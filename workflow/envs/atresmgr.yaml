@@ -1,0 +1,10 @@
+# vim: syntax=yaml tabstop=2 expandtab
+# coding: utf-8
+name: atresmgr
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.7
+  - snakemake=7.8.1
+
