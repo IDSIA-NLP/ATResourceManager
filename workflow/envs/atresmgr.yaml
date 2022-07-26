@@ -8,6 +8,7 @@ dependencies:
   - python=3.10
   - snakemake=7.9.0
 
+  - bs4=4.11.1         # BeautifulSoup - web scraping
   - dvc=2.15.0
   - dvc-gdrive=2.15.0
   - loguru=0.5.3
