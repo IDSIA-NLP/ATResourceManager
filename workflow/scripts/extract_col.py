@@ -1,20 +1,38 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# vim: syntax=python tabstop=4 expandtab
 
 """
 Description: Down sample the Catalog of Life (CoL) data to arthropods related entries.
-Author: Joseph Cornelius
+Authors: 
+  Joseph Cornelius
+  Harald Detering
 July 2022
 """
 # --------------------------------------------------------------------------------------------
 #                                           IMPORT
 # --------------------------------------------------------------------------------------------
 
+import argparse
 import pandas as pd
 from loguru import logger
 
 from simple_graph import SimpleGraph
 
+# --------------------------------------------------------------------------------------------
+#                                    COMMAND-LINE INTERFACE
+# --------------------------------------------------------------------------------------------
+
+def parse_args():
+    parser = argparse.ArgumentParser(description='Downsample the Catalog of Life (CoL) data to arthropods related entries.')
+    parser.add_argument('col_file', help='CoL TSV file containing taxa (Taxon.tsv).')
+    parser.add_argument('out_file', help='Output file for filtered taxa (TSV).')
+    parser.add_argument('out_file_sm', help='Output file for filtered taxa (TSV, fewer columns).')
+
+    parser.add_argument('--log', default='extract_col.log', help='TXT file receiving log messages.')
+
+    args = parser.parse_args()
+    return args
 
 # --------------------------------------------------------------------------------------------
 #                                           FUNCTIONS
@@ -68,24 +86,23 @@ def get_path(child, path=[], targetParent="RT", child2parent={}):
 #                                           RUN
 # --------------------------------------------------------------------------------------------
 
-if __name__ == '__main__':
+def main(args):
+    log_file_path = args.log
+    col_file_path = args.col_file
+    col_arthro_file_path = args.out_file
+    col_arthro_small_file_path = args.out_file_sm
+    
 
-    #! REPLACE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-    col_file_path = "../../../ArthroTraitMine_Data/latest_dwca/Taxon.tsv"
-    col_arthro_file_path = "./Taxon_arthro.tsv"
-    col_arthro_small_file_path = "./Taxon_arthro_sm.tsv"
-
-    #! REPLACE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
-    logger.add("./extract_col_eol.log", rotation="200 KB")
+    logger.add(log_file_path, rotation="200 KB")
     logger.info('Start ...')
     logger.info('Load CoL file, this can take a few seconds.')
 
     df_col = pd.read_csv(col_file_path, sep='\t')
     logger.debug(f"CoL DataFrame shape: {df_col.shape}")
 
+    #import pdb; pdb.set_trace()
     # Remove not "accepted" entries and entries without a parent node
-    df_col = df_col[df_col["dwc:taxonomicStatus"]=="ACCEPTED"]
+    df_col = df_col[df_col["dwc:taxonomicStatus"].str.upper()=="ACCEPTED"]
     df_col.dropna(subset=['dwc:parentNameUsageID']).shape 
 
     # ---------------------------------------- Sanity Check --------------------------------------
@@ -109,7 +126,7 @@ if __name__ == '__main__':
 
     # Sanity checks
     logger.debug(f"Sanity Check: Path of random node to root (RT): {col_graph.get_paths('RT','4GQ9Y')}")
-    logger.debug(f"Sanity Check: Are all nodes in the path in the right order?  {df_col[df_col['dwc:taxonID']=='62765']}")
+    logger.debug(f"Sanity Check: Are all nodes in the path in the right order?  {df_col[df_col['dwc:taxonID']=='4GQ9Y']}")
 
     # Create arthropod DataFrame 
     logger.info("Create arthropod DataFrame and get path from leaf to arthropod node...")
@@ -126,5 +143,9 @@ if __name__ == '__main__':
     df_new.to_csv(col_arthro_file_path, sep='\t')
 
     # Save to file reduce df to necessary columns
-    df_new_s = df_new[["dwc:taxonID", "dwc:parentNameUsageID","dwc:taxonomicStatus", "dwc:taxonRank","dwc:scientificName","gbif:genericName", "dwc:specificEpithet", "dwc:infraspecificEpithet", "parentLeafChain"]]
+    df_new_s = df_new[["dwc:taxonID", "dwc:parentNameUsageID","dwc:taxonomicStatus", "dwc:taxonRank","dwc:scientificName","dwc:genericName", "dwc:specificEpithet", "dwc:infraspecificEpithet", "parentLeafChain"]]
     df_new_s.to_csv(col_arthro_small_file_path, sep='\t')
+
+if __name__ == '__main__':
+    args = parse_args()
+    main(args)

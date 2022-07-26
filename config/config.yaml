@@ -1,3 +1,7 @@
 # vim: syntax=yaml tabstop=2 expandtab
 # coding: utf-8
 
+# Catalogue of Life (CoL) settings
+col_taxa_file_path: '../resources/col/latest_dwca/Taxon.tsv'
+col_taxa_arthropoda: '../results/col/Taxon_arthro.tsv'
+col_taxa_arthropoda_sm: '../results/col/Taxon_arthro_sm.tsv'
