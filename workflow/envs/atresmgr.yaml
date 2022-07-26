@@ -7,4 +7,6 @@ channels:
 dependencies:
   - python=3.10
   - snakemake=7.9.0
+
   - dvc=2.15.0
+  - dvc-gdrive=2.15.0
