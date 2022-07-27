@@ -3,7 +3,7 @@
 # coding: utf-8
 #------------------------------------------------------------------------------
 # Download Catalogue of Life (CoL) resources.
-#     data: https://download.checklistbank.org/col/
+#   https://download.checklistbank.org/col/
 # Check if already on newest version before downloading
 #------------------------------------------------------------------------------
 # author   : Harald Detering
@@ -90,8 +90,13 @@ def main(args):
     print(f'  Online version: {web_version}')
     print(f'  Local version:  {version}')
     print()
-    print('Now downloading data...')
+    print('---\nNow downloading data...')
     download_file(web_version, url, args.out_dir)
+    print(f'Download successful. Find new data at:\n{os.path.join(args.out_dir, web_version)}')
+    if args.version_file:
+      print(f'Storing latest version in version file {args.version_file}.')
+      with open(args.version_file, 'wt') as f:
+        f.write(f'{web_version}\n')
   else:
     print(f'Already on latest version:\n{web_version}')
     print()
