@@ -25,9 +25,9 @@ from simple_graph import SimpleGraph
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Downsample the Catalog of Life (CoL) data to arthropods related entries.')
-    parser.add_argument('col_file', help='CoL TSV file containing taxa (Taxon.tsv).')
-    parser.add_argument('out_file', help='Output file for filtered taxa (TSV).')
-    parser.add_argument('out_file_sm', help='Output file for filtered taxa (TSV, fewer columns).')
+    parser.add_argument('--col-file', required=True, help='CoL TSV file containing taxa (Taxon.tsv).')
+    parser.add_argument('--out-file', required=True, help='Output file for filtered taxa (TSV).')
+    parser.add_argument('--out-file-sm', required=True, help='Output file for filtered taxa (TSV, fewer columns).')
 
     parser.add_argument('--log', default='extract_col.log', help='TXT file receiving log messages.')
 

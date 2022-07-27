@@ -15,8 +15,11 @@ configfile: '../config/config.yaml'
 # Download latest Catalogue of Life (CoL) data files
 # TODO: implement caching to prevent unnecessary downloading
 rule get_col:
+  input:
+    config['col_taxa_file_path'],
+    config['col_taxa_arthropoda']
   output:
-    config['col_taxa_file_path']
+    '../results/col.done',
   shell:
     """
     touch {output}
@@ -36,8 +39,8 @@ rule col_taxa_extract_arthropods:
     set -x
     time (
       python scripts/extract_col.py --log {log} \
-        {input.col} \
-        {output.tax_art} \
-        {output.tax_art_sm}
+        --col-file {input.col} \
+        --out-file {output.tax_art} \
+        --out-file-sm {output.tax_art_sm}
     )
     """
