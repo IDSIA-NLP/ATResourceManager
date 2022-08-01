@@ -96,7 +96,4 @@ def main(version_file, out_dir): #def main(args):
   
 
 if __name__ == '__main__':
-  #args = parse_args()
-  #main(args)
-
   main()
