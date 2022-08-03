@@ -2,8 +2,8 @@
 # coding: utf-8
 configfile: '../config/config.yaml'
 
-include: 'rules/col.smk'
+include: 'rules/taxa.smk'
 
 rule all:
   input:
-    '../results/col.done'
+    '../results/taxa.done'

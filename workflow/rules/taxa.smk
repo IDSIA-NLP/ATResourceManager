@@ -1,25 +1,61 @@
 # vim: syntax=python tabstop=2 expandtab
 # coding: utf-8
 #------------------------------------------------------------------------------
-# Download and transform Catalogue of Life (CoL) resources.
+# Download and transform resources from
+#   Catalogue of Life (CoL)
 #     data: https://download.checklistbank.org/col/
 #     web:  https://www.catalogueoflife.org/
+#   Encyclopedia of Life (EOL)
+#     data: https://editors.eol.org/other_files/SDR/traits_all.zip
 #------------------------------------------------------------------------------
 # author   : Harald Detering
 # email    : harald.detering@gmail.com
-# modified : 2022-07-26
+# modified : 2022-08-03
 #------------------------------------------------------------------------------
 
 configfile: '../config/config.yaml' 
 
+# Dummy rule to run all other rules
+rule all_taxa:
+  input:
+    config['col_eol_taxa.tsv']
+  output:
+    '../results/taxa.done'
+  shell:
+    """
+    touch {output}
+    """
+
 # Download latest Catalogue of Life (CoL) data files
-# TODO: implement caching to prevent unnecessary downloading
+rule get_col:
+  input:
+    config['col_version_file']
+  output:
+    col_taxa = config['col_taxa_file']
+  params:
+    data_dir = config['col_data_dir']
+  log:
+    out = '../log/get_col.out',
+    err = '../log/get_col.err'
+  shell:
+    """
+    set -x
+    time (
+    python scripts/col_download_latest_dwca.py \
+      --log ../log/col_download_latest_dwca.log \
+      --version-file {input}
+      --out-dir {params.data_dir}
+    touch {output}
+    ) >{log.out} 2>{log.err}
+    """
+
+# Download latest Encyclopedia of Life (EOL) data files
 rule get_col:
   input:
     config['col_taxa_file'],
     config['col_taxa_arthropoda']
   output:
-    '../results/col.done',
+    col_taxa = config['col_taxa_file']
   shell:
     """
     touch {output}
@@ -30,8 +66,7 @@ rule col_taxa_extract_arthropods:
   input:
     col = config['col_taxa_file']
   output:
-    tax_art = config['col_taxa_arthropoda'],
-    tax_art_sm = config['col_taxa_arthropoda_sm']
+    tax_art = config['col_taxa_arthropoda']
   log:
     '../log/col_taxa_extract_arthropods.log'
   shell:
@@ -49,11 +84,9 @@ rule col_taxa_extract_arthropods:
 rule col_eol_merge_taxa:
   input:
     tax_col = config['col_taxa_arthropoda'],
-    tax_col_sm = config['col_taxa_arthropoda_sm'],
     tax_eol = config['eol_taxa_file']
   output:
-    tax_col_eol = '../resources/col_eol_taxa.tsv',
-    tax_col_eol_sm = '../resources/col_eol_taxa_sm.tsv'
+    tax_col_eol = '../resources/col_eol_taxa.tsv'
   log:
     '../log/col_eol_merge_taxa.log'
   shell:
@@ -65,11 +98,5 @@ rule col_eol_merge_taxa:
       --col-taxa {input.tax_col} \
       --eol-taxa {input.tax_eol} \
       --out-file {output.tax_col_eol}
-
-    python scripts/col_eol_merge.py \
-      --log {log} \
-      --col-taxa {input.tax_col_sm} \
-      --eol-taxa {input.tax_eol} \
-      --out-file {output.tax_col_eol_sm}
     )
     """

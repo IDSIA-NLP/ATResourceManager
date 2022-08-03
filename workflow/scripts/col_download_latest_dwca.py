@@ -12,7 +12,7 @@
 #------------------------------------------------------------------------------
 
 import os, sys
-import argparse
+import click
 import requests
 from bs4 import BeautifulSoup
 import re
@@ -24,16 +24,8 @@ import re
 url = 'https://download.checklistbank.org/col/monthly/'
 
 # ------------------------------------------------------------------------------
-#                            COMMAND-LINE INTERFACE
+#                               UTILITY FUNCTIONS
 # ------------------------------------------------------------------------------
-
-def parse_args():
-  parser = argparse.ArgumentParser(description='Download Catalogue of Life (CoL) resources.')
-  parser.add_argument('--version-file', help='Current version of downloaded CoL data.')
-  parser.add_argument('out_dir', help='Output directory to download to.')
-
-  args = parser.parse_args()
-  return args
 
 def download_file(filename, base_url, out_dir):
     if not os.path.exists(args.out_dir):
@@ -59,7 +51,15 @@ def download_file(filename, base_url, out_dir):
       LINE_CLEAR = '\x1b[2K' # <-- ANSI sequence
       print(end=LINE_CLEAR)
 
-def main(args):
+# ------------------------------------------------------------------------------
+#                            COMMAND-LINE INTERFACE
+# ------------------------------------------------------------------------------
+
+@click.command()
+@click.option('--version-file', help='Current version of downloaded CoL data.')
+@click.option('--out-dir', required=True, help='Output directory to download to.')
+def main(version_file, out_dir):
+  """Download Catalogue of Life (CoL) resources."""
   version = ''
   # read version file if given
   if args.version_file:
@@ -103,5 +103,4 @@ def main(args):
   
 
 if __name__ == '__main__':
-  args = parse_args()
-  main(args)
+  main()
