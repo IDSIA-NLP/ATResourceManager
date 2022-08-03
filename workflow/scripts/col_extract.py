@@ -100,7 +100,12 @@ def main(args):
     df_col = pd.read_csv(col_file_path, sep='\t')
     logger.debug(f"CoL DataFrame shape: {df_col.shape}")
 
-    #import pdb; pdb.set_trace()
+    # check field names (gbif:genericName changed to dwc:genericName at some point)
+    cols_genericName = [x for x in df_col.columns if 'genericname' in x.lower()]
+    assert len(cols_genericName) == 1, \
+        f"ERROR: expected one column named '<pfx>:genericName', got {len(cols_genericName)}"
+    field_genericName = cols_genericName[0]
+
     # Remove not "accepted" entries and entries without a parent node
     df_col = df_col[df_col["dwc:taxonomicStatus"].str.upper()=="ACCEPTED"]
     df_col.dropna(subset=['dwc:parentNameUsageID']).shape 
@@ -143,7 +148,7 @@ def main(args):
     df_new.to_csv(col_arthro_file_path, sep='\t')
 
     # Save to file reduce df to necessary columns
-    df_new_s = df_new[["dwc:taxonID", "dwc:parentNameUsageID","dwc:taxonomicStatus", "dwc:taxonRank","dwc:scientificName","dwc:genericName", "dwc:specificEpithet", "dwc:infraspecificEpithet", "parentLeafChain"]]
+    df_new_s = df_new[["dwc:taxonID", "dwc:parentNameUsageID","dwc:taxonomicStatus", "dwc:taxonRank","dwc:scientificName",field_genericName, "dwc:specificEpithet", "dwc:infraspecificEpithet", "parentLeafChain"]]
     df_new_s.to_csv(col_arthro_small_file_path, sep='\t')
 
 if __name__ == '__main__':

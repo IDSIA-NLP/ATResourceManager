@@ -2,6 +2,11 @@
 # coding: utf-8
 
 # Catalogue of Life (CoL) settings
-col_taxa_file_path: '../resources/col/latest_dwca/Taxon.tsv'
+col_data_dir: '../resources/col/latest_dwca'
+col_taxa_file: '../resources/col/latest_dwca/Taxon.tsv'
 col_taxa_arthropoda: '../results/col/Taxon_arthro.tsv'
 col_taxa_arthropoda_sm: '../results/col/Taxon_arthro_sm.tsv'
+
+# Encyclopedia of Life (EOL) settings
+eol_data_dir: '../resources/eol/trait_bank'
+eol_taxa_file: '../resources/eol/trait_bank/pages.csv'
