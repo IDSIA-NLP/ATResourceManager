@@ -16,6 +16,7 @@ import xml.etree.ElementTree as ET
 from loguru import logger
 from shutil import copyfile
 import os
+import csv
 
 
 # --------------------------------------------------------------------------------------------
@@ -24,6 +25,36 @@ import os
 
 
 # ----------------------------------------- Functions ----------------------------------------
+def get_dois(treatment_file):
+    treatment_id = treatment_file.split('/')[-1].split('.')[0]
+    csv_list_docDOI = ""
+    csv_list_docMTitle = ""
+    csv_list_treatDOI = ""
+
+    try:
+        tree = ET.parse(treatment_file)
+        root = tree.getroot()
+        
+        # Document attributes
+        try:
+            csv_list_docMTitle = root.attrib["masterDocTitle"]
+        except:
+            pass
+
+        try:
+            csv_list_docDOI = root.attrib["ID-DOI"]
+        except:
+            pass
+        
+        # Treatment attribute
+        treat_element = root.find(".//treatment")
+        csv_list_treatDOI = treat_element.attrib["ID-DOI"]
+
+    except:
+        pass
+
+    return [treatment_id, csv_list_docDOI, csv_list_docMTitle, csv_list_treatDOI]
+
 
 def is_arthropod(treatment_file):
     """Check if .xml treatment file is about a arthropod.
@@ -61,6 +92,9 @@ def main(logger, args):
 
     logger.info(f'Start copying arthropod treatments...')
     
+    # List to collect DOI infos
+    doi_infos =[['palziID', 'document:ID-DOI', 'document:masterDocTitle','treatment:ID-DOI']]
+
     counter = 0
     counter_arthro = 0
     
@@ -80,6 +114,12 @@ def main(logger, args):
             copyfile(treatment_file, args.out_path + treatment_file_name)
 
 
+            doi_infos.append(get_dois(treatment_file))
+
+    logger.info(f'Writing Plazi plaziID - IDDOI csv ...')
+    with open(args.out_path_doi, "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerows(doi_infos)
 # --------------------------------------------------------------------------------------------
 #                                          RUN
 # --------------------------------------------------------------------------------------------
@@ -97,6 +137,9 @@ if __name__ == '__main__':
                         default='../../data/plazi/plazi.xml/', help='Path to all .xml treatments files.')
     parser.add_argument('-o', '--out_path', metavar='out_path', type=str, required=False, 
                         default='../../data/plazi/plazi_arthro.xml/', help='Output path for arthropods treatments files.')
+    parser.add_argument('-od', '--out_path_doi', metavar='out_path_doi', type=str, required=False, 
+                        default='../../data/plazi/plazi_arthro_plaziID-IDDOI.csv', 
+                        help='Output path for arthropod treatmentID - ID_DOI pair file.')
     args = parser.parse_args()
 
    # Run main
