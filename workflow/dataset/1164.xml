@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+        packageId="col-clb-1164"  system="http://catalogueoflife.org" scope="system"
+  xml:lang="en">
+
+
+<dataset>
+  <title>The Scorpion Files</title>
+  <shortName>The Scorpion Files</shortName>
+  <associatedParty>
+    <individualName>
+      <givenName>Jan Ove</givenName>
+      <surName>Rein</surName>
+      <userId>https://orcid.org/0000-0002-9976-358X</userId>
+    </individualName>
+    <address>
+      <city>Trondheim</city>
+      <country>Norway</country>
+    </address>
+    <electronicMailAddress>jan.rein@ub.ntnu.no</electronicMailAddress>
+    <role>editor</role>
+  </associatedParty>
+    <pubDate>2022-05-27</pubDate>
+  <language>english</language>
+  <abstract>
+    <para>The intention of The Scorpion Files is to present an updated list of all extant scorpion species and the current situation in scorpion taxonomy. The Scorpion Files&apos; family and species lists reflect the most recent published works, and not necessarily which system the editor believes is correct. The list does not contain synonymy yet. Data have been harvested by Geoff Ower, CoL Database Manager, from the original website into CoLDP format.</para>
+  </abstract>
+  <intellectualRights>
+    <para><ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC BY) 4.0</citetitle></ulink></para>
+  </intellectualRights>
+  <distribution scope="document">
+    <online>
+      <url function="information">http://www.ntnu.no/ub/scorpion-files</url>
+    </online>
+  </distribution>
+  <coverage>
+    <geographicCoverage>
+      <geographicDescription>Global</geographicDescription>
+    </geographicCoverage>
+    <taxonomicCoverage>
+      <generalTaxonomicCoverage>Scorpions</generalTaxonomicCoverage>
+    </taxonomicCoverage>
+    </coverage>
+  <contact>
+    <individualName>
+      <givenName>Jan Ove</givenName>
+      <surName>Rein</surName>
+      <userId>https://orcid.org/0000-0002-9976-358X</userId>
+    </individualName>
+    <electronicMailAddress>jan.rein@ub.ntnu.no</electronicMailAddress>
+  </contact>
+</dataset>
+
+<additionalMetadata>
+  <metadata>
+    <gbif>
+      <citation>Rein, J. O. (2022). The Scorpion Files. In O. Bánki, Y. Roskov, M. Döring, G. Ower, L. Vandepitte, D. Hobern, D. Remsen, P. Schalk, R. E. DeWalt, M. Keping, J. Miller, T. Orrell, R. Aalbu, R. Adlard, E. M. Adriaenssens, C. Aedo, E. Aescht, N. Akkari, P. Alfenas-Zerbini, et al., Catalogue of Life Checklist (May 2022). https://doi.org/10.48580/dfpx-3f6</citation>
+      <resourceLogoUrl>https://github.com/Sp2000/colplus-repo/raw/master/logos/The_Scorpion_Files.png</resourceLogoUrl>
+    </gbif>
+    <col>
+      <version>May 2022</version>
+      <completeness>99</completeness>
+      <confidence>4</confidence>
+    </col>
+  </metadata>
+</additionalMetadata>
+
+</eml:eml>

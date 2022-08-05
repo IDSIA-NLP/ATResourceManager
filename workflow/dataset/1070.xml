@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+        packageId="col-clb-1070"  system="http://catalogueoflife.org" scope="system"
+  xml:lang="en">
+
+
+<dataset>
+  <title>Mites GSD Phytoseiidae</title>
+  <shortName>Mites GSD Phytoseiidae</shortName>
+  <creator>
+    <individualName>
+      <givenName>R.C.</givenName>
+      <surName>Castilho</surName>
+    </individualName>
+  </creator>
+  <associatedParty>
+    <individualName>
+      <givenName>J.P.Z.</givenName>
+      <surName>Narita</surName>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>G.J.</givenName>
+      <surName>de Moraes</surName>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>J.A.</givenName>
+      <surName>McMurtry</surName>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <address>
+      <city>São Paulo</city>
+      <country>Brazil</country>
+    </address>
+    <role>contributor</role>
+  </associatedParty>
+    <pubDate>2009-09-24</pubDate>
+  <language>english</language>
+  <abstract>
+    <para>The Phytoseiidae are predatory mites found mostly on plants, playing an important role in the control of mite and small insect pests. This database was prepared based mostly on information summarized by Moraes et al. (1986, 2004), updated to include the new species described in the last 5 years and in accordance with the publications by Chant &amp; McMurtry (2003-2007). It provides information on the 2186 species names.</para>
+  </abstract>
+  <distribution scope="document">
+    <online>
+      <url function="information">http://www.lea.esalq.usp.br/phytoseiidae/</url>
+    </online>
+  </distribution>
+  <coverage>
+    <geographicCoverage>
+      <geographicDescription>Global</geographicDescription>
+    </geographicCoverage>
+    <taxonomicCoverage>
+      <generalTaxonomicCoverage>Phytoseiid mites</generalTaxonomicCoverage>
+    </taxonomicCoverage>
+    </coverage>
+  <contact>
+    <individualName>
+      <givenName>Gilberto</givenName>
+      <surName>de Moraes</surName>
+    </individualName>
+  </contact>
+</dataset>
+
+<additionalMetadata>
+  <metadata>
+    <gbif>
+      <citation>Castilho, R. C., Narita, J. P. Z., de Moraes, G. J., &amp; McMurtry, J. A. (2009). Mites GSD Phytoseiidae. In O. Bánki, Y. Roskov, M. Döring, G. Ower, L. Vandepitte, D. Hobern, D. Remsen, P. Schalk, R. E. DeWalt, M. Keping, J. Miller, T. Orrell, R. Aalbu, R. Adlard, E. M. Adriaenssens, C. Aedo, E. Aescht, N. Akkari, P. Alfenas-Zerbini, et al., Catalogue of Life Checklist (Sep 2009). https://doi.org/10.48580/dfp3-39x</citation>
+      <resourceLogoUrl>https://github.com/Sp2000/colplus-repo/raw/master/logos/PhytoseiidBase.png</resourceLogoUrl>
+    </gbif>
+    <col>
+      <version>Sep 2009</version>
+      <completeness>99</completeness>
+      <confidence>5</confidence>
+    </col>
+  </metadata>
+</additionalMetadata>
+
+</eml:eml>

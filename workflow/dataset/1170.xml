@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+        packageId="col-clb-1170"  system="http://catalogueoflife.org" scope="system"
+  xml:lang="en">
+
+
+<dataset>
+  <title>Grylloblattodea Species File</title>
+  <shortName>SF Grylloblattodea</shortName>
+  <creator>
+    <individualName>
+      <givenName>Heidi</givenName>
+      <surName>Hopkins</surName>
+    </individualName>
+    <address>
+      <city>Ithaca</city>
+      <administrativeArea>NY</administrativeArea>
+      <country>UnitedStates</country>
+    </address>
+  </creator>
+  <associatedParty>
+    <individualName>
+      <givenName>Michael D</givenName>
+      <surName>Maehr</surName>
+      <userId>https://orcid.org/0000-0003-4573-0536</userId>
+    </individualName>
+    <address>
+      <city>Champaign</city>
+      <administrativeArea>IL</administrativeArea>
+      <country>UnitedStates</country>
+    </address>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>David C</givenName>
+      <surName>Eades</surName>
+    </individualName>
+    <address>
+      <city>Champaign</city>
+      <administrativeArea>IL</administrativeArea>
+      <country>UnitedStates</country>
+    </address>
+    <role>contributor</role>
+  </associatedParty>
+    <pubDate>2021-08-20</pubDate>
+  <language>english</language>
+  <abstract>
+    <para>Grylloblattodea Species File website and database contains taxonomic information on ice crawlers.</para>
+  </abstract>
+  <intellectualRights>
+    <para><ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC BY) 4.0</citetitle></ulink></para>
+  </intellectualRights>
+  <distribution scope="document">
+    <online>
+      <url function="information">http://grylloblattodea.speciesfile.org</url>
+    </online>
+  </distribution>
+  <coverage>
+    <geographicCoverage>
+      <geographicDescription>Global</geographicDescription>
+    </geographicCoverage>
+    <taxonomicCoverage>
+      <generalTaxonomicCoverage>Ice crawlers</generalTaxonomicCoverage>
+    </taxonomicCoverage>
+    </coverage>
+  <contact>
+    <individualName>
+      <givenName>Deborah</givenName>
+      <surName>Paul</surName>
+      <userId>https://orcid.org/0000-0003-2639-7520</userId>
+    </individualName>
+    <address>
+      <city>Champaign</city>
+      <administrativeArea>IL</administrativeArea>
+      <country>UnitedStates</country>
+    </address>
+    <electronicMailAddress>dlpaul@illinois.edu</electronicMailAddress>
+  </contact>
+</dataset>
+
+<additionalMetadata>
+  <metadata>
+    <gbif>
+      <citation>Hopkins, H., &amp; Maehr, M. D. (2021). Grylloblattodea Species File. In O. Bánki, Y. Roskov, M. Döring, G. Ower, L. Vandepitte, D. Hobern, D. Remsen, P. Schalk, R. E. DeWalt, M. Keping, J. Miller, T. Orrell, R. Aalbu, R. Adlard, E. M. Adriaenssens, C. Aedo, E. Aescht, N. Akkari, P. Alfenas-Zerbini, et al., Catalogue of Life Checklist (Aug 2021). https://doi.org/10.48580/dfp3-3fd</citation>
+      <resourceLogoUrl>https://github.com/Sp2000/colplus-repo/raw/master/logos/SF_Grylloblattodea.png</resourceLogoUrl>
+    </gbif>
+    <col>
+      <version>Aug 2021</version>
+      <completeness>99</completeness>
+      <confidence>5</confidence>
+    </col>
+  </metadata>
+</additionalMetadata>
+
+</eml:eml>

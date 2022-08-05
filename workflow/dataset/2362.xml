@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+        packageId="col-clb-2362"  system="http://catalogueoflife.org" scope="system"
+  xml:lang="en">
+
+
+<dataset>
+  <title>Catalogue of World Gelechiidae</title>
+  <shortName>Gelechiidae</shortName>
+  <creator>
+    <individualName>
+      <givenName>Donald</givenName>
+      <surName>Hobern</surName>
+      <userId>https://orcid.org/0000-0001-6492-4016</userId>
+    </individualName>
+    <address>
+      <city>Aranda</city>
+      <administrativeArea>ACT</administrativeArea>
+      <country>Australia</country>
+    </address>
+    <electronicMailAddress>donald.hobern@sp2000.org</electronicMailAddress>
+    <onlineUrl>https://sp2000.org/</onlineUrl>
+  </creator>
+  <associatedParty>
+    <individualName>
+      <givenName>Klaus</givenName>
+      <surName>Sattler</surName>
+    </individualName>
+    <address>
+      <city>London</city>
+      <country>UnitedKingdom</country>
+    </address>
+    <onlineUrl>https://www.nhm.ac.uk/</onlineUrl>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Donald</givenName>
+      <surName>Hobern</surName>
+      <userId>https://orcid.org/0000-0001-6492-4016</userId>
+    </individualName>
+    <address>
+      <city>Aranda</city>
+      <administrativeArea>ACT</administrativeArea>
+      <country>Australia</country>
+    </address>
+    <electronicMailAddress>donald.hobern@sp2000.org</electronicMailAddress>
+    <onlineUrl>https://sp2000.org/</onlineUrl>
+    <role>editor</role>
+  </associatedParty>
+    <pubDate>2022-07-06</pubDate>
+  <language>english</language>
+  <abstract>
+    <para>The Catalogue of World Gelechiidae derives from a summary of the Gelechiidae list developed and maintained as a Word document by Klaus Sattler at the Natural History Museum, London. This list was converted in 2021 by Donald Hobern to form this Catalogue of Life Data Package dataset. Many species previously included as Gelechiidae within the COL Checklist from the NHM Global Lepidoptera Names Index (LepIndex) are not recognised within the family by Klaus Sattler. Most of these are now considered to belong to other families within the Gelechioidea, but 40 genera and 62 species cannot yet be assigned to any other family. These have been included as &quot;provisionally accepted&quot; taxa within this dataset but are likely to be moved elsewhere in the COL Checklist in future.</para>
+  </abstract>
+  <intellectualRights>
+    <para><ulink url="http://creativecommons.org/publicdomain/zero/1.0/legalcode"><citetitle>Public Domain (CC0 1.0)</citetitle></ulink></para>
+  </intellectualRights>
+  <coverage>
+    <geographicCoverage>
+      <geographicDescription>global</geographicDescription>
+    </geographicCoverage>
+    <taxonomicCoverage>
+      <generalTaxonomicCoverage>Gelechiid moths</generalTaxonomicCoverage>
+    </taxonomicCoverage>
+    </coverage>
+  <contact>
+    <individualName>
+      <givenName>Donald</givenName>
+      <surName>Hobern</surName>
+      <userId>https://orcid.org/0000-0001-6492-4016</userId>
+    </individualName>
+    <address>
+      <city>Aranda</city>
+      <administrativeArea>ACT</administrativeArea>
+      <country>Australia</country>
+    </address>
+    <electronicMailAddress>donald.hobern@sp2000.org</electronicMailAddress>
+    <onlineUrl>https://sp2000.org/</onlineUrl>
+  </contact>
+</dataset>
+
+<additionalMetadata>
+  <metadata>
+    <gbif>
+      <citation>Hobern, D., &amp; Sattler, K. (2022). Catalogue of World Gelechiidae. In O. Bánki, Y. Roskov, M. Döring, G. Ower, L. Vandepitte, D. Hobern, D. Remsen, P. Schalk, R. E. DeWalt, M. Keping, J. Miller, T. Orrell, R. Aalbu, R. Adlard, E. M. Adriaenssens, C. Aedo, E. Aescht, N. Akkari, P. Alfenas-Zerbini, et al., Catalogue of Life Checklist (1.1.22.187 (06 Jul 2022)). https://doi.org/10.48580/dfpz-4th</citation>
+    </gbif>
+    <col>
+      <version>1.1.22.187 (06 Jul 2022)</version>
+      <completeness>99</completeness>
+      <confidence>5</confidence>
+    </col>
+  </metadata>
+</additionalMetadata>
+
+</eml:eml>

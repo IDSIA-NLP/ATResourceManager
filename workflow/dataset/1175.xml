@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+        packageId="col-clb-1175"  system="http://catalogueoflife.org" scope="system"
+  xml:lang="en">
+
+
+<dataset>
+  <title>World Ostracoda Database</title>
+  <shortName>WoRMS Ostracoda</shortName>
+  <associatedParty>
+    <individualName>
+      <givenName>Lucas Silveira</givenName>
+      <surName>Antonietto</surName>
+    </individualName>
+    <electronicMailAddress>antoniettols@gmail.com</electronicMailAddress>
+    <role>editor</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Simone</givenName>
+      <surName>Brandão</surName>
+      <userId>https://orcid.org/0000-0002-3487-6129</userId>
+    </individualName>
+    <electronicMailAddress>brandao.sn.100@gmail.com</electronicMailAddress>
+    <role>editor</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Stéfhanne</givenName>
+      <surName>Guimarães</surName>
+    </individualName>
+    <electronicMailAddress>stefhanne.guimaraes@gmail.com</electronicMailAddress>
+    <role>editor</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Ivana</givenName>
+      <surName>Karanovic</surName>
+    </individualName>
+    <electronicMailAddress>ivana.karanovic@utas.edu.au</electronicMailAddress>
+    <role>editor</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Davi Galvão</givenName>
+      <surName>Nery</surName>
+    </individualName>
+    <electronicMailAddress>davi.galvaon@gmail.com</electronicMailAddress>
+    <role>editor</role>
+  </associatedParty>
+  <associatedParty>
+    <role>contributor</role>
+  </associatedParty>
+  <associatedParty>
+    <address>
+      <country>Brazil</country>
+    </address>
+    <role>contributor</role>
+  </associatedParty>
+  <associatedParty>
+    <address>
+      <country>Australia</country>
+    </address>
+    <role>contributor</role>
+  </associatedParty>
+  <associatedParty>
+    <address>
+      <country>Belgium</country>
+    </address>
+    <role>contributor</role>
+  </associatedParty>
+    <pubDate>2022-07-01</pubDate>
+  <language>english</language>
+  <abstract>
+    <para>The Recent or extant taxa from the World Ostracoda Database-World Register of Marine Species includes mostly marine species, and was data-mined from thousands of publications (see sources in WoRMS). Concerning the Recent non-marine  Ostracoda, very few of the 2,000 species and approximately 200 genera of are included in the present data, because they have already been compiled by Martens et al. (2007). Concerning the high level classification (i.e., down to family level), we follow different authors. The Recent Podocopa classification mostly follows Horne et al. (2002), with two exceptions. First, we include Platycopida within the subclass Platycopa, while Horne et al. (2002) place it within Podocopa. Second, we place the superfamily Puncioidea (which includes a few Recent species) directly in the subclass Palaeocopa, while Horne et al (2002) include it within Subclass Podocopa, order Palaeocopida and  Suborder Kirkbyocopina. The classification of Recent Myodocopa follows diverse classifications of Kornicker and collaborators (e.g. Kornicker et al., 2007).
+
+Horne, D.J., Cohen, A.C. &amp; Martens, K. (2002). Taxonomy, morphology and biology of Quaternary and living Ostracoda. In: J. Holmes and A. Chivas (Eds), The Ostracoda. Applications in Quaternary Research. Geophysical Monograph. American Geophysical Union, Washington, DC, pp. 5-35. 
+
+Kornicker, L.S., Iliffe, T.M. &amp; Harrison-Nelson, E. (2007) Ostracoda (Myodocopa) from anchialine caves and ocean blue holes. Zootaxa 1565, 3-151. 
+
+Martens, K., Schön, I., Meisch, C. &amp; Horne, D.J. (2008) Global diversity of ostracods (Ostracoda, Crustacea) in freshwater. Hydrobiologia 595, 185-193.</para>
+  </abstract>
+  <intellectualRights>
+    <para><ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC BY) 4.0</citetitle></ulink></para>
+  </intellectualRights>
+  <distribution scope="document">
+    <online>
+      <url function="information">https://www.marinespecies.org/ostracoda</url>
+    </online>
+  </distribution>
+  <coverage>
+    <geographicCoverage>
+      <geographicDescription>Global</geographicDescription>
+    </geographicCoverage>
+    <taxonomicCoverage>
+      <generalTaxonomicCoverage>ostracods</generalTaxonomicCoverage>
+    </taxonomicCoverage>
+    </coverage>
+  <contact>
+    <individualName>
+      <givenName>Simone</givenName>
+      <surName>Brandão</surName>
+    </individualName>
+    <electronicMailAddress>brandao.sn.100@gmail.com</electronicMailAddress>
+  </contact>
+</dataset>
+
+<additionalMetadata>
+  <metadata>
+    <gbif>
+      <citation>Antonietto, L. S., Brandão, S., Guimarães, S., Karanovic, I., &amp; Nery, D. G. (2022). World Ostracoda Database. In O. Bánki, Y. Roskov, M. Döring, G. Ower, L. Vandepitte, D. Hobern, D. Remsen, P. Schalk, R. E. DeWalt, M. Keping, J. Miller, T. Orrell, R. Aalbu, R. Adlard, E. M. Adriaenssens, C. Aedo, E. Aescht, N. Akkari, P. Alfenas-Zerbini, et al., Catalogue of Life Checklist (ver. (07/2022)). https://doi.org/10.48580/dfpz-3fk</citation>
+      <resourceLogoUrl>https://www.marinespecies.org/documents/WoRMS%20branding/WoRMS_logo_blue_negative.png</resourceLogoUrl>
+    </gbif>
+    <col>
+      <version>ver. (07/2022)</version>
+      <completeness>60</completeness>
+      <confidence>3</confidence>
+    </col>
+  </metadata>
+</additionalMetadata>
+
+</eml:eml>

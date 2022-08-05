@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+        packageId="col-clb-1032"  system="http://catalogueoflife.org" scope="system"
+  xml:lang="en">
+
+
+<dataset>
+  <title>Cerambycidae database</title>
+  <shortName>TITAN</shortName>
+  <creator>
+    <individualName>
+      <givenName>Gerard</givenName>
+      <surName>Tavakilian</surName>
+      <userId>https://orcid.org/0000-0002-3310-1903</userId>
+    </individualName>
+    <address>
+      <city>Paris</city>
+      <country>France</country>
+    </address>
+    <electronicMailAddress>gerard.tavakilian@mnhn.fr</electronicMailAddress>
+  </creator>
+  <associatedParty>
+    <individualName>
+      <givenName>Herve</givenName>
+      <surName>Chevillotte</surName>
+    </individualName>
+    <address>
+      <city>Paris</city>
+      <country>France</country>
+    </address>
+    <electronicMailAddress>herve.chevillotte@ird.fr</electronicMailAddress>
+    <role>author</role>
+  </associatedParty>
+    <pubDate>2015-04-03</pubDate>
+  <language>english</language>
+  <abstract>
+    <para>Database started in 1986 with Cerambycids of the whole American Continent and extended to world wide species since 2002. It contains about 35.000 species and more than 215.000 bibliographic links including first publications, types locations, synonyms, flight period, host plants, behaviour, chorology, mimectics, parasites, phoretics and predators.</para>
+  </abstract>
+  <distribution scope="document">
+    <online>
+      <url function="information">http://titan.gbif.fr/</url>
+    </online>
+  </distribution>
+  <coverage>
+    <geographicCoverage>
+      <geographicDescription>Global</geographicDescription>
+    </geographicCoverage>
+    <taxonomicCoverage>
+      <generalTaxonomicCoverage>Longhorn beetles, timber beetles</generalTaxonomicCoverage>
+    </taxonomicCoverage>
+    </coverage>
+  <contact>
+    <individualName>
+      <givenName>Gerard</givenName>
+      <surName>Tavakilian</surName>
+      <userId>https://orcid.org/0000-0002-3310-1903</userId>
+    </individualName>
+    <electronicMailAddress>gerard.tavakilian@mnhn.fr</electronicMailAddress>
+  </contact>
+</dataset>
+
+<additionalMetadata>
+  <metadata>
+    <gbif>
+      <citation>Tavakilian, G., &amp; Chevillotte, H. (2015). Cerambycidae database. In O. Bánki, Y. Roskov, M. Döring, G. Ower, L. Vandepitte, D. Hobern, D. Remsen, P. Schalk, R. E. DeWalt, M. Keping, J. Miller, T. Orrell, R. Aalbu, R. Adlard, E. M. Adriaenssens, C. Aedo, E. Aescht, N. Akkari, P. Alfenas-Zerbini, et al., Catalogue of Life Checklist (Apr 2015). https://doi.org/10.48580/dfp3-38m</citation>
+      <resourceLogoUrl>https://github.com/Sp2000/colplus-repo/raw/master/logos/TITAN.png</resourceLogoUrl>
+    </gbif>
+    <col>
+      <version>Apr 2015</version>
+      <completeness>99</completeness>
+      <confidence>2</confidence>
+    </col>
+  </metadata>
+</additionalMetadata>
+
+</eml:eml>

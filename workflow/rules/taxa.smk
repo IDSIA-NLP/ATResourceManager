@@ -18,7 +18,7 @@ configfile: '../config/config.yaml'
 # Dummy rule to run all other rules
 rule all_taxa:
   input:
-    config['col_eol_taxa.tsv']
+    config['col_eol_taxa']
   output:
     '../results/taxa.done'
   shell:
@@ -27,7 +27,7 @@ rule all_taxa:
     """
 
 # Download latest Catalogue of Life (CoL) data files
-rule get_col:
+rule col_get_data:
   input:
     config['col_version_file']
   output:
@@ -35,30 +35,41 @@ rule get_col:
   params:
     data_dir = config['col_data_dir']
   log:
-    out = '../log/get_col.out',
-    err = '../log/get_col.err'
+    out = '../log/col_get_data.out',
+    err = '../log/col_get_data.err'
   shell:
     """
     set -x
     time (
+
+    # clear or create data directory
+    if [[ -d {params.data_dir} ]]; then
+      rm -rf {params.data_dir}/*
+    else
+      mkdir {params.data_dir}
+    fi
+
+    # download data file
     python scripts/col_download_latest_dwca.py \
-      --log ../log/col_download_latest_dwca.log \
-      --version-file {input}
+      --version-file {input} \
       --out-dir {params.data_dir}
+
+    # unzip data files
+    #cd {params.data_dir}
+    unzip {params.data_dir}/$(cat {input}) -d {params.data_dir}
     touch {output}
     ) >{log.out} 2>{log.err}
     """
 
 # Download latest Encyclopedia of Life (EOL) data files
-rule get_col:
+rule eol_get_data:
   input:
-    config['col_taxa_file'],
-    config['col_taxa_arthropoda']
+    config['eol_version_file']
   output:
-    col_taxa = config['col_taxa_file']
+    eol_taxa = config['eol_taxa_file']
   shell:
     """
-    touch {output}
+    touch {output.eol_taxa}
     """
 
 # Parse Catalogue of Life (CoL) taxa file and extract descents of Arthropoda

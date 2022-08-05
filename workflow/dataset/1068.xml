@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+        packageId="col-clb-1068"  system="http://catalogueoflife.org" scope="system"
+  xml:lang="en">
+
+
+<dataset>
+  <title>Taxapad Ichneumonoidea</title>
+  <shortName>Taxapad Ichneumonoidea</shortName>
+  <creator>
+    <individualName>
+      <givenName>Dicky Sick Ki</givenName>
+      <surName>Yu</surName>
+    </individualName>
+    <electronicMailAddress>dickyyu@gmail.com</electronicMailAddress>
+  </creator>
+    <pubDate>2009-05-04</pubDate>
+  <language>english</language>
+  <abstract>
+    <para>The Ichneumonoidea is one of the largest superfamilies of the apocritan wasps with 58,121 described species and is distributed world wide. The taxonomic, biological, morphological and distribution information of the group gleaned from over 30,000 references were organized based on scientific names and made accessible by Taxapad, a relational taxonomic database management system.</para>
+  </abstract>
+  <distribution scope="document">
+    <online>
+      <url function="information">https://web.archive.org/web/20180906195542/http%3A//www.ichneumonoidea.name</url>
+    </online>
+  </distribution>
+  <coverage>
+    <geographicCoverage>
+      <geographicDescription>Global</geographicDescription>
+    </geographicCoverage>
+    <taxonomicCoverage>
+      <generalTaxonomicCoverage>Ichneumonid and braconid wasps</generalTaxonomicCoverage>
+    </taxonomicCoverage>
+    </coverage>
+  <contact>
+    <individualName>
+      <givenName>Dicky Sick Ki</givenName>
+      <surName>Yu</surName>
+    </individualName>
+    <electronicMailAddress>dickyyu@gmail.com</electronicMailAddress>
+  </contact>
+</dataset>
+
+<additionalMetadata>
+  <metadata>
+    <gbif>
+      <citation>Yu, D. S. K. (2009). Taxapad Ichneumonoidea. In O. Bánki, Y. Roskov, M. Döring, G. Ower, L. Vandepitte, D. Hobern, D. Remsen, P. Schalk, R. E. DeWalt, M. Keping, J. Miller, T. Orrell, R. Aalbu, R. Adlard, E. M. Adriaenssens, C. Aedo, E. Aescht, N. Akkari, P. Alfenas-Zerbini, et al., Catalogue of Life Checklist (May 2009). https://doi.org/10.48580/dfp3-39v</citation>
+      <resourceLogoUrl>https://github.com/Sp2000/colplus-repo/raw/master/logos/Taxapad_Ichneumonoidea.png</resourceLogoUrl>
+    </gbif>
+    <col>
+      <version>May 2009</version>
+      <completeness>97</completeness>
+      <confidence>5</confidence>
+    </col>
+  </metadata>
+</additionalMetadata>
+
+</eml:eml>

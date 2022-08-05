@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+        packageId="col-clb-2305"  system="http://catalogueoflife.org" scope="system"
+  xml:lang="en">
+
+
+<dataset>
+  <title>Update on the Brassicaceae Species Checklist</title>
+  <shortName>Brassicaceae</shortName>
+  <creator>
+    <individualName>
+      <givenName>Ardath</givenName>
+      <surName>Francis</surName>
+    </individualName>
+    <electronicMailAddress>ardath.francis@canada.ca</electronicMailAddress>
+  </creator>
+  <associatedParty>
+    <individualName>
+      <givenName>Beatriz E.</givenName>
+      <surName>Lujan-Toro</surName>
+      <userId>https://orcid.org/0000-0003-3533-3318</userId>
+    </individualName>
+    <electronicMailAddress>bibilujan@gmail.com</electronicMailAddress>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Suzanne</givenName>
+      <surName>Warwick</surName>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>James A.</givenName>
+      <surName>Macklin</surName>
+      <userId>https://orcid.org/0000-0001-9508-1349</userId>
+    </individualName>
+    <electronicMailAddress>james.macklin@canada.ca</electronicMailAddress>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Sara L.</givenName>
+      <surName>Martin</surName>
+      <userId>https://orcid.org/0000-0003-2055-6498</userId>
+    </individualName>
+    <electronicMailAddress>sara.martin@canada.ca</electronicMailAddress>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>James A.</givenName>
+      <surName>Macklin</surName>
+      <userId>https://orcid.org/0000-0001-9508-1349</userId>
+    </individualName>
+    <electronicMailAddress>james.macklin@canada.ca</electronicMailAddress>
+    <role>editor</role>
+  </associatedParty>
+  <associatedParty>
+    <address>
+      <country>Canada</country>
+    </address>
+    <role>contributor</role>
+  </associatedParty>
+    <pubDate>2021-01-19</pubDate>
+  <language>english</language>
+  <abstract>
+    <para>Here we present a revised species checklist for the Brassicaceae updated from Warwick SI, Francis, A., Al-Shehbaz IA (2006). Brassicaceae: Species checklist and database on CD-ROM. Plant Systematics and Evolution 259: 249─25. This update of the checklist was initiated on the basis of recent taxonomic and molecular studies on the Brassicaceae that have resulted in new species names, combinations and associated synonyms. New data has been added indicating tribal affiliations within the family and where type specimens have been designated. In addition, information from many early publications was checked and added to the database. The database now includes information on 14,980 taxa, 4,634 of which are currently accepted and divided into 340 genera and 52 tribes. A selected bibliography of recent publications on the Brassicaceae is included.</para>
+  </abstract>
+  <intellectualRights>
+    <para><ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC BY) 4.0</citetitle></ulink></para>
+  </intellectualRights>
+  <coverage>
+    <geographicCoverage>
+      <geographicDescription>Global</geographicDescription>
+    </geographicCoverage>
+    <taxonomicCoverage>
+      <generalTaxonomicCoverage>Mustard or cabbage family</generalTaxonomicCoverage>
+    </taxonomicCoverage>
+    </coverage>
+  <contact>
+    <individualName>
+      <givenName>Beatriz E..</givenName>
+      <surName>Lujan-Toro</surName>
+      <userId>https://orcid.org/0000-0003-3533-3318</userId>
+    </individualName>
+    <electronicMailAddress>bibilujan@gmail.com</electronicMailAddress>
+  </contact>
+</dataset>
+
+<additionalMetadata>
+  <metadata>
+    <gbif>
+      <citation>Francis, A., Lujan-Toro, B. E., Warwick, S., Macklin, J. A., &amp; Martin, S. L. (2021). Update on the Brassicaceae Species Checklist. In O. Bánki, Y. Roskov, M. Döring, G. Ower, L. Vandepitte, D. Hobern, D. Remsen, P. Schalk, R. E. DeWalt, M. Keping, J. Miller, T. Orrell, R. Aalbu, R. Adlard, E. M. Adriaenssens, C. Aedo, E. Aescht, N. Akkari, P. Alfenas-Zerbini, et al., Catalogue of Life Checklist. https://doi.org/10.48580/dfp3-4rj</citation>
+    </gbif>
+    <col>
+      <completeness>100</completeness>
+      <confidence>5</confidence>
+    </col>
+  </metadata>
+</additionalMetadata>
+
+</eml:eml>

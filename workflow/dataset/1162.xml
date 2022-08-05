@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+        packageId="col-clb-1162"  system="http://catalogueoflife.org" scope="system"
+  xml:lang="en">
+
+
+<dataset>
+  <title>World Wide Wattle</title>
+  <shortName>WWW</shortName>
+  <creator>
+    <individualName>
+      <givenName>Bruce</givenName>
+      <surName>Maslin</surName>
+      <userId>https://orcid.org/0000-0002-3039-0973</userId>
+    </individualName>
+    <address>
+      <city>Perth</city>
+      <country>Australia</country>
+    </address>
+    <electronicMailAddress>bruce.maslin@outlook.com</electronicMailAddress>
+  </creator>
+    <pubDate>2018-01-22</pubDate>
+  <language>english</language>
+  <abstract>
+    <para>Includes all currently accepted names in Acacia s.l. together with commonly used synonyms (mostly basionyms). Full synonymy is not included yet. Distribution information is provided, but apart from Australia, these data are of a general nature.</para>
+  </abstract>
+  <distribution scope="document">
+    <online>
+      <url function="information">http://www.worldwidewattle.com</url>
+    </online>
+  </distribution>
+  <coverage>
+    <geographicCoverage>
+      <geographicDescription>Global</geographicDescription>
+    </geographicCoverage>
+    <taxonomicCoverage>
+      <generalTaxonomicCoverage>Wattles, thorntrees, acacias</generalTaxonomicCoverage>
+    </taxonomicCoverage>
+    </coverage>
+  <contact>
+    <individualName>
+      <givenName>Bruce</givenName>
+      <surName>Maslin</surName>
+      <userId>https://orcid.org/0000-0002-3039-0973</userId>
+    </individualName>
+    <electronicMailAddress>bruce.maslin@outlook.com</electronicMailAddress>
+  </contact>
+</dataset>
+
+<additionalMetadata>
+  <metadata>
+    <gbif>
+      <citation>Maslin, B. (2018). World Wide Wattle. In O. Bánki, Y. Roskov, M. Döring, G. Ower, L. Vandepitte, D. Hobern, D. Remsen, P. Schalk, R. E. DeWalt, M. Keping, J. Miller, T. Orrell, R. Aalbu, R. Adlard, E. M. Adriaenssens, C. Aedo, E. Aescht, N. Akkari, P. Alfenas-Zerbini, et al., Catalogue of Life Checklist (2, Jan 2018). https://doi.org/10.48580/dfp3-3f4</citation>
+      <resourceLogoUrl>https://github.com/Sp2000/colplus-repo/raw/master/logos/WWW.png</resourceLogoUrl>
+    </gbif>
+    <col>
+      <version>2, Jan 2018</version>
+      <completeness>100</completeness>
+      <confidence>5</confidence>
+    </col>
+  </metadata>
+</additionalMetadata>
+
+</eml:eml>

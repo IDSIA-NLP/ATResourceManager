@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+        packageId="col-clb-1039"  system="http://catalogueoflife.org" scope="system"
+  xml:lang="en">
+
+
+<dataset>
+  <title>Electronic Catalogue of Weevil names (Curculionoidea)</title>
+  <shortName>WTaxa</shortName>
+  <creator>
+    <individualName>
+      <givenName>Miguel A.</givenName>
+      <surName>Alonso-Zarazaga</surName>
+      <userId>https://orcid.org/0000-0002-6991-0980</userId>
+    </individualName>
+    <address>
+      <city>Madrid</city>
+      <country>Spain</country>
+    </address>
+    <electronicMailAddress>mcnaz39@mncn.csic.es</electronicMailAddress>
+  </creator>
+  <associatedParty>
+    <individualName>
+      <givenName>Chris HC</givenName>
+      <surName>Lyal</surName>
+      <userId>https://orcid.org/0000-0003-3647-6222</userId>
+    </individualName>
+    <address>
+      <city>London</city>
+      <country>UnitedKingdom</country>
+    </address>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>M.</givenName>
+      <surName>Sánchez-Ruiz</surName>
+    </individualName>
+    <role>editor</role>
+  </associatedParty>
+    <pubDate>2021-04-04</pubDate>
+  <language>english</language>
+  <abstract>
+    <para>The Electronic Catalogue of Weevil Names is a project in progress. Ultimately it will contain all family, genus and species-group names in the Curculionoidea, a group of beetles with about 60,000 described species which contains many important insects, including the bark beetles (Scolytinae) and powder-post beetles (Platypodinae). Currently the database contains all generic and family-group names, in their current taxonomic position, and based on Alonso-Zarazaga &amp; Lyal&apos;s (1999, 2002, 2009) and Lyal &amp; Alonso-Zarazaga&apos;s (2005) catalogue of weevil family and genus names. Species-group names are now added up to the end of 2014. These, and their subsequent combinations, have been checked against original publication and current placement for most names firstly published before 1801. All these names have been adequately qualified under the provisions of the International Code of Zoological Nomenclature, 4th Edition. Many duplicate names appearing in previous versions have been eliminated. M. Sánchez-Ruiz is acknowledged as technical editor for WTaxa database and data export for the Catalogue of Life.</para>
+  </abstract>
+  <intellectualRights>
+    <para><ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC BY) 4.0</citetitle></ulink></para>
+  </intellectualRights>
+  <distribution scope="document">
+    <online>
+      <url function="information">http://wtaxa.csic.es</url>
+    </online>
+  </distribution>
+  <coverage>
+    <geographicCoverage>
+      <geographicDescription>Global</geographicDescription>
+    </geographicCoverage>
+    <taxonomicCoverage>
+      <generalTaxonomicCoverage>Weevils</generalTaxonomicCoverage>
+    </taxonomicCoverage>
+    </coverage>
+  <contact>
+    <individualName>
+      <givenName>Miguel A</givenName>
+      <surName>Alonso-Zarazaga</surName>
+      <userId>https://orcid.org/0000-0002-6991-0980</userId>
+    </individualName>
+    <electronicMailAddress>mcnaz39@mncn.csic.es</electronicMailAddress>
+  </contact>
+</dataset>
+
+<additionalMetadata>
+  <metadata>
+    <gbif>
+      <citation>Alonso-Zarazaga, M. A., Lyal, C. H., &amp; Sánchez-Ruiz, M. (2021). Electronic Catalogue of Weevil names (Curculionoidea). In O. Bánki, Y. Roskov, M. Döring, G. Ower, L. Vandepitte, D. Hobern, D. Remsen, P. Schalk, R. E. DeWalt, M. Keping, J. Miller, T. Orrell, R. Aalbu, R. Adlard, E. M. Adriaenssens, C. Aedo, E. Aescht, N. Akkari, P. Alfenas-Zerbini, et al., Catalogue of Life Checklist (Version 2021-04). https://doi.org/10.48580/dfp3-38v</citation>
+      <resourceLogoUrl>https://github.com/Sp2000/colplus-repo/raw/master/logos/WTaxa.png</resourceLogoUrl>
+    </gbif>
+    <col>
+      <version>2021-04</version>
+      <completeness>87</completeness>
+      <confidence>2</confidence>
+    </col>
+  </metadata>
+</additionalMetadata>
+
+</eml:eml>

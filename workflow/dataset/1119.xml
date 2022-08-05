@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+        packageId="col-clb-1119"  system="http://catalogueoflife.org" scope="system"
+  xml:lang="en">
+
+
+<dataset>
+  <title>World checklist of freshwater Nematomorpha species</title>
+  <shortName>FADA Nematomorpha</shortName>
+  <creator>
+    <individualName>
+      <givenName>A.</givenName>
+      <surName>Schmidt-Rhaesa</surName>
+    </individualName>
+  </creator>
+  <associatedParty>
+    <address>
+      <city>Hamburg</city>
+      <country>Germany</country>
+    </address>
+    <role>contributor</role>
+  </associatedParty>
+    <pubDate>2010-12-11</pubDate>
+  <language>english</language>
+  <abstract>
+    <para>The checklist includes a list of all currently known and accepted species of freshwater hairworms (Nematomorpha), assembled in the Freshwater Animal Diversity Assessment (FADA) project. Nematomorpha are parasites of terrestrial (in few cases aquatic) insects. For sexual reproduction, they leave their host by driving it into water and emerging there. Five species are marine, 356 species live in freshwater. Horsehair worms are found in many different aquatic habitats throughout the world.</para>
+  </abstract>
+  <intellectualRights>
+    <para><ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC BY) 4.0</citetitle></ulink></para>
+  </intellectualRights>
+  <distribution scope="document">
+    <online>
+      <url function="information">https://web.archive.org/web/20180320182846/http%3A//fada.biodiversity.be/group/show/7</url>
+    </online>
+  </distribution>
+  <coverage>
+    <geographicCoverage>
+      <geographicDescription>Global</geographicDescription>
+    </geographicCoverage>
+    <taxonomicCoverage>
+      <generalTaxonomicCoverage>Freshwater hairworms</generalTaxonomicCoverage>
+    </taxonomicCoverage>
+    </coverage>
+  <contact>
+    <individualName>
+      <givenName>A</givenName>
+      <surName>Schmidt-Rhaesa</surName>
+    </individualName>
+  </contact>
+</dataset>
+
+<additionalMetadata>
+  <metadata>
+    <gbif>
+      <citation>Schmidt-Rhaesa, A. (2010). World checklist of freshwater Nematomorpha species. In O. Bánki, Y. Roskov, M. Döring, G. Ower, L. Vandepitte, D. Hobern, D. Remsen, P. Schalk, R. E. DeWalt, M. Keping, J. Miller, T. Orrell, R. Aalbu, R. Adlard, E. M. Adriaenssens, C. Aedo, E. Aescht, N. Akkari, P. Alfenas-Zerbini, et al., Catalogue of Life Checklist (Dec 2010). https://doi.org/10.48580/dfp3-3cm</citation>
+      <resourceLogoUrl>https://github.com/Sp2000/colplus-repo/raw/master/logos/FADA_Nematomorpha.png</resourceLogoUrl>
+    </gbif>
+    <col>
+      <version>Dec 2010</version>
+      <completeness>100</completeness>
+      <confidence>5</confidence>
+    </col>
+  </metadata>
+</additionalMetadata>
+
+</eml:eml>

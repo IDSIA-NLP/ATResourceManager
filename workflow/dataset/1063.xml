@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+        packageId="col-clb-1063"  system="http://catalogueoflife.org" scope="system"
+  xml:lang="en">
+
+
+<dataset>
+  <title>Mites GSD Ologamasidae</title>
+  <shortName>Mites GSD Ologamasidae</shortName>
+  <creator>
+    <individualName>
+      <givenName>R.C.</givenName>
+      <surName>Castilho</surName>
+    </individualName>
+  </creator>
+  <associatedParty>
+    <individualName>
+      <givenName>E.S.</givenName>
+      <surName>Silva</surName>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>G.J.</givenName>
+      <surName>de Moraes</surName>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <address>
+      <city>São Paulo</city>
+      <country>Brazil</country>
+    </address>
+    <role>contributor</role>
+  </associatedParty>
+    <pubDate>2009-10-15</pubDate>
+  <language>english</language>
+  <abstract>
+    <para>Ologamasidae mites are cosmopolitan, edaphic and free-living. This data base evolved as part of the Doctorate dissertation work conducted by the second author and submitted to the Brazilian “Escola Superior de Agricultura Luiz de Queiroz (ESALQ), Universidade de São Paulo (USP)”. It provides information on the 446 species considered to belong to this family.</para>
+  </abstract>
+  <coverage>
+    <geographicCoverage>
+      <geographicDescription>Global</geographicDescription>
+    </geographicCoverage>
+    <taxonomicCoverage>
+      <generalTaxonomicCoverage>Ologamasid mites</generalTaxonomicCoverage>
+    </taxonomicCoverage>
+    </coverage>
+  <contact>
+    <individualName>
+      <givenName>Gilberto</givenName>
+      <surName>de Moraes</surName>
+    </individualName>
+  </contact>
+</dataset>
+
+<additionalMetadata>
+  <metadata>
+    <gbif>
+      <citation>Castilho, R. C., Silva, E. S., &amp; de Moraes, G. J. (2009). Mites GSD Ologamasidae. In O. Bánki, Y. Roskov, M. Döring, G. Ower, L. Vandepitte, D. Hobern, D. Remsen, P. Schalk, R. E. DeWalt, M. Keping, J. Miller, T. Orrell, R. Aalbu, R. Adlard, E. M. Adriaenssens, C. Aedo, E. Aescht, N. Akkari, P. Alfenas-Zerbini, et al., Catalogue of Life Checklist (Oct 2009). https://doi.org/10.48580/dfp3-39p</citation>
+      <resourceLogoUrl>https://github.com/Sp2000/colplus-repo/raw/master/logos/OlogamasidBase.png</resourceLogoUrl>
+    </gbif>
+    <col>
+      <version>Oct 2009</version>
+      <completeness>99</completeness>
+      <confidence>5</confidence>
+    </col>
+  </metadata>
+</additionalMetadata>
+
+</eml:eml>

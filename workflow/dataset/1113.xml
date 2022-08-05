@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+        packageId="col-clb-1113"  system="http://catalogueoflife.org" scope="system"
+  xml:lang="en">
+
+
+<dataset>
+  <title>The World Ciliate Catalog</title>
+  <shortName>CilCat</shortName>
+  <creator>
+    <individualName>
+      <givenName>E.</givenName>
+      <surName>Aescht</surName>
+    </individualName>
+  </creator>
+  <associatedParty>
+    <address>
+      <city>Linz</city>
+      <country>Austria</country>
+    </address>
+    <role>contributor</role>
+  </associatedParty>
+    <pubDate>2012-01-16</pubDate>
+  <language>english</language>
+  <abstract>
+    <para>The phylum embraces heterotrophic species with a heterokaryotic nuclear apparatus, multiple cilia over body, pellicular alveoli, and always an infraciliature (highly developed cortical system with kinetid as central feature). Ciliates play a significant role in food chains and nutrient recycling; most taxa are found free-living in marine or freshwater habitats, while about one third are symbiotic forms, less then 10 percent are possibly endemic in soils or known only as fossils, respectively.</para>
+  </abstract>
+  <distribution scope="document">
+    <online>
+      <url function="information">http://www.zobodat.at</url>
+    </online>
+  </distribution>
+  <coverage>
+    <geographicCoverage>
+      <geographicDescription>Global</geographicDescription>
+    </geographicCoverage>
+    <taxonomicCoverage>
+      <generalTaxonomicCoverage>Ciliates</generalTaxonomicCoverage>
+    </taxonomicCoverage>
+    </coverage>
+  <contact>
+    <individualName>
+      <givenName>M</givenName>
+      <surName>Malicky</surName>
+    </individualName>
+  </contact>
+</dataset>
+
+<additionalMetadata>
+  <metadata>
+    <gbif>
+      <citation>Aescht, E. (2012). The World Ciliate Catalog. In O. Bánki, Y. Roskov, M. Döring, G. Ower, L. Vandepitte, D. Hobern, D. Remsen, P. Schalk, R. E. DeWalt, M. Keping, J. Miller, T. Orrell, R. Aalbu, R. Adlard, E. M. Adriaenssens, C. Aedo, E. Aescht, N. Akkari, P. Alfenas-Zerbini, et al., Catalogue of Life Checklist (4.0, Jan 2012). https://doi.org/10.48580/dfp3-3cf</citation>
+      <resourceLogoUrl>https://github.com/Sp2000/colplus-repo/raw/master/logos/CilCat.png</resourceLogoUrl>
+    </gbif>
+    <col>
+      <version>4.0, Jan 2012</version>
+      <completeness>60</completeness>
+      <confidence>4</confidence>
+    </col>
+  </metadata>
+</additionalMetadata>
+
+</eml:eml>

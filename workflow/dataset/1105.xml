@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+        packageId="col-clb-1105"  system="http://catalogueoflife.org" scope="system"
+  xml:lang="en">
+
+
+<dataset>
+  <title>World List of Leptostraca</title>
+  <shortName>WoRMS Leptostraca</shortName>
+  <associatedParty>
+    <individualName>
+      <givenName>Jan</givenName>
+      <surName>Mees</surName>
+      <userId>https://orcid.org/0000-0001-5709-3816</userId>
+    </individualName>
+    <electronicMailAddress>jan.mees@vliz.be</electronicMailAddress>
+    <role>editor</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Genefor</givenName>
+      <surName>Walker-Smith</surName>
+    </individualName>
+    <electronicMailAddress>gwalker@museum.vic.gov.au</electronicMailAddress>
+    <role>editor</role>
+  </associatedParty>
+  <associatedParty>
+    <address>
+      <country>Belgium</country>
+    </address>
+    <role>contributor</role>
+  </associatedParty>
+  <associatedParty>
+    <address>
+      <country>Australia</country>
+    </address>
+    <role>contributor</role>
+  </associatedParty>
+    <pubDate>2022-07-01</pubDate>
+  <language>english</language>
+  <abstract>
+    <para>This global marine species list is part of the World Register of Marine Species database, which aims to provide the most authoritative list of names of all marine species globally. Data have been contributed to the Catalogue of Life via the WoRMS, hosted by the Flanders Marine Institute (VLIZ).</para>
+  </abstract>
+  <intellectualRights>
+    <para><ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC BY) 4.0</citetitle></ulink></para>
+  </intellectualRights>
+  <distribution scope="document">
+    <online>
+      <url function="information">https://www.marinespecies.org</url>
+    </online>
+  </distribution>
+  <coverage>
+    <geographicCoverage>
+      <geographicDescription>Global</geographicDescription>
+    </geographicCoverage>
+    <taxonomicCoverage>
+      <generalTaxonomicCoverage></generalTaxonomicCoverage>
+    </taxonomicCoverage>
+    </coverage>
+  <contact>
+    <individualName>
+      <givenName>Jan</givenName>
+      <surName>Mees</surName>
+    </individualName>
+    <electronicMailAddress>jan.mees@vliz.be</electronicMailAddress>
+  </contact>
+</dataset>
+
+<additionalMetadata>
+  <metadata>
+    <gbif>
+      <citation>Mees, J., &amp; Walker-Smith, G. (2022). World List of Leptostraca. In O. Bánki, Y. Roskov, M. Döring, G. Ower, L. Vandepitte, D. Hobern, D. Remsen, P. Schalk, R. E. DeWalt, M. Keping, J. Miller, T. Orrell, R. Aalbu, R. Adlard, E. M. Adriaenssens, C. Aedo, E. Aescht, N. Akkari, P. Alfenas-Zerbini, et al., Catalogue of Life Checklist (ver. (07/2022)). https://doi.org/10.48580/dfpx-3c5</citation>
+      <resourceLogoUrl>https://www.marinespecies.org/documents/WoRMS%20branding/WoRMS_logo_blue_negative.png</resourceLogoUrl>
+    </gbif>
+    <col>
+      <version>ver. (07/2022)</version>
+      <completeness>98</completeness>
+      <confidence>5</confidence>
+    </col>
+  </metadata>
+</additionalMetadata>
+
+</eml:eml>

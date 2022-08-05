@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+        packageId="col-clb-1014"  system="http://catalogueoflife.org" scope="system"
+  xml:lang="en">
+
+
+<dataset>
+  <title>ICTV Master Species List (MSL)</title>
+  <shortName>ICTV MSL</shortName>
+  <creator>
+  </creator>
+  <associatedParty>
+    <individualName>
+      <givenName>Peter J.</givenName>
+      <surName>Walker</surName>
+      <userId>https://orcid.org/0000-0003-1851-642X</userId>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Stuart G.</givenName>
+      <surName>Siddell</surName>
+      <userId>https://orcid.org/0000-0002-8702-7868</userId>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Elliot J.</givenName>
+      <surName>Lefkowitz</surName>
+      <userId>https://orcid.org/0000-0002-4748-4925</userId>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Arcady R.</givenName>
+      <surName>Mushegian</surName>
+      <userId>https://orcid.org/0000-0002-6809-9225</userId>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Evelien M.</givenName>
+      <surName>Adriaenssens</surName>
+      <userId>https://orcid.org/0000-0003-4826-5406</userId>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Poliane</givenName>
+      <surName>Alfenas-Zerbini</surName>
+      <userId>https://orcid.org/0000-0002-8203-5244</userId>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Andrew J.</givenName>
+      <surName>Davison</surName>
+      <userId>https://orcid.org/0000-0002-4991-9128</userId>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Donald M.</givenName>
+      <surName>Dempsey</surName>
+      <userId>https://orcid.org/0000-0002-2200-5828</userId>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Bas E.</givenName>
+      <surName>Dutilh</surName>
+      <userId>https://orcid.org/0000-0003-2329-7890</userId>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>María Laura</givenName>
+      <surName>García</surName>
+      <userId>https://orcid.org/0000-0001-6468-6943</userId>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Balázs</givenName>
+      <surName>Harrach</surName>
+      <userId>https://orcid.org/0000-0002-1410-6469</userId>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Robert L.</givenName>
+      <surName>Harrison</surName>
+      <userId>https://orcid.org/0000-0002-8348-3874</userId>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>R. Curtis</givenName>
+      <surName>Hendrickson</surName>
+      <userId>https://orcid.org/0000-0001-6986-4630</userId>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Sandra</givenName>
+      <surName>Junglen</surName>
+      <userId>https://orcid.org/0000-0002-3799-6011</userId>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Nick J.</givenName>
+      <surName>Knowles</surName>
+      <userId>https://orcid.org/0000-0002-6696-1344</userId>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Mart</givenName>
+      <surName>Krupovic</surName>
+      <userId>https://orcid.org/0000-0001-5486-0098</userId>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Jens H.</givenName>
+      <surName>Kuhn</surName>
+      <userId>https://orcid.org/0000-0002-7800-6045</userId>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Amy J.</givenName>
+      <surName>Lambert</surName>
+      <userId>https://orcid.org/0000-0002-7571-3529</userId>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Małgorzata</givenName>
+      <surName>Łobocka</surName>
+      <userId>https://orcid.org/0000-0003-0679-5193</userId>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Max L.</givenName>
+      <surName>Nibert</surName>
+      <userId>https://orcid.org/0000-0002-9703-9328</userId>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Hanna M.</givenName>
+      <surName>Oksanen</surName>
+      <userId>https://orcid.org/0000-0003-3047-8294</userId>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Richard J.</givenName>
+      <surName>Orton</surName>
+      <userId>https://orcid.org/0000-0002-3389-4325</userId>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>David L.</givenName>
+      <surName>Robertson</surName>
+      <userId>https://orcid.org/0000-0001-6338-0221</userId>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Luisa</givenName>
+      <surName>Rubino</surName>
+      <userId>https://orcid.org/0000-0002-2073-2415</userId>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Sead</givenName>
+      <surName>Sabanadzovic</surName>
+      <userId>https://orcid.org/0000-0002-2995-2633</userId>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Peter</givenName>
+      <surName>Simmonds</surName>
+      <userId>https://orcid.org/0000-0002-7964-4700</userId>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Donald B.</givenName>
+      <surName>Smith</surName>
+      <userId>https://orcid.org/0000-0002-2876-5318</userId>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Nobuhiro</givenName>
+      <surName>Suzuki</surName>
+      <userId>https://orcid.org/0000-0003-0097-9856</userId>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Koenraad</givenName>
+      <surName>Van Dooerslaer</surName>
+      <userId>https://orcid.org/0000-0002-2985-0733</userId>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Anne-Mieke</givenName>
+      <surName>Vandamme</surName>
+      <userId>https://orcid.org/0000-0002-6594-2766</userId>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Arvind</givenName>
+      <surName>Varsani</surName>
+      <userId>https://orcid.org/0000-0003-4111-2415</userId>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Francisco Murilo</givenName>
+      <surName>Zerbini</surName>
+      <userId>https://orcid.org/0000-0001-8617-0200</userId>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+    <pubDate>2021-05-18</pubDate>
+  <language>english</language>
+  <abstract>
+    <para>This new release contains taxonomic changes approved by the ICTV Executive Committee in October, 2020 and ratified by the ICTV Membership in March, 2021. 
+Official taxonomy proposals documenting these and all other taxonomic changes approved by the ICTV since the publication of the ICTV 8th Report 
+can be found at https://ictv.global/Official_ICTV_Proposals.htm.
+
+A notable change approved this year is the adoption of a uniform binomial format for naming of virus species. 
+Previously, virologists have not been required to follow the convention of species naming that has been established in other fields of biology, 
+whereby the species name consists of the genus name separated by a space from a species epithet that identifies the species within that genus. 
+Over the last several decades, the case for a standardized nomenclature for virus species has been acknowledged by the ICTV and by many other virologists, 
+but a uniform format of the species names had not been adopted (see references for an incomplete but relatively representative account of the opinion spectrum).
+The case for a binomial nomenclature was presented by the ICTV Executive Committee in 2018 and 2020, 
+and the advantages and disadvantages of different naming formats within the binomial framework were discussed. 
+The EC then invited comments on this position from the virology community. 
+Comments from ICTV SGs were also solicited and received by the EC SCs. 
+Debates of the merits of various forms of binomial nomenclature took place in social media and in journal publications. 
+Taking these discussions and comments into account, ICTV ratified the adoption of a standardized binomial system, 
+which may follow either Latinized or free form formats. 
+The ICTV SGs are now charged with conversion of all existing virus species names to the new binomial form; t
+he process has started already and is expected to be completed in time to be considered by an EC meeting planned for 2023. 
+It is worth emphasizing that this system concerns only the names of virus species but does not affect the names of viruses.
+
+Another general proposal was the abolition of the requirement for a type species—a designated nomenclatural type for each genus. 
+The ICTV noted that the requirement for type species in virus taxonomy was largely historical. 
+Most importantly, the ICVCN defines virus species as follows: 
+“A species is a monophyletic group of viruses whose properties can be distinguished from those of other species by multiple criteria&quot;, 
+suggesting that the emphasis on “defining” a genus has been shifting from the properties of any particular member to the closeness of molecular 
+and ecological relationships between all genus members. 
+The ICTV concluded that the concept of a type species no longer serves a clear and useful purpose in virology and voted to abolish it.
+
+One more proposal has clarified the remit of the ICTV. 
+In addition to viruses, ICTV has been classifying viroids and virus satellites, though none of these mobile genetic elements, 
+including viruses themselves, have been operationally defined, leaving the limits of the ICTV scope unclear. 
+This has been clarified now by giving operational definitions of viruses sensu stricto, viriforms, viroids, and satellites. 
+These entities together constitute the virosphere and are within the remit of the ICTV responsibilities for their classification, taxonomy and nomenclature. 
+The historical name of the organization—the International Committee on Taxonomy of Viruses—remains unchanged.</para>
+  </abstract>
+  <intellectualRights>
+    <para><ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC BY) 4.0</citetitle></ulink></para>
+  </intellectualRights>
+  <distribution scope="document">
+    <online>
+      <url function="information">https://talk.ictvonline.org/taxonomy/w/ictv-taxonomy</url>
+    </online>
+  </distribution>
+  <coverage>
+    <geographicCoverage>
+      <geographicDescription>global</geographicDescription>
+    </geographicCoverage>
+    <taxonomicCoverage>
+      <generalTaxonomicCoverage>Viruses</generalTaxonomicCoverage>
+    </taxonomicCoverage>
+    </coverage>
+  <contact>
+    <electronicMailAddress>info@ictvonline.org</electronicMailAddress>
+  </contact>
+</dataset>
+
+<additionalMetadata>
+  <metadata>
+    <gbif>
+      <citation>International Committee on Taxonomy of Viruses (ICTV), Walker, P. J., Siddell, S. G., Lefkowitz, E. J., Mushegian, A. R., Adriaenssens, E. M., Alfenas-Zerbini, P., Davison, A. J., Dempsey, D. M., Dutilh, B. E., García, M. L., Harrach, B., Harrison, R. L., Hendrickson, R. C., Junglen, S., Knowles, N. J., Krupovic, M., Kuhn, J. H., Lambert, A. J., et al. (2021). ICTV Master Species List (MSL). In O. Bánki, Y. Roskov, M. Döring, G. Ower, L. Vandepitte, D. Hobern, D. Remsen, P. Schalk, R. E. DeWalt, M. Keping, J. Miller, T. Orrell, R. Aalbu, R. Adlard, E. M. Adriaenssens, C. Aedo, E. Aescht, N. Akkari, P. Alfenas-Zerbini, et al., Catalogue of Life Checklist (2020.v1). https://doi.org/10.48580/dfp3-37z</citation>
+      <resourceLogoUrl>https://raw.githubusercontent.com/mdoering/checklist_builder/master/src/main/resources/ictv/ictv-logo.png</resourceLogoUrl>
+    </gbif>
+    <col>
+      <version>2020.v1</version>
+      <completeness>100</completeness>
+      <confidence>5</confidence>
+    </col>
+  </metadata>
+</additionalMetadata>
+
+</eml:eml>

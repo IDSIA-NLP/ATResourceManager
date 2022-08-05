@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+        packageId="col-clb-1019"  system="http://catalogueoflife.org" scope="system"
+  xml:lang="en">
+
+
+<dataset>
+  <title>Moss TROPICOS Database</title>
+  <shortName>MOST</shortName>
+  <creator>
+    <individualName>
+      <givenName>Marshall R</givenName>
+      <surName>Crosby</surName>
+    </individualName>
+    <address>
+      <city>St. Louis</city>
+      <country>UnitedStates</country>
+    </address>
+  </creator>
+  <associatedParty>
+    <individualName>
+      <givenName>Robert E</givenName>
+      <surName>Magill</surName>
+    </individualName>
+    <address>
+      <city>St. Louis</city>
+      <country>UnitedStates</country>
+    </address>
+    <role>author</role>
+  </associatedParty>
+    <pubDate>2004-07-19</pubDate>
+  <language>english</language>
+  <abstract>
+    <para>The World Checklist of Mosses (W3MOST) provides current information on bryophyte species from the TROPICOS MOST database compiled by the Index of Mosses project, at the Missouri Botanical Garden. This database extraction, unlike the Index of Mosses, includes taxonomic opinions of numerous authors. All the known species of mosses are included.</para>
+  </abstract>
+  <intellectualRights>
+    <para><ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC BY) 4.0</citetitle></ulink></para>
+  </intellectualRights>
+  <distribution scope="document">
+    <online>
+      <url function="information">http://www.mobot.org/mobot/tropicos/most/checklist.shtml</url>
+    </online>
+  </distribution>
+  <coverage>
+    <geographicCoverage>
+      <geographicDescription>Global</geographicDescription>
+    </geographicCoverage>
+    <taxonomicCoverage>
+      <generalTaxonomicCoverage>Mosses</generalTaxonomicCoverage>
+    </taxonomicCoverage>
+    </coverage>
+  <contact>
+    <individualName>
+      <givenName>John</givenName>
+      <surName>Brinda</surName>
+    </individualName>
+    <address>
+      <city>St. Louis</city>
+      <country>UnitedStates</country>
+    </address>
+    <electronicMailAddress>john.brinda@mobot.org</electronicMailAddress>
+  </contact>
+</dataset>
+
+<additionalMetadata>
+  <metadata>
+    <gbif>
+      <citation>Crosby, M. R., &amp; Magill, R. E. (2004). Moss TROPICOS Database. In O. Bánki, Y. Roskov, M. Döring, G. Ower, L. Vandepitte, D. Hobern, D. Remsen, P. Schalk, R. E. DeWalt, M. Keping, J. Miller, T. Orrell, R. Aalbu, R. Adlard, E. M. Adriaenssens, C. Aedo, E. Aescht, N. Akkari, P. Alfenas-Zerbini, et al., Catalogue of Life Checklist (1, Jul 2004). https://doi.org/10.48580/dfp3-386</citation>
+      <resourceLogoUrl>https://github.com/Sp2000/colplus-repo/raw/master/logos/MOST.png</resourceLogoUrl>
+    </gbif>
+    <col>
+      <version>1, Jul 2004</version>
+      <completeness>95</completeness>
+      <confidence>4</confidence>
+    </col>
+  </metadata>
+</additionalMetadata>
+
+</eml:eml>

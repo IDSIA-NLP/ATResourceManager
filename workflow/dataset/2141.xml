@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+        packageId="col-clb-2141"  system="http://catalogueoflife.org" scope="system"
+  xml:lang="en">
+
+
+<dataset>
+  <title>Hymenoptera Information System, Pompilidae of the World</title>
+  <shortName>HymIS Pompilidae</shortName>
+  <creator>
+    <individualName>
+      <givenName>A.S.</givenName>
+      <surName>Kroupa</surName>
+    </individualName>
+  </creator>
+  <associatedParty>
+    <individualName>
+      <givenName>C.</givenName>
+      <surName>Schmid-Egger</surName>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+    <pubDate>2019-09-04</pubDate>
+  <language>english</language>
+  <abstract>
+    <para>The HymIS database provides the taxonomic backbone for a global information system on bees and wasps. For the family Pompilidae 4785 valid taxa and 8553 synonyms are available.</para>
+  </abstract>
+  <intellectualRights>
+    <para><ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC BY) 4.0</citetitle></ulink></para>
+  </intellectualRights>
+  <distribution scope="document">
+    <online>
+      <url function="information">http://www.hymis.net/</url>
+    </online>
+  </distribution>
+  <coverage>
+    <geographicCoverage>
+      <geographicDescription>Global</geographicDescription>
+    </geographicCoverage>
+    <taxonomicCoverage>
+      <generalTaxonomicCoverage>Spider wasps</generalTaxonomicCoverage>
+    </taxonomicCoverage>
+    </coverage>
+  <contact>
+    <individualName>
+      <givenName>A.S.</givenName>
+      <surName>Kroupa</surName>
+    </individualName>
+  </contact>
+</dataset>
+
+<additionalMetadata>
+  <metadata>
+    <gbif>
+      <citation>Kroupa, A. S., &amp; Schmid-Egger, C. (2019). Hymenoptera Information System, Pompilidae of the World. In O. Bánki, Y. Roskov, M. Döring, G. Ower, L. Vandepitte, D. Hobern, D. Remsen, P. Schalk, R. E. DeWalt, M. Keping, J. Miller, T. Orrell, R. Aalbu, R. Adlard, E. M. Adriaenssens, C. Aedo, E. Aescht, N. Akkari, P. Alfenas-Zerbini, et al., Catalogue of Life Checklist (Version 2019-09). https://doi.org/10.48580/dfp3-4kv</citation>
+    </gbif>
+    <col>
+      <version>2019-09</version>
+      <completeness>100</completeness>
+      <confidence>5</confidence>
+    </col>
+  </metadata>
+</additionalMetadata>
+
+</eml:eml>

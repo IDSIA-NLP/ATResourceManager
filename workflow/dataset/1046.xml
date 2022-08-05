@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+        packageId="col-clb-1046"  system="http://catalogueoflife.org" scope="system"
+  xml:lang="en">
+
+
+<dataset>
+  <title>Global Butterfly Information System</title>
+  <shortName>GloBIS (GART)</shortName>
+  <associatedParty>
+    <individualName>
+      <givenName>C.</givenName>
+      <surName>Häuser</surName>
+    </individualName>
+    <role>editor</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>J.</givenName>
+      <surName>Holstein</surName>
+    </individualName>
+    <role>editor</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>A.S.</givenName>
+      <surName>Kroupa</surName>
+    </individualName>
+    <role>editor</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>A.</givenName>
+      <surName>Steiner</surName>
+    </individualName>
+    <role>editor</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>M.</givenName>
+      <surName>Turiault</surName>
+    </individualName>
+    <role>editor</role>
+  </associatedParty>
+  <associatedParty>
+    <address>
+      <city>Berlin</city>
+    </address>
+    <role>contributor</role>
+  </associatedParty>
+    <pubDate>2013-09-01</pubDate>
+  <language>english</language>
+  <abstract>
+    <para>The GloBIS/GART database provides the taxonomic backbone for a global information system on butterflies. In addition to the data presented in the Catalogue of Life, the original GloBIS/GART database provides information about the type material such as type locality, status and current location of the type specimens and images, as well as the original and current taxonomic placement. Currently data for the families Papilionidae or &quot;Swallowtails&quot; (553 recognized species, more than 2,100 subordinate taxa), Pieridae or &quot;Whites&quot; (1,108 recognized species, more than 700 subordinate taxa), and Lycaenidae or &quot;Hairstreaks, Blues, and Coppers&quot; (10,879 entered species names, more than 2,000 subordinate taxa) are available, and other butterfly groups to follow.</para>
+  </abstract>
+  <distribution scope="document">
+    <online>
+      <url function="information">http://www.globis.insects-online.de/</url>
+    </online>
+  </distribution>
+  <coverage>
+    <geographicCoverage>
+      <geographicDescription>Global</geographicDescription>
+    </geographicCoverage>
+    <taxonomicCoverage>
+      <generalTaxonomicCoverage>Hairstreaks, blues, coppers, swallowtails and whites</generalTaxonomicCoverage>
+    </taxonomicCoverage>
+    </coverage>
+  <contact>
+    <individualName>
+      <givenName>CL</givenName>
+      <surName>Häuser</surName>
+    </individualName>
+  </contact>
+</dataset>
+
+<additionalMetadata>
+  <metadata>
+    <gbif>
+      <citation>Häuser, C., Holstein, J., Kroupa, A. S., Steiner, A., &amp; Turiault, M. (2013). Global Butterfly Information System. In O. Bánki, Y. Roskov, M. Döring, G. Ower, L. Vandepitte, D. Hobern, D. Remsen, P. Schalk, R. E. DeWalt, M. Keping, J. Miller, T. Orrell, R. Aalbu, R. Adlard, E. M. Adriaenssens, C. Aedo, E. Aescht, N. Akkari, P. Alfenas-Zerbini, et al., Catalogue of Life Checklist (Sep 2013). https://doi.org/10.48580/dfpx-394</citation>
+      <resourceLogoUrl>https://github.com/Sp2000/colplus-repo/raw/master/logos/GloBIS_(GART).png</resourceLogoUrl>
+    </gbif>
+    <col>
+      <version>Sep 2013</version>
+      <completeness>100</completeness>
+      <confidence>5</confidence>
+    </col>
+  </metadata>
+</additionalMetadata>
+
+</eml:eml>

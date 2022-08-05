@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+        packageId="col-clb-1144"  system="http://catalogueoflife.org" scope="system"
+  xml:lang="en">
+
+
+<dataset>
+  <title>Lace Bugs Database (Hemiptera: Tingidae)</title>
+  <shortName>Lace Bugs Database</shortName>
+  <creator>
+    <individualName>
+      <givenName>E.</givenName>
+      <surName>Guilbert</surName>
+    </individualName>
+  </creator>
+  <associatedParty>
+    <address>
+      <city>Paris</city>
+      <country>France</country>
+    </address>
+    <role>contributor</role>
+  </associatedParty>
+    <pubDate>2019-02-01</pubDate>
+  <language>english</language>
+  <abstract>
+    <para>A database of all the species described in Tingidae family (Insecta: Heteroptera) with references, distribution and pictures.</para>
+  </abstract>
+  <intellectualRights>
+    <para><ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC BY) 4.0</citetitle></ulink></para>
+  </intellectualRights>
+  <distribution scope="document">
+    <online>
+      <url function="information">http://hemiptera-databases.com/tingidae/</url>
+    </online>
+  </distribution>
+  <coverage>
+    <geographicCoverage>
+      <geographicDescription>Global</geographicDescription>
+    </geographicCoverage>
+    <taxonomicCoverage>
+      <generalTaxonomicCoverage>Lace bugs</generalTaxonomicCoverage>
+    </taxonomicCoverage>
+    </coverage>
+  <contact>
+  </contact>
+</dataset>
+
+<additionalMetadata>
+  <metadata>
+    <gbif>
+      <citation>Guilbert, E. (2019). Lace Bugs Database (Hemiptera: Tingidae). In O. Bánki, Y. Roskov, M. Döring, G. Ower, L. Vandepitte, D. Hobern, D. Remsen, P. Schalk, R. E. DeWalt, M. Keping, J. Miller, T. Orrell, R. Aalbu, R. Adlard, E. M. Adriaenssens, C. Aedo, E. Aescht, N. Akkari, P. Alfenas-Zerbini, et al., Catalogue of Life Checklist (Feb 2019). https://doi.org/10.48580/dfp3-3dh</citation>
+      <resourceLogoUrl>https://github.com/Sp2000/colplus-repo/raw/master/logos/Lace_Bugs_Database.png</resourceLogoUrl>
+    </gbif>
+    <col>
+      <version>Feb 2019</version>
+      <completeness>85</completeness>
+      <confidence>4</confidence>
+    </col>
+  </metadata>
+</additionalMetadata>
+
+</eml:eml>

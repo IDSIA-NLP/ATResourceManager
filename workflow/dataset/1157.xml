@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+        packageId="col-clb-1157"  system="http://catalogueoflife.org" scope="system"
+  xml:lang="en">
+
+
+<dataset>
+  <title>World Foraminifera Database</title>
+  <shortName>WoRMS Foraminifera</shortName>
+  <associatedParty>
+    <individualName>
+      <givenName>Sarita Camacho da</givenName>
+      <surName>Encarnação</surName>
+    </individualName>
+    <electronicMailAddress>scamacho@ualg.pt</electronicMailAddress>
+    <role>editor</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Onno</givenName>
+      <surName>Gross</surName>
+    </individualName>
+    <electronicMailAddress>info@deepwave.org</electronicMailAddress>
+    <role>editor</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Bruce W.</givenName>
+      <surName>Hayward</surName>
+      <userId>https://orcid.org/0000-0003-1302-7686</userId>
+    </individualName>
+    <electronicMailAddress>b.hayward@geomarine.org.nz</electronicMailAddress>
+    <role>editor</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>François</givenName>
+      <surName>Le Coze</surName>
+    </individualName>
+    <electronicMailAddress>info@marinespecies.org</electronicMailAddress>
+    <role>editor</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Briony</givenName>
+      <surName>Mamo</surName>
+    </individualName>
+    <electronicMailAddress>briony.mamo@mq.edu.au</electronicMailAddress>
+    <role>editor</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Daniel</givenName>
+      <surName>Vachard</surName>
+    </individualName>
+    <electronicMailAddress>daniel.vachard@free.fr</electronicMailAddress>
+    <role>editor</role>
+  </associatedParty>
+  <associatedParty>
+    <address>
+      <country>Portugal</country>
+    </address>
+    <role>contributor</role>
+  </associatedParty>
+  <associatedParty>
+    <address>
+      <country>Germany</country>
+    </address>
+    <role>contributor</role>
+  </associatedParty>
+  <associatedParty>
+    <address>
+      <country>NewZealand</country>
+    </address>
+    <role>contributor</role>
+  </associatedParty>
+  <associatedParty>
+    <role>contributor</role>
+  </associatedParty>
+  <associatedParty>
+    <role>contributor</role>
+  </associatedParty>
+  <associatedParty>
+    <address>
+      <country>France</country>
+    </address>
+    <role>contributor</role>
+  </associatedParty>
+  <associatedParty>
+    <address>
+      <country>Belgium</country>
+    </address>
+    <role>contributor</role>
+  </associatedParty>
+    <pubDate>2022-07-01</pubDate>
+  <language>english</language>
+  <abstract>
+    <para>This World Database of all species of Foraminifera ever described, is part of the World Register of Marine Species (WoRMS), a global initiative to provide a register of all marine organisms.
+Foraminifera (‘hole bearers’) or forams for short, are a large phylum of amoeboid protozoans (single celled) with reticulating pseudopods, fine strands of cytoplasm that branch and merge to form a dynamic net. They usually produce a test (or shell) which can have one or more chambers, and are made of calcium carbonate (CaCO3) or mineral grains or other particles glued together. The tests are usually less than 0.5 mm in size, but the largest can be up to 20 cm across. Foraminifera are among the most abundant and scientifically important groups of marine organisms. The tests of recently dead planktic foraminifera are so abundant that they form a thick blanket over one third of the surface of the Earth (as Globigerina ooze on the ocean floor). Foraminifera are essentially marine- and estuarine-dwelling protozoans living in all environments from the greatest depths right up to highest astronomical tide level and from the equator to the poles.
+
+The importance of foraminifera comes from the use of their fossil tests in biostratigraphy, paleoenvironmental studies, and isotope geochemistry. Their ubiquity in most marine sedimentary rocks, often as large, well-preserved, diverse assemblages, has resulted in their being the most studied group of fossils worldwide. Because modern foraminifera have attracted little interest from biologists, paleontologists have been forced to undertake most studies, including genetic research, on the living fauna.
+This site has the following aims:
+    to provide a catalogue of the world&apos;s foraminiferal species
+    to promote stability in foraminiferal nomenclature
+    to act as a tool for higher taxonomic revisions and regional monographs</para>
+  </abstract>
+  <intellectualRights>
+    <para><ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC BY) 4.0</citetitle></ulink></para>
+  </intellectualRights>
+  <distribution scope="document">
+    <online>
+      <url function="information">https://www.marinespecies.org/foraminifera</url>
+    </online>
+  </distribution>
+  <coverage>
+    <geographicCoverage>
+      <geographicDescription>Global</geographicDescription>
+    </geographicCoverage>
+    <taxonomicCoverage>
+      <generalTaxonomicCoverage>hole bearers</generalTaxonomicCoverage>
+    </taxonomicCoverage>
+    </coverage>
+  <contact>
+    <individualName>
+      <givenName>Bruce W.</givenName>
+      <surName>Hayward</surName>
+    </individualName>
+    <electronicMailAddress>b.hayward@geomarine.org.nz</electronicMailAddress>
+  </contact>
+</dataset>
+
+<additionalMetadata>
+  <metadata>
+    <gbif>
+      <citation>Encarnação, S. C. d., Gross, O., Hayward, B. W., Le Coze, F., Mamo, B., &amp; Vachard, D. (2022). World Foraminifera Database. In O. Bánki, Y. Roskov, M. Döring, G. Ower, L. Vandepitte, D. Hobern, D. Remsen, P. Schalk, R. E. DeWalt, M. Keping, J. Miller, T. Orrell, R. Aalbu, R. Adlard, E. M. Adriaenssens, C. Aedo, E. Aescht, N. Akkari, P. Alfenas-Zerbini, et al., Catalogue of Life Checklist (ver. (07/2022)). https://doi.org/10.48580/dfpz-3dx</citation>
+      <resourceLogoUrl>https://www.marinespecies.org/documents/WoRMS%20branding/WoRMS_logo_blue_negative.png</resourceLogoUrl>
+    </gbif>
+    <col>
+      <version>ver. (07/2022)</version>
+      <completeness>98</completeness>
+      <confidence>4</confidence>
+    </col>
+  </metadata>
+</additionalMetadata>
+
+</eml:eml>

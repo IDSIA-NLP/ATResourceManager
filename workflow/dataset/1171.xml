@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+        packageId="col-clb-1171"  system="http://catalogueoflife.org" scope="system"
+  xml:lang="en">
+
+
+<dataset>
+  <title>On-line Systematic Catalog of Plant Bugs (Insecta - Heteroptera - Miridae)</title>
+  <shortName>PBI Plant Bug</shortName>
+  <creator>
+    <individualName>
+      <givenName>R.T.</givenName>
+      <surName>Schuh</surName>
+    </individualName>
+  </creator>
+  <associatedParty>
+    <address>
+      <city>New York</city>
+      <administrativeArea>NY</administrativeArea>
+      <country>UnitedStates</country>
+    </address>
+    <role>contributor</role>
+  </associatedParty>
+    <pubDate>2016-01-11</pubDate>
+  <language>english</language>
+  <abstract>
+    <para>The Planetary Biodiversity Inventory (PBI) for Plant Bugs provides a resource about the global plant bug subfamilies Orthotylinae and Phylinae (Insecta - Heteroptera - Miridae) to systematists, insect ecologists, conservation biologists, the general public, and students via the Internet. The database was made possible with the generous support from the National Science Foundation in 2003-2011.</para>
+  </abstract>
+  <distribution scope="document">
+    <online>
+      <url function="information">http://research.amnh.org/pbi/index.html</url>
+    </online>
+  </distribution>
+  <coverage>
+    <geographicCoverage>
+      <geographicDescription>Global</geographicDescription>
+    </geographicCoverage>
+    <taxonomicCoverage>
+      <generalTaxonomicCoverage>Plant bugs</generalTaxonomicCoverage>
+    </taxonomicCoverage>
+    </coverage>
+  <contact>
+    <individualName>
+      <surName>Christine Johnson for Toby Schuh</surName>
+    </individualName>
+  </contact>
+</dataset>
+
+<additionalMetadata>
+  <metadata>
+    <gbif>
+      <citation>Schuh, R. T. (2016). On-line Systematic Catalog of Plant Bugs (Insecta - Heteroptera - Miridae). In O. Bánki, Y. Roskov, M. Döring, G. Ower, L. Vandepitte, D. Hobern, D. Remsen, P. Schalk, R. E. DeWalt, M. Keping, J. Miller, T. Orrell, R. Aalbu, R. Adlard, E. M. Adriaenssens, C. Aedo, E. Aescht, N. Akkari, P. Alfenas-Zerbini, et al., Catalogue of Life Checklist (Mar 2013). https://doi.org/10.48580/dfp3-3ff</citation>
+      <resourceLogoUrl>https://github.com/Sp2000/colplus-repo/raw/master/logos/PBI_Plant_Bug.png</resourceLogoUrl>
+    </gbif>
+    <col>
+      <version>Mar 2013</version>
+      <completeness>100</completeness>
+      <confidence>5</confidence>
+    </col>
+  </metadata>
+</additionalMetadata>
+
+</eml:eml>

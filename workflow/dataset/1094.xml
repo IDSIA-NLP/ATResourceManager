@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+        packageId="col-clb-1094"  system="http://catalogueoflife.org" scope="system"
+  xml:lang="en">
+
+
+<dataset>
+  <title>World Marine, Freshwater and Terrestrial Isopod Crustaceans database</title>
+  <shortName>WoRMS Isopoda</shortName>
+  <associatedParty>
+    <individualName>
+      <givenName>Christopher</givenName>
+      <surName>Boyko</surName>
+    </individualName>
+    <electronicMailAddress>cboyko@amnh.org</electronicMailAddress>
+    <role>editor</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Niel</givenName>
+      <surName>Bruce</surName>
+    </individualName>
+    <electronicMailAddress>niel.bruce@qm.qld.gov.au</electronicMailAddress>
+    <role>editor</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Kerry A.</givenName>
+      <surName>Hadfield</surName>
+      <userId>https://orcid.org/0000-0003-1308-6360</userId>
+    </individualName>
+    <electronicMailAddress>kerryh26@yahoo.com</electronicMailAddress>
+    <role>editor</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Kelly</givenName>
+      <surName>Merrin</surName>
+    </individualName>
+    <electronicMailAddress>kellymerrin@hotmail.com</electronicMailAddress>
+    <role>editor</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Yuzo</givenName>
+      <surName>Ota</surName>
+    </individualName>
+    <electronicMailAddress>ootayu@pref.tottori.jp</electronicMailAddress>
+    <role>editor</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Gary</givenName>
+      <surName>Poore</surName>
+    </individualName>
+    <electronicMailAddress>gpoore@museum.vic.gov.au</electronicMailAddress>
+    <role>editor</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Marilyn</givenName>
+      <surName>Schotte</surName>
+    </individualName>
+    <role>editor</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>Stefano</givenName>
+      <surName>Taiti</surName>
+    </individualName>
+    <electronicMailAddress>stefano.taiti@cnr.it</electronicMailAddress>
+    <role>editor</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>George D.F.</givenName>
+      <surName>Wilson</surName>
+    </individualName>
+    <electronicMailAddress>buz@optusnet.com.au</electronicMailAddress>
+    <role>editor</role>
+  </associatedParty>
+  <associatedParty>
+    <role>contributor</role>
+  </associatedParty>
+  <associatedParty>
+    <address>
+      <country>Australia</country>
+    </address>
+    <role>contributor</role>
+  </associatedParty>
+  <associatedParty>
+    <address>
+      <country>SouthAfrica</country>
+    </address>
+    <role>contributor</role>
+  </associatedParty>
+  <associatedParty>
+    <address>
+      <country>SouthAfrica</country>
+    </address>
+    <role>contributor</role>
+  </associatedParty>
+  <associatedParty>
+    <address>
+      <country>Japan</country>
+    </address>
+    <role>contributor</role>
+  </associatedParty>
+  <associatedParty>
+    <address>
+      <country>Australia</country>
+    </address>
+    <role>contributor</role>
+  </associatedParty>
+  <associatedParty>
+    <address>
+      <country>Australia</country>
+    </address>
+    <role>contributor</role>
+  </associatedParty>
+  <associatedParty>
+    <address>
+      <country>Australia</country>
+    </address>
+    <role>contributor</role>
+  </associatedParty>
+  <associatedParty>
+    <address>
+      <country>Belgium</country>
+    </address>
+    <role>contributor</role>
+  </associatedParty>
+    <pubDate>2022-07-01</pubDate>
+  <language>english</language>
+  <abstract>
+    <para>This list began as an initiative of the US National Museum of Natural History, Smithsonian Institution, maintained by the late Brian Kensley and Marilyn Schotte. It grew into a valuable resource http://invertebrates.si.edu/isopod/ for providing nomenclature on the Isopoda: Schotte, M., B.F. Kensley, and S. Shilling (1995 onwards). World list of Marine, Freshwater and Terrestrial Crustacea Isopoda. National Museum of Natural History Smithsonian Institution: Washington D.C., USA. This list is now reconstructed at http://www.marinespecies.org, with more detailed information on synonymies and distributions, and a capability to host more information, such as images, original literature, and specimen data. This list will be transferred on a monthly basis back to the Smithsonian site. Data have been contributed to the Catalogue of Life via the WoRMS, hosted by the Flanders Marine Institute (VLIZ).</para>
+  </abstract>
+  <intellectualRights>
+    <para><ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC BY) 4.0</citetitle></ulink></para>
+  </intellectualRights>
+  <distribution scope="document">
+    <online>
+      <url function="information">https://www.marinespecies.org/isopoda</url>
+    </online>
+  </distribution>
+  <coverage>
+    <geographicCoverage>
+      <geographicDescription>Global</geographicDescription>
+    </geographicCoverage>
+    <taxonomicCoverage>
+      <generalTaxonomicCoverage>pillbugs, slaters, and woodlice</generalTaxonomicCoverage>
+    </taxonomicCoverage>
+    </coverage>
+  <contact>
+    <electronicMailAddress>info@marinespecies.org</electronicMailAddress>
+  </contact>
+</dataset>
+
+<additionalMetadata>
+  <metadata>
+    <gbif>
+      <citation>Boyko, C., Bruce, N., Hadfield, K. A., Merrin, K., Ota, Y., Poore, G., Schotte, M., Taiti, S., &amp; Wilson, G. D. F. (2022). World Marine, Freshwater and Terrestrial Isopod Crustaceans database. In O. Bánki, Y. Roskov, M. Döring, G. Ower, L. Vandepitte, D. Hobern, D. Remsen, P. Schalk, R. E. DeWalt, M. Keping, J. Miller, T. Orrell, R. Aalbu, R. Adlard, E. M. Adriaenssens, C. Aedo, E. Aescht, N. Akkari, P. Alfenas-Zerbini, et al., Catalogue of Life Checklist (ver. (07/2022)). https://doi.org/10.48580/dfpz-3br</citation>
+      <resourceLogoUrl>https://www.marinespecies.org/documents/WoRMS%20branding/WoRMS_logo_blue_negative.png</resourceLogoUrl>
+    </gbif>
+    <col>
+      <version>ver. (07/2022)</version>
+      <completeness>100</completeness>
+      <confidence>5</confidence>
+    </col>
+  </metadata>
+</additionalMetadata>
+
+</eml:eml>

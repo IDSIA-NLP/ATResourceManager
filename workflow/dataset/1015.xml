@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+        packageId="col-clb-1015"  system="http://catalogueoflife.org" scope="system"
+  xml:lang="en">
+
+
+<dataset>
+  <title>World Database of Legumes</title>
+  <shortName>ILDIS</shortName>
+  <associatedParty>
+    <individualName>
+      <givenName>Yuri</givenName>
+      <surName>Roskov</surName>
+    </individualName>
+    <role>editor</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>F.</givenName>
+      <surName>Bisby</surName>
+    </individualName>
+    <role>editor</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>J.</givenName>
+      <surName>Zarucchi</surName>
+    </individualName>
+    <role>editor</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>M.</givenName>
+      <surName>Novoselova</surName>
+    </individualName>
+    <role>editor</role>
+  </associatedParty>
+  <associatedParty>
+    <role>contributor</role>
+  </associatedParty>
+    <pubDate>2014-05-05</pubDate>
+  <language>english</language>
+  <abstract>
+    <para>The International Legume Database and Information Service (ILDIS) is a long-term programme of co-operation among legume specialists world-wide to create a biodiversity database for the Leguminosae (Fabaceae) family. The database provides a taxonomic checklist plus basic factual data on distribution, common names, life-forms, uses, literature references to descriptions, illustrations and maps. Now database includes contribution from &quot;ILDIS for i4Life&quot; dataset by M. Novoselova, 2013. In 2000 - 2013, ILDIS was funded by institutions including the Global Biodiversity Information Facility (GBIF), the University of Reading, the Catalogue of Life (CoL), and European Commission projects for taxonomic infrastructures (EuroCat, 4D4Life and i4Life).</para>
+  </abstract>
+  <intellectualRights>
+    <para><ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC BY) 4.0</citetitle></ulink></para>
+  </intellectualRights>
+  <coverage>
+    <geographicCoverage>
+      <geographicDescription>Global</geographicDescription>
+    </geographicCoverage>
+    <taxonomicCoverage>
+      <generalTaxonomicCoverage>Legumes</generalTaxonomicCoverage>
+    </taxonomicCoverage>
+    </coverage>
+  <contact>
+    <individualName>
+      <givenName>Yuri</givenName>
+      <surName>Roskov</surName>
+    </individualName>
+  </contact>
+</dataset>
+
+<additionalMetadata>
+  <metadata>
+    <gbif>
+      <citation>Roskov, Y., Bisby, F., Zarucchi, J., &amp; Novoselova, M. (2014). World Database of Legumes. In O. Bánki, Y. Roskov, M. Döring, G. Ower, L. Vandepitte, D. Hobern, D. Remsen, P. Schalk, R. E. DeWalt, M. Keping, J. Miller, T. Orrell, R. Aalbu, R. Adlard, E. M. Adriaenssens, C. Aedo, E. Aescht, N. Akkari, P. Alfenas-Zerbini, et al., Catalogue of Life Checklist (12, May 2014). https://doi.org/10.48580/dfp3-382</citation>
+      <resourceLogoUrl>https://github.com/Sp2000/colplus-repo/raw/master/logos/ILDIS.png</resourceLogoUrl>
+    </gbif>
+    <col>
+      <version>12, May 2014</version>
+      <completeness>96</completeness>
+      <confidence>4</confidence>
+    </col>
+  </metadata>
+</additionalMetadata>
+
+</eml:eml>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+        packageId="col-clb-1066"  system="http://catalogueoflife.org" scope="system"
+  xml:lang="en">
+
+
+<dataset>
+  <title>Droseraceae Database</title>
+  <shortName>Droseraceae Database</shortName>
+  <creator>
+    <individualName>
+      <givenName>A.</givenName>
+      <surName>Culham</surName>
+    </individualName>
+  </creator>
+  <associatedParty>
+    <individualName>
+      <givenName>C.</givenName>
+      <surName>Yesson</surName>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <address>
+      <city>Reading</city>
+      <country>UnitedKingdom</country>
+    </address>
+    <role>contributor</role>
+  </associatedParty>
+    <pubDate>2009-01-09</pubDate>
+  <language>english</language>
+  <abstract>
+    <para>Droseraceae Database is a research database of names of the family Droseraceae including infraspecific ranks. The database has been compiled to guide nomenclatural, phylogenetic and distributional research into the family. Work on the database is in progress and not all names and synonyms are currently included. Future releases of the database will include reference to types, to DNA sequence data and enhanced distributional data.</para>
+  </abstract>
+  <intellectualRights>
+    <para><ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC BY) 4.0</citetitle></ulink></para>
+  </intellectualRights>
+  <coverage>
+    <geographicCoverage>
+      <geographicDescription>Global</geographicDescription>
+    </geographicCoverage>
+    <taxonomicCoverage>
+      <generalTaxonomicCoverage>Sundew family</generalTaxonomicCoverage>
+    </taxonomicCoverage>
+    </coverage>
+  <contact>
+    <individualName>
+      <givenName>A</givenName>
+      <surName>Culham</surName>
+    </individualName>
+  </contact>
+</dataset>
+
+<additionalMetadata>
+  <metadata>
+    <gbif>
+      <citation>Culham, A., &amp; Yesson, C. (2009). Droseraceae Database. In O. Bánki, Y. Roskov, M. Döring, G. Ower, L. Vandepitte, D. Hobern, D. Remsen, P. Schalk, R. E. DeWalt, M. Keping, J. Miller, T. Orrell, R. Aalbu, R. Adlard, E. M. Adriaenssens, C. Aedo, E. Aescht, N. Akkari, P. Alfenas-Zerbini, et al., Catalogue of Life Checklist (0.1, Dec 2008). https://doi.org/10.48580/dfp3-39s</citation>
+      <resourceLogoUrl>https://github.com/Sp2000/colplus-repo/raw/master/logos/Droseraceae_Database.png</resourceLogoUrl>
+    </gbif>
+    <col>
+      <version>0.1, Dec 2008</version>
+      <completeness>95</completeness>
+      <confidence>4</confidence>
+    </col>
+  </metadata>
+</additionalMetadata>
+
+</eml:eml>

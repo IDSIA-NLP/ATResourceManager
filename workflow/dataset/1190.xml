@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+        packageId="col-clb-1190"  system="http://catalogueoflife.org" scope="system"
+  xml:lang="en">
+
+
+<dataset>
+  <title>The World of Jewel Beetles</title>
+  <shortName>Jewel Beetles</shortName>
+  <creator>
+    <individualName>
+      <givenName>C.L.</givenName>
+      <surName>Bellamy</surName>
+    </individualName>
+  </creator>
+  <associatedParty>
+    <onlineUrl>http://coleopsoc.org</onlineUrl>
+    <role>contributor</role>
+  </associatedParty>
+    <pubDate>2014-08-25</pubDate>
+  <language>english</language>
+  <abstract>
+    <para>This Buprestoidea checklist was harvested by Dmitry Mozzherin from the original website The World of Jewel Beetles created by Chuck Bellamy (1951-2013). Data are published in the Catalogue of Life with kind permission of the website keepers Gino Nearns &amp; Ted MacRae, at the Coleopterists Society (&lt;a href=&quot;http://coleopsoc.org/&quot;&gt;http://coleopsoc.org&lt;/a&gt;), and Pensoft, a publisher of comprehensive Bellamy’s monograph &lt;a href=&quot;https://ebooks.pensoft.net/author.php?auth=5803&quot;&gt;A World Catalogue and Bibliography of the Jewel Beetles (Coleoptera: Buprestoidea), 2008, Vol. 1-5. Pensoft Series Faunistica N 76-80, p. 1-3264.&lt;/a&gt;</para>
+  </abstract>
+  <intellectualRights>
+    <para><ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC BY) 4.0</citetitle></ulink></para>
+  </intellectualRights>
+  <distribution scope="document">
+    <online>
+      <url function="information">https://cerambycids.com/buprestidae/index.html</url>
+    </online>
+  </distribution>
+  <coverage>
+    <geographicCoverage>
+      <geographicDescription>Global</geographicDescription>
+    </geographicCoverage>
+    <taxonomicCoverage>
+      <generalTaxonomicCoverage>Jewel beetles</generalTaxonomicCoverage>
+    </taxonomicCoverage>
+    </coverage>
+  <contact>
+    <individualName>
+      <givenName>Gino</givenName>
+      <surName>Nearns</surName>
+    </individualName>
+  </contact>
+</dataset>
+
+<additionalMetadata>
+  <metadata>
+    <gbif>
+      <citation>Bellamy, C. L. (2014). The World of Jewel Beetles. In O. Bánki, Y. Roskov, M. Döring, G. Ower, L. Vandepitte, D. Hobern, D. Remsen, P. Schalk, R. E. DeWalt, M. Keping, J. Miller, T. Orrell, R. Aalbu, R. Adlard, E. M. Adriaenssens, C. Aedo, E. Aescht, N. Akkari, P. Alfenas-Zerbini, et al., Catalogue of Life Checklist (Aug 2014). https://doi.org/10.48580/dfp3-3g3</citation>
+      <resourceLogoUrl>https://github.com/Sp2000/colplus-repo/raw/master/logos/Jewel_Beetles.png</resourceLogoUrl>
+    </gbif>
+    <col>
+      <version>Aug 2014</version>
+      <completeness>100</completeness>
+      <confidence>5</confidence>
+    </col>
+  </metadata>
+</additionalMetadata>
+
+</eml:eml>

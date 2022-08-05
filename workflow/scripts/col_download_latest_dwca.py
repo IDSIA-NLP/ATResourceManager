@@ -8,7 +8,7 @@
 #------------------------------------------------------------------------------
 # author   : Harald Detering
 # email    : harald.detering@gmail.com
-# modified : 2022-07-26
+# modified : 2022-08-05
 #------------------------------------------------------------------------------
 
 import os, sys
@@ -28,14 +28,14 @@ url = 'https://download.checklistbank.org/col/monthly/'
 # ------------------------------------------------------------------------------
 
 def download_file(filename, base_url, out_dir):
-    if not os.path.exists(args.out_dir):
-      print(f'[ERROR] Directory does not exist: {args.out_dir}.')
+    if not os.path.exists(out_dir):
+      print(f'[ERROR] Directory does not exist: {out_dir}.')
       sys.exit(1)
     
     # build URL to download from
     url_dl = f'{base_url}/{filename}'
     # build file path to write to
-    fn_out = os.path.join(args.out_dir, filename)
+    fn_out = os.path.join(out_dir, filename)
     
     print(f'source: {url_dl}')
     print(f'target: {fn_out}')
@@ -62,8 +62,8 @@ def main(version_file, out_dir):
   """Download Catalogue of Life (CoL) resources."""
   version = ''
   # read version file if given
-  if args.version_file:
-    with open(args.version_file, 'rt') as f:
+  if version_file:
+    with open(version_file, 'rt') as f:
       version = f.readline().strip()
   print(f'Latest version downloaded:\n{version}\n---')
 
@@ -90,11 +90,11 @@ def main(version_file, out_dir):
     print(f'  Local version:  {version}')
     print()
     print('---\nNow downloading data...')
-    download_file(web_version, url, args.out_dir)
-    print(f'Download successful. Find new data at:\n{os.path.join(args.out_dir, web_version)}')
-    if args.version_file:
-      print(f'Storing latest version in version file {args.version_file}.')
-      with open(args.version_file, 'wt') as f:
+    download_file(web_version, url, out_dir)
+    print(f'Download successful. Find new data at:\n{os.path.join(out_dir, web_version)}')
+    if version_file:
+      print(f'Storing latest version in version file {version_file}.')
+      with open(version_file, 'wt') as f:
         f.write(f'{web_version}\n')
   else:
     print(f'Already on latest version:\n{web_version}')

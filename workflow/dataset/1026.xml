@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+        packageId="col-clb-1026"  system="http://catalogueoflife.org" scope="system"
+  xml:lang="en">
+
+
+<dataset>
+  <title>Systematic Database of the Scale Insects of the World</title>
+  <shortName>ScaleNet</shortName>
+  <creator>
+    <individualName>
+      <givenName>Yair</givenName>
+      <surName>Ben-Dov</surName>
+    </individualName>
+    <address>
+      <city>Bet Dagan</city>
+      <country>Israel</country>
+    </address>
+  </creator>
+  <associatedParty>
+    <individualName>
+      <givenName>Douglas R</givenName>
+      <surName>Miller</surName>
+    </individualName>
+    <address>
+      <city>Beltsville</city>
+      <administrativeArea>MD</administrativeArea>
+      <country>UnitedStates</country>
+    </address>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <address>
+      <city>Tallahassee</city>
+      <administrativeArea>FL</administrativeArea>
+      <country>UnitedStates</country>
+    </address>
+    <role>contributor</role>
+  </associatedParty>
+  <associatedParty>
+    <address>
+      <city>Beltsville</city>
+      <administrativeArea>MD</administrativeArea>
+      <country>UnitedStates</country>
+    </address>
+    <role>contributor</role>
+  </associatedParty>
+    <pubDate>2004-12-05</pubDate>
+  <language>english</language>
+  <abstract>
+    <para>The ScaleNet site provides comprehensive information on the scale insects (Hemiptera: Coccoidea) of the world, including queriable information on their classification, nomenclatural history, geographical distribution, host plants, natural enemies, economic importance and literature. Currently information can be retrieved for 27 families, and data of about 21,000 references dating from 1758 to the present. Ultimately, information will be provided for all 28 families of scale insects, comprising more than 7,500 species.</para>
+  </abstract>
+  <intellectualRights>
+    <para><ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC BY) 4.0</citetitle></ulink></para>
+  </intellectualRights>
+  <distribution scope="document">
+    <online>
+      <url function="information">http://scalenet.info/catalogue/</url>
+    </online>
+  </distribution>
+  <coverage>
+    <geographicCoverage>
+      <geographicDescription>Global</geographicDescription>
+    </geographicCoverage>
+    <taxonomicCoverage>
+      <generalTaxonomicCoverage>Scale insects</generalTaxonomicCoverage>
+    </taxonomicCoverage>
+    </coverage>
+  <contact>
+    <individualName>
+      <givenName>Yair</givenName>
+      <surName>Ben-Dov</surName>
+    </individualName>
+    <address>
+      <city>Bet Dagan</city>
+      <country>Israel</country>
+    </address>
+  </contact>
+</dataset>
+
+<additionalMetadata>
+  <metadata>
+    <gbif>
+      <citation>Ben-Dov, Y., &amp; Miller, D. R. (2004). Systematic Database of the Scale Insects of the World. In O. Bánki, Y. Roskov, M. Döring, G. Ower, L. Vandepitte, D. Hobern, D. Remsen, P. Schalk, R. E. DeWalt, M. Keping, J. Miller, T. Orrell, R. Aalbu, R. Adlard, E. M. Adriaenssens, C. Aedo, E. Aescht, N. Akkari, P. Alfenas-Zerbini, et al., Catalogue of Life Checklist (Dec 2004). https://doi.org/10.48580/dfp3-38f</citation>
+      <resourceLogoUrl>https://github.com/Sp2000/colplus-repo/raw/master/logos/ScaleNet.png</resourceLogoUrl>
+    </gbif>
+    <col>
+      <version>Dec 2004</version>
+      <completeness>97</completeness>
+      <confidence>4</confidence>
+    </col>
+  </metadata>
+</additionalMetadata>
+
+</eml:eml>

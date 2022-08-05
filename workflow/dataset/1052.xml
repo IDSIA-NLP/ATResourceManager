@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+        packageId="col-clb-1052"  system="http://catalogueoflife.org" scope="system"
+  xml:lang="en">
+
+
+<dataset>
+  <title>Cercopoidea Organised On Line</title>
+  <shortName>COOL</shortName>
+  <creator>
+    <individualName>
+      <givenName>A.</givenName>
+      <surName>Soulier-Perkins</surName>
+    </individualName>
+  </creator>
+  <associatedParty>
+    <address>
+      <city>Paris</city>
+      <country>France</country>
+    </address>
+    <role>contributor</role>
+  </associatedParty>
+    <pubDate>2019-02-01</pubDate>
+  <language>english</language>
+  <abstract>
+    <para>COOL is a systematic based database on the Cercopoidea (Froghoppers or Spittlebugs). Its purpose is to gather information on the taxonomy, nomenclature, bibliography, geographic distributin and host-plants for those insects. The objective is to organise the collected knowledge on the froghoppers and to allow an easy access to these information to any interested person. This database is on the process of being developed. At the moment it is based upon the Metcalf catalogue (1960-1962) for the families Cercopidae, Clastopteridae and Aphrophoridae. Since the Epigydae were described posteriorly to this catalogue the information concerning this family were taken directly from the publication of Hamilton (2001). The Machaerotidae are up to date.</para>
+  </abstract>
+  <intellectualRights>
+    <para><ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC BY) 4.0</citetitle></ulink></para>
+  </intellectualRights>
+  <distribution scope="document">
+    <online>
+      <url function="information">http://rameau.snv.jussieu.fr/cool/</url>
+    </online>
+  </distribution>
+  <coverage>
+    <geographicCoverage>
+      <geographicDescription>Global</geographicDescription>
+    </geographicCoverage>
+    <taxonomicCoverage>
+      <generalTaxonomicCoverage>Froghoppers</generalTaxonomicCoverage>
+    </taxonomicCoverage>
+    </coverage>
+  <contact>
+    <individualName>
+      <givenName>A</givenName>
+      <surName>Soulier-Perkins</surName>
+    </individualName>
+  </contact>
+</dataset>
+
+<additionalMetadata>
+  <metadata>
+    <gbif>
+      <citation>Soulier-Perkins, A. (2019). Cercopoidea Organised On Line. In O. Bánki, Y. Roskov, M. Döring, G. Ower, L. Vandepitte, D. Hobern, D. Remsen, P. Schalk, R. E. DeWalt, M. Keping, J. Miller, T. Orrell, R. Aalbu, R. Adlard, E. M. Adriaenssens, C. Aedo, E. Aescht, N. Akkari, P. Alfenas-Zerbini, et al., Catalogue of Life Checklist (Feb 2019). https://doi.org/10.48580/dfp3-39b</citation>
+      <resourceLogoUrl>https://github.com/Sp2000/colplus-repo/raw/master/logos/COOL.png</resourceLogoUrl>
+    </gbif>
+    <col>
+      <version>Feb 2019</version>
+      <completeness>95</completeness>
+      <confidence>4</confidence>
+    </col>
+  </metadata>
+</additionalMetadata>
+
+</eml:eml>

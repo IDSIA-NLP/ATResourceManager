@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+        packageId="col-clb-1022"  system="http://catalogueoflife.org" scope="system"
+  xml:lang="en">
+
+
+<dataset>
+  <title>Parhost World Database of Fleas</title>
+  <shortName>Parhost</shortName>
+  <creator>
+    <individualName>
+      <givenName>S.</givenName>
+      <surName>Medvedev</surName>
+    </individualName>
+  </creator>
+  <associatedParty>
+    <individualName>
+      <givenName>A.</givenName>
+      <surName>Lobanov</surName>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <individualName>
+      <givenName>I.</givenName>
+      <surName>Lyangouzov</surName>
+    </individualName>
+    <role>author</role>
+  </associatedParty>
+  <associatedParty>
+    <address>
+      <city>St. Petersburg</city>
+      <country>RussianFederation</country>
+    </address>
+    <role>contributor</role>
+  </associatedParty>
+    <pubDate>2005-11-14</pubDate>
+  <language>english</language>
+  <abstract>
+    <para>The Parhost World Database of Fleas is a complete electronic taxonomic checklist of order Siphonaptera. This is part of the original analytical system PARHOST, which contains extensive data on flea morphology, parasite–host associations, and geographical distribution.</para>
+  </abstract>
+  <distribution scope="document">
+    <online>
+      <url function="information">http://www.zin.ru/Animalia/Siphonaptera</url>
+    </online>
+  </distribution>
+  <coverage>
+    <geographicCoverage>
+      <geographicDescription>Global</geographicDescription>
+    </geographicCoverage>
+    <taxonomicCoverage>
+      <generalTaxonomicCoverage>Fleas</generalTaxonomicCoverage>
+    </taxonomicCoverage>
+    </coverage>
+  <contact>
+    <individualName>
+      <givenName>Sergey</givenName>
+      <surName>Medvedev</surName>
+    </individualName>
+  </contact>
+</dataset>
+
+<additionalMetadata>
+  <metadata>
+    <gbif>
+      <citation>Medvedev, S., Lobanov, A., &amp; Lyangouzov, I. (2005). Parhost World Database of Fleas. In O. Bánki, Y. Roskov, M. Döring, G. Ower, L. Vandepitte, D. Hobern, D. Remsen, P. Schalk, R. E. DeWalt, M. Keping, J. Miller, T. Orrell, R. Aalbu, R. Adlard, E. M. Adriaenssens, C. Aedo, E. Aescht, N. Akkari, P. Alfenas-Zerbini, et al., Catalogue of Life Checklist (2, Nov 2005). https://doi.org/10.48580/dfp3-389</citation>
+      <resourceLogoUrl>https://github.com/Sp2000/colplus-repo/raw/master/logos/Parhost.png</resourceLogoUrl>
+    </gbif>
+    <col>
+      <version>2, Nov 2005</version>
+      <completeness>99</completeness>
+      <confidence>4</confidence>
+    </col>
+  </metadata>
+</additionalMetadata>
+
+</eml:eml>

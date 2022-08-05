@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+        packageId="col-clb-1048"  system="http://catalogueoflife.org" scope="system"
+  xml:lang="en">
+
+
+<dataset>
+  <title>Geranium Taxonomic Information System</title>
+  <shortName>RJB Geranium</shortName>
+  <creator>
+    <individualName>
+      <givenName>Carlos</givenName>
+      <surName>Aedo</surName>
+    </individualName>
+    <address>
+      <city>Madrid</city>
+      <country>Spain</country>
+    </address>
+  </creator>
+    <pubDate>2017-09-28</pubDate>
+  <language>english</language>
+  <abstract>
+    <para>This is a database of Geranium names and synonymic checklist of the genus which is a part of a project to prepare a worldwide monograph of cranesbills. It is partly financed by the Spanish Government through the research projects REN2003-00982/GLO, CGL2004-00172/BOS and CGL2007-60184/BOS.</para>
+  </abstract>
+  <intellectualRights>
+    <para><ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC BY) 4.0</citetitle></ulink></para>
+  </intellectualRights>
+  <distribution scope="document">
+    <online>
+      <url function="information">http://www.geranium.es/</url>
+    </online>
+  </distribution>
+  <coverage>
+    <taxonomicCoverage>
+      <generalTaxonomicCoverage>Cranesbills, geraniums</generalTaxonomicCoverage>
+    </taxonomicCoverage>
+    </coverage>
+  <contact>
+    <individualName>
+      <givenName>Carlos</givenName>
+      <surName>Aedo</surName>
+    </individualName>
+    <address>
+      <city>Madrid</city>
+      <country>Spain</country>
+    </address>
+  </contact>
+</dataset>
+
+<additionalMetadata>
+  <metadata>
+    <gbif>
+      <citation>Aedo, C. (2017). Geranium Taxonomic Information System. In O. Bánki, Y. Roskov, M. Döring, G. Ower, L. Vandepitte, D. Hobern, D. Remsen, P. Schalk, R. E. DeWalt, M. Keping, J. Miller, T. Orrell, R. Aalbu, R. Adlard, E. M. Adriaenssens, C. Aedo, E. Aescht, N. Akkari, P. Alfenas-Zerbini, et al., Catalogue of Life Checklist (Sep 2017). https://doi.org/10.48580/dfp3-396</citation>
+      <resourceLogoUrl>https://github.com/Sp2000/colplus-repo/raw/master/logos/RJB_Geranium.png</resourceLogoUrl>
+    </gbif>
+    <col>
+      <version>Sep 2017</version>
+      <completeness>98</completeness>
+      <confidence>5</confidence>
+    </col>
+  </metadata>
+</additionalMetadata>
+
+</eml:eml>
