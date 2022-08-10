@@ -10,7 +10,7 @@
 #------------------------------------------------------------------------------
 # author   : Harald Detering
 # email    : harald.detering@gmail.com
-# modified : 2022-08-03
+# modified : 2022-08-06
 #------------------------------------------------------------------------------
 
 configfile: '../config/config.yaml' 
@@ -33,31 +33,41 @@ rule col_get_data:
   output:
     col_taxa = config['col_taxa_file']
   params:
-    data_dir = config['col_data_dir']
+    data_dir = config['col_data_dir'],
+    dl_dir = f"{config['col_data_dir']}/.."
   log:
     out = '../log/col_get_data.out',
     err = '../log/col_get_data.err'
+  benchmark:
+    '../log/col_get_data.prf'
   shell:
     """
     set -x
-    time (
-
-    # clear or create data directory
-    if [[ -d {params.data_dir} ]]; then
-      rm -rf {params.data_dir}/*
-    else
-      mkdir {params.data_dir}
-    fi
-
+    (
     # download data file
     python scripts/col_download_latest_dwca.py \
       --version-file {input} \
-      --out-dir {params.data_dir}
+      --out-dir {params.dl_dir}
 
-    # unzip data files
-    #cd {params.data_dir}
-    unzip {params.data_dir}/$(cat {input}) -d {params.data_dir}
-    touch {output}
+    # check for sentinel file
+    for f_new in $(ls {params.dl_dir}/*.new); do
+      echo "Found sentinel file: $f_new"
+      f_data=${{f_new%.new}}
+
+      # clear or create data directory
+      if [[ -d {params.data_dir} ]]; then
+        rm -rf {params.data_dir}/*
+      else
+        mkdir {params.data_dir}
+      fi
+
+      # unzip data files
+      unzip $f_data -d {params.data_dir}
+
+      # clean up
+      rm $f_new $f_data
+      break
+    done
     ) >{log.out} 2>{log.err}
     """
 
@@ -67,9 +77,31 @@ rule eol_get_data:
     config['eol_version_file']
   output:
     eol_taxa = config['eol_taxa_file']
+  params:
+    data_dir = config['eol_data_dir']
+  log:
+    out = '../log/eol_get_data.out',
+    err = '../log/eol_get_data.err'
+  benchmark:
+    '../log/eol_get_data.prf'
   shell:
     """
-    touch {output.eol_taxa}
+    (
+    # clear or create data directory
+    if [[ -d {params.data_dir} ]]; then
+      rm -rf {params.data_dir}/*
+    else
+      mkdir {params.data_dir}
+    fi
+
+    # download data file
+    python scripts/eol_download_latest_traits.py \
+      --version-file {input} \
+      --out-dir {params.data_dir}/../
+
+    # unzip data files
+    unzip {params.data_dir}/../traits_all.zip -d {params.data_dir}/..
+    ) >{log.out} 2>{log.err}
     """
 
 # Parse Catalogue of Life (CoL) taxa file and extract descents of Arthropoda
@@ -79,16 +111,18 @@ rule col_taxa_extract_arthropods:
   output:
     tax_art = config['col_taxa_arthropoda']
   log:
-    '../log/col_taxa_extract_arthropods.log'
+    out = '../log/col_taxa_extract_arthropods.out',
+    err = '../log/col_taxa_extract_arthropods.err'
+  benchmark:
+    '../log/col_taxa_extract_arthropods.prf'
   shell:
     """
     set -x
-    time (
-      python scripts/extract_col.py --log {log} \
+    (
+      python scripts/col_extract_arthropods.py \
         --col-file {input.col} \
-        --out-file {output.tax_art} \
-        --out-file-sm {output.tax_art_sm}
-    )
+        --out-file {output.tax_art}
+    ) >{log.out} 2>{log.err}
     """
 
 # Merge CoL and EOL taxa
@@ -97,7 +131,7 @@ rule col_eol_merge_taxa:
     tax_col = config['col_taxa_arthropoda'],
     tax_eol = config['eol_taxa_file']
   output:
-    tax_col_eol = '../resources/col_eol_taxa.tsv'
+    tax_col_eol = config['col_eol_taxa']
   log:
     '../log/col_eol_merge_taxa.log'
   shell:

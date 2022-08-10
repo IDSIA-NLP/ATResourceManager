@@ -28,28 +28,41 @@ url = 'https://download.checklistbank.org/col/monthly/'
 # ------------------------------------------------------------------------------
 
 def download_file(filename, base_url, out_dir):
-    if not os.path.exists(out_dir):
-      print(f'[ERROR] Directory does not exist: {out_dir}.')
-      sys.exit(1)
-    
-    # build URL to download from
-    url_dl = f'{base_url}/{filename}'
-    # build file path to write to
-    fn_out = os.path.join(out_dir, filename)
-    
-    print(f'source: {url_dl}')
-    print(f'target: {fn_out}')
-    print()
+  """
+  Download a file from a given base URL to an output folder.
+  
+  Args:
+    filename: File to be downloaded (without directory)
+    base_url: Base URL under which file is stored
+    out_dir:  Output directory to write downloaded file.
 
-    response = requests.get(url_dl, stream=True)
-    with open(fn_out, 'wb') as f:
-      i = 0
-      for chunk in response.iter_content(chunk_size=512*1024):
-        f.write(chunk)
-        i += 1
-        print(f'{512 * i} kb downloaded...', end='\r')
-      LINE_CLEAR = '\x1b[2K' # <-- ANSI sequence
-      print(end=LINE_CLEAR)
+  Returns:
+    Local path of the downloaded file.
+  """
+  if not os.path.exists(out_dir):
+    print(f'[ERROR] Directory does not exist: {out_dir}.')
+    sys.exit(1)
+
+  # build URL to download from
+  url_dl = f'{base_url}/{filename}'
+  # build file path to write to
+  fn_out = os.path.join(out_dir, filename)
+    
+  print(f'source: {url_dl}')
+  print(f'target: {fn_out}')
+  print()
+
+  response = requests.get(url_dl, stream=True)
+  with open(fn_out, 'wb') as f:
+    i = 0
+    for chunk in response.iter_content(chunk_size=512*1024):
+      f.write(chunk)
+      i += 1
+      print(f'{512 * i} kb downloaded...', end='\r')
+    LINE_CLEAR = '\x1b[2K' # <-- ANSI sequence
+    print(end=LINE_CLEAR)
+
+  return fn_out
 
 # ------------------------------------------------------------------------------
 #                            COMMAND-LINE INTERFACE
@@ -90,12 +103,15 @@ def main(version_file, out_dir):
     print(f'  Local version:  {version}')
     print()
     print('---\nNow downloading data...')
-    download_file(web_version, url, out_dir)
+    fn_out = download_file(web_version, url, out_dir)
     print(f'Download successful. Find new data at:\n{os.path.join(out_dir, web_version)}')
     if version_file:
       print(f'Storing latest version in version file {version_file}.')
       with open(version_file, 'wt') as f:
         f.write(f'{web_version}\n')
+      print(f'Writing sentinel file: "{fn_out}.new".')
+      with open(f'{fn_out}.new', 'wt') as f:
+        pass
   else:
     print(f'Already on latest version:\n{web_version}')
     print()

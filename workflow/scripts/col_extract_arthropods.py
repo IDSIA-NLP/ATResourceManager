@@ -7,32 +7,18 @@ Description: Down sample the Catalog of Life (CoL) data to arthropods related en
 Authors: 
   Joseph Cornelius
   Harald Detering
-July 2022
+August 2022
 """
 # --------------------------------------------------------------------------------------------
 #                                           IMPORT
 # --------------------------------------------------------------------------------------------
 
-import argparse
+import click
+import csv
 import pandas as pd
 from loguru import logger
 
 from simple_graph import SimpleGraph
-
-# --------------------------------------------------------------------------------------------
-#                                    COMMAND-LINE INTERFACE
-# --------------------------------------------------------------------------------------------
-
-def parse_args():
-    parser = argparse.ArgumentParser(description='Downsample the Catalog of Life (CoL) data to arthropods related entries.')
-    parser.add_argument('--col-file', required=True, help='CoL TSV file containing taxa (Taxon.tsv).')
-    parser.add_argument('--out-file', required=True, help='Output file for filtered taxa (TSV).')
-    parser.add_argument('--out-file-sm', required=True, help='Output file for filtered taxa (TSV, fewer columns).')
-
-    parser.add_argument('--log', default='extract_col.log', help='TXT file receiving log messages.')
-
-    args = parser.parse_args()
-    return args
 
 # --------------------------------------------------------------------------------------------
 #                                           FUNCTIONS
@@ -86,18 +72,23 @@ def get_path(child, path=[], targetParent="RT", child2parent={}):
 #                                           RUN
 # --------------------------------------------------------------------------------------------
 
-def main(args):
-    log_file_path = args.log
-    col_file_path = args.col_file
-    col_arthro_file_path = args.out_file
-    col_arthro_small_file_path = args.out_file_sm
+@click.command()
+@click.option('--log', default='col_extract.log', help='TXT file receiving log messages.')
+@click.option('--col-file', required=True, help='CoL TSV file containing taxa (Taxon.tsv).')
+@click.option('--out-file', required=True, help='Output file for filtered taxa (TSV).')
+def main(log, col_file, out_file):
+    """Downsample the Catalog of Life (CoL) data to arthropods related entries."""
+    log_file_path = log
+    col_file_path = col_file
+    col_arthro_file_path = out_file
+    #col_arthro_small_file_path = out_file_sm
     
 
     logger.add(log_file_path, rotation="200 KB")
     logger.info('Start ...')
     logger.info('Load CoL file, this can take a few seconds.')
 
-    df_col = pd.read_csv(col_file_path, sep='\t')
+    df_col = pd.read_csv(col_file_path, sep='\t', quoting=csv.QUOTE_NONE)
     logger.debug(f"CoL DataFrame shape: {df_col.shape}")
 
     # check field names (gbif:genericName changed to dwc:genericName at some point)
@@ -148,9 +139,8 @@ def main(args):
     df_new.to_csv(col_arthro_file_path, sep='\t')
 
     # Save to file reduce df to necessary columns
-    df_new_s = df_new[["dwc:taxonID", "dwc:parentNameUsageID","dwc:taxonomicStatus", "dwc:taxonRank","dwc:scientificName",field_genericName, "dwc:specificEpithet", "dwc:infraspecificEpithet", "parentLeafChain"]]
-    df_new_s.to_csv(col_arthro_small_file_path, sep='\t')
+    #df_new_s = df_new[["dwc:taxonID", "dwc:parentNameUsageID","dwc:taxonomicStatus", "dwc:taxonRank","dwc:scientificName",field_genericName, "dwc:specificEpithet", "dwc:infraspecificEpithet", "parentLeafChain"]]
+    #df_new_s.to_csv(col_arthro_small_file_path, sep='\t')
 
 if __name__ == '__main__':
-    args = parse_args()
-    main(args)
+    main()

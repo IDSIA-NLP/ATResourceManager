@@ -90,9 +90,9 @@ def main(col_taxa, eol_taxa, out_file, log):
     """Merge Catalog of Life (CoL) arthropods with the Encyclopedia of Life (EoL) arthropods."""
 
     #! REPLACE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-    col_arthro_file_path = "./Taxon_arthro.tsv"
-    eol_pages_file_path = "../../../ArthroTraitMine_Data/encyclopedia_of_life/trait_bank/pages.csv"
-    col_eol_merged_file_path = "./Taxon_arthro_eol.tsv"
+    #col_arthro_file_path = "./Taxon_arthro.tsv"
+    #eol_pages_file_path = "../../../ArthroTraitMine_Data/encyclopedia_of_life/trait_bank/pages.csv"
+    #col_eol_merged_file_path = "./Taxon_arthro_eol.tsv"
     #! REPLACE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
     logger.add(log, rotation="200 KB")
@@ -123,7 +123,7 @@ def main(col_taxa, eol_taxa, out_file, log):
     logger.debug(f"Final DataFrame head:\n{df_col.head()}")
 
     # Write new DataFrame to file
-    df_col.to_csv(col_eol_merged_file_path, sep='\t')
+    df_col.to_csv(out_file, sep='\t')
 
    
 if __name__ == '__main__':
