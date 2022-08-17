@@ -5,3 +5,7 @@
 col_taxa_file_path: '../resources/col/latest_dwca/Taxon.tsv'
 col_taxa_arthropoda: '../results/col/Taxon_arthro.tsv'
 col_taxa_arthropoda_sm: '../results/col/Taxon_arthro_sm.tsv'
+
+# PLAZI settings
+plazi_trait_xml_dir: '../resources/plazi/plazi_arthro.xml/'
+plazi_trait_txt_dir: '../resources/plazi/plazi_arthro.txt/'
