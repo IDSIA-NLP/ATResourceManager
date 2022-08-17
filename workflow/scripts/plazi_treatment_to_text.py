@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# vim: syntax=python tabstop=4 expandtab
 
 """
 Description: Convert the XML Treatments to plain text files

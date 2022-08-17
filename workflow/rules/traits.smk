@@ -26,13 +26,33 @@ rule all_traits:
 # TODO: download treatment XML files (>400k) from PLAZI
 
 # Convert PLAZI treatment XML to text
+rule plazi_extract_arthro_treatments_and_doi:
+  input:
+    config['plazi_xml_dir']
+  output:
+    xml = directory(config['plazi_arthro_txt_dir']),
+    csv = config['plazi_arthro_id_doi']
+  log:
+    out = '../log/plazi_extract_arthro_treatments_and_doi.log'
+  benchmark:
+    '../log/plazi_extract_arthro_treatments_and_doi.prf'
+  shell:
+    """
+    python scripts/plazi_extract_arthro_treatments_and_doi.py \
+      --xml-dir {input} \
+      --out-dir-xml {output.xml} \
+      --out-file-ids {output.csv} \
+    1>{log.out} 2>&1
+    """
+
+# Convert PLAZI treatment XML to text
 rule plazi_xml_to_txt:
   input:
-    config['plazi_trait_xml_dir']
+    config['plazi_arthro_xml_dir']
   output:
-    directory(config['plazi_trait_txt_dir'])
+    directory(config['plazi_arthro_txt_dir'])
   log:
-    out = '../log/plazi_xml_to_txt.out'
+    out = '../log/plazi_xml_to_txt.log'
   benchmark:
     '../log/plazi_xml_to_txt.prf'
   shell:

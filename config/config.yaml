@@ -7,5 +7,7 @@ col_taxa_arthropoda: '../results/col/Taxon_arthro.tsv'
 col_taxa_arthropoda_sm: '../results/col/Taxon_arthro_sm.tsv'
 
 # PLAZI settings
-plazi_trait_xml_dir: '../resources/plazi/plazi_arthro.xml/'
-plazi_trait_txt_dir: '../resources/plazi/plazi_arthro.txt/'
+plazi_xml_dir: '../resources/plazi/plazi.xml/'
+plazi_arthro_xml_dir: '../resources/plazi/plazi_arthro.xml/'
+plazi_arthro_txt_dir: '../resources/plazi/plazi_arthro.txt/'
+plazi_arthro_id_doi: '../resources/plazi/plazi_arthro_id_doi.csv'

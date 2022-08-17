@@ -1,16 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# vim: syntax=python tabstop=4 expandtab
 
 """
 Description: Extract the Treatments concerning arthropods.
-Author: Joseph Cornelius
-July 2022
+Authors:
+  Joseph Cornelius
+  Harald Detering
+August 2022
 """
 # --------------------------------------------------------------------------------------------
 #                                           IMPORT
 # --------------------------------------------------------------------------------------------
 
-import argparse
+import click
 import glob
 import xml.etree.ElementTree as ET
 from loguru import logger
@@ -79,29 +82,26 @@ def is_arthropod(treatment_file):
         return False
 
 
-def main(logger, args):
-    """Copy arthropod treatment files to new directory.
+@click.command()
+@click.option('--xml-dir', '-i', required=True, help='Path to all .xml treatments files.')
+@click.option('--out-dir-xml', '-ox', required=True, help='Output path for arthropods treatments files.')
+@click.option('--out-file-ids', '-oi', required=True, help='Output path for arthropod treatmentID - ID_DOI pair file.')
+def main(xml_dir, out_dir_xml, out_file_ids):
+    """Copy arthropod treatment files to new directory."""
 
-    Args:
-        logger (logger instance): Instance of the loguru logger
-        args (argparser object): Object of the argument parser 
-
-    Returns:
-        None
-    """
-
+    logger.info(f'Start ...')
     logger.info(f'Start copying arthropod treatments...')
     
     # List to collect DOI infos
-    doi_infos =[['palziID', 'document:ID-DOI', 'document:masterDocTitle','treatment:ID-DOI']]
+    doi_infos =[['plaziID', 'document:ID-DOI', 'document:masterDocTitle','treatment:ID-DOI']]
 
     counter = 0
     counter_arthro = 0
     
-    treatment_files = [ f for f in glob.glob(args.data_path + "*")]
+    treatment_files = [f for f in glob.glob(os.path.join(xml_dir, "*"))]
 
-    if not os.path.exists(args.out_path):
-        os.makedirs(args.out_path)
+    if not os.path.exists(out_dir_xml):
+        os.makedirs(out_dir_xml)
 
     for treatment_file in treatment_files:
         counter += 1
@@ -111,15 +111,17 @@ def main(logger, args):
             counter_arthro += 1
             if counter_arthro % 10000 == 0: logger.debug(f'Arthropod counter: {counter_arthro:_>10}')
             treatment_file_name = treatment_file.split('/')[-1]
-            copyfile(treatment_file, args.out_path + treatment_file_name)
-
+            copyfile(treatment_file, os.path.join(out_dir_xml, treatment_file_name))
 
             doi_infos.append(get_dois(treatment_file))
 
     logger.info(f'Writing Plazi plaziID - IDDOI csv ...')
-    with open(args.out_path_doi, "w", newline="") as f:
+    with open(out_file_ids, "w", newline="") as f:
         writer = csv.writer(f)
         writer.writerows(doi_infos)
+
+    logger.info(f'Done.')
+
 # --------------------------------------------------------------------------------------------
 #                                          RUN
 # --------------------------------------------------------------------------------------------
@@ -130,19 +132,6 @@ if __name__ == '__main__':
     logger.add("../../logs/extract_arthro_treatments.log", rotation="1 MB")
     logger.info(f'Start ...')
 
-    # Setup argument parser
-    description = "Application description"
-    parser = argparse.ArgumentParser(description=description)
-    parser.add_argument('-d', '--data_path', metavar='data_path', type=str, required=False, 
-                        default='../../data/plazi/plazi.xml/', help='Path to all .xml treatments files.')
-    parser.add_argument('-o', '--out_path', metavar='out_path', type=str, required=False, 
-                        default='../../data/plazi/plazi_arthro.xml/', help='Output path for arthropods treatments files.')
-    parser.add_argument('-od', '--out_path_doi', metavar='out_path_doi', type=str, required=False, 
-                        default='../../data/plazi/plazi_arthro_plaziID-IDDOI.csv', 
-                        help='Output path for arthropod treatmentID - ID_DOI pair file.')
-    args = parser.parse_args()
+    # Run main
+    main()
 
-   # Run main
-    main(logger, args)
-
-    logger.info(f'Done.')
