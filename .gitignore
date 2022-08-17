@@ -1,6 +1,7 @@
 # ignore workflow output
 results/
 workflow/.snakemake/
+log/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
