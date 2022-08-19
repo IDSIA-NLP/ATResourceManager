@@ -1,16 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# vim: syntax=python tabstop=4 expandtab
 
 """
 Description: Download PMC XML articles based on the DOIs extracted from the PLAZI treatments.
-Author: Joseph Cornelius
+Authors:
+  Joseph Cornelius
+  Harald Detering
 August 2022
 """
 # --------------------------------------------------------------------------------------------
 #                                           IMPORT
 # --------------------------------------------------------------------------------------------
 
-import argparse
+import click
 from loguru import logger
 import pandas as pd
 import requests
@@ -107,7 +110,7 @@ def write_single_pmc_xml(pmc_articles, out_path, batch_num):
                     pmcid = elem.text
                     
             writetree = ET.ElementTree(child) 
-            writetree.write(f'{out_path}article_pmcid-PMC{pmcid}.xml')
+            writetree.write(os.path.join(out_path, f'article_pmcid-PMC{pmcid}.xml'))
 
     except Exception as e:
         logger.debug(e)
@@ -180,17 +183,24 @@ def add_PM_C_ID(doi, ppd_dict, pm_c_key):
         return np.nan
 
 
-def main(args):
-    """Check/clean DOIs and download the corresponding PMC XML articles.
-    Args:
-        args (argparser object): Object of the argument parser.
 
-    Return:
-        None
-    """
+@click.command()
+@click.option('--in-file-csv', '-i', required=True, help='Path to PLAZI DOI csv file.')
+@click.option('--out-file-pmid', '-o1', required=True, help='Output path for DOI to PMID file.')
+@click.option('--out-file-doi-pmid', '-o2', required=True, help='Output path for the PLAZI DOI csv file extended by the PMIDs.')
+@click.option('--out-dir-xml', '-xp', required=True, help='Output path to PMC XML directory.')
+@click.option('--doi-2-pmid', '-d2p', is_flag=True, help='Write a file with DOIs and there corresponding PMIDs?')
+@click.option('--batch-size', '-bs', type=int, default=200, help='Download batch size (maximum value is 200).')
+def main(in_file_csv, out_file_pmid, out_file_doi_pmid, out_dir_xml, doi_2_pmid, batch_size):
+    """Check/clean DOIs and download the corresponding PMC XML articles."""
     
+    assert 200 >= batch_size > 0, "Batch size is not in the range of [1,200]"
+
+    # Setup logger
+    #logger.add("../../logs/download_pmc_articles.log", rotation="1 MB")
+    logger.info(f'Start ...')
     logger.info("Load DOIs and clean them...")
-    df = pd.read_csv(args.data_path)
+    df = pd.read_csv(in_file_csv)
     df.head()  
 
 
@@ -218,9 +228,9 @@ def main(args):
     docDOIs = [re.sub('[^0-9a-zA-Z\.\-\/]+', '', doi) for doi in docDOIs]
 
     # Divide docDOIs in sublist of max length 200
-    docDOIs_batched = [docDOIs[i:i + args.batch_size] for i in range(0, len(docDOIs), args.batch_size)] 
+    docDOIs_batched = [docDOIs[i:i + batch_size] for i in range(0, len(docDOIs), batch_size)] 
 
-    logger.debug(f"DOIs batch size: {args.batch_size}")
+    logger.debug(f"DOIs batch size: {batch_size}")
     logger.debug(f"Sanity check, is docDOIs_batched == docDOIs length: {len(docDOIs_batched) == int(len(docDOIs)/200) + (len(docDOIs)%200>0)}")
 
     # PMC Dataframe
@@ -229,9 +239,9 @@ def main(args):
     logger.debug(f"Sanity check, DF shape:{df_pm.shape}, # of unique PMIDs: {df_pm.PMID.nunique()}, # of unique PMCIDs: {df_pm.PMCID.nunique()}, # of unique DOIs: {df_pm.DOI.nunique()}")
 
     # Write to file
-    if args.doi_2_pmid:
+    if doi_2_pmid:
         logger.info("Write DOI to PMID to a file.")
-        df_pm.to_csv(args.out_path_pmid, index=False)
+        df_pm.to_csv(out_file_pmid, index=False)
 
     # Download the PMC papers from PubMed Central. 
     logger.info("Download the papers from PubMed...")
@@ -241,17 +251,17 @@ def main(args):
     pmc_ids = list(filter(lambda x: x != "", pmc_ids))
     logger.debug(f"Length of PMCID list.{len(pmc_ids)}")
 
-    pmc_ids_batched = [pmc_ids[i:i + args.batch_size] for i in range(0, len(pmc_ids), args.batch_size)] 
+    pmc_ids_batched = [pmc_ids[i:i + batch_size] for i in range(0, len(pmc_ids), batch_size)] 
 
     logger.debug(f"Sanity check: pmc_ids batched == pmc length: {len(pmc_ids_batched) == int(len(pmc_ids)/200) + (len(pmc_ids)%200>0)}")
-    logger.debug(f"Download batch size: {args.batch_size}")
+    logger.debug(f"Download batch size: {batch_size}")
     logger.debug(f"Number if batches: {len(pmc_ids_batched)}")
 
-    if not os.path.exists(args.xml_path):
-        os.makedirs(args.xml_path)
+    if not os.path.exists(out_dir_xml):
+        os.makedirs(out_dir_xml)
 
     # Start the download and write XMLs to file
-    received_pmc_articles = download_pmc_articles(pmc_ids_batched, args.xml_path)
+    received_pmc_articles = download_pmc_articles(pmc_ids_batched, out_dir_xml)
     logger.debug(f"Received PMC articles: {len(received_pmc_articles)}") 
 
     # Create ppd dictionary
@@ -265,39 +275,15 @@ def main(args):
     df['pmcID'] = df['document:ID-DOIClean'].apply(add_PM_C_ID, args=(ppd_dict, 'pmcid',))
     df = df.rename(columns={"pmid": "pmID", "pmcid": "pmcID"})
     logger.info("Write finale csv to file...")
-    df.to_csv(args.out_path_doi_pmid, index=False)
+    df.to_csv(out_file_doi_pmid, index=False)
 
 # --------------------------------------------------------------------------------------------
 #                                          RUN
 # --------------------------------------------------------------------------------------------
 
 if __name__ == '__main__':
-
-    # Setup logger
-    logger.add("../../logs/download_pmc_articles.log", rotation="1 MB")
-    logger.info(f'Start ...')
-
-    # Setup argument parser
-    description = "Application description"
-    parser = argparse.ArgumentParser(description=description)
-    parser.add_argument('-d', '--data_path', metavar='data_path', type=str, required=False, 
-                        default='../../data/plazi/plazi_arthro_plaziID-IDDOI.csv', help='Path to PLAZI DOI csv file.')
-    parser.add_argument('-o1', '--out_path_pmid', metavar='out_path_pmid', type=str, required=False, 
-                        default='../../data/plazi/plazi_docDOI_to_PMID.csv', help='Output path for DOI to PMID file.')
-    parser.add_argument('-o2', '--out_path_doi_pmid', metavar='out_path_doi_pmid', type=str, required=False, 
-                        default="../../data/plazi/plazi_arthro_plaziID-IDDOI-pmID.csv", help='Output path for the PLAZI DOI csv file extended by the PMIDs.')
-    parser.add_argument('-xp', '--xml_path', metavar='xml_path', type=str, required=False,
-                        default='../../data/plazi/pmc/pmc_xml/', help='Output path to PMC XML directory.')
-    parser.add_argument("-d2p", "--doi_2_pmid", metavar='doi_2_pmid', type=bool, required=False,
-                        default=True, help='Write a file with DOIs and there corresponding PMIDs?')
-    parser.add_argument("-bs", "--batch_size", metavar='batch_size', type=int, required=False,
-                        default=200, help='Download batch size (maximum value is 200).')
-    args = parser.parse_args()
-
-    assert 200 >= args.batch_size > 0, "Batch size is not in the range of [1,200]"
-
-   # Run main
-    main(args)
+    # Run main
+    main()
 
     logger.info(f'Done.')
 

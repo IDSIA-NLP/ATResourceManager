@@ -62,3 +62,27 @@ rule plazi_xml_to_txt:
       --out-dir {output} \
     1>{log.out} 2>&1
     """
+
+# Donwload PMC articles
+rule plazi_download_pmc:
+  input:
+    csv = config['plazi_arthro_id_doi']
+  output:
+    d2p = config['plazi_arthro_doi_pmid_map'],
+    csv = config['plazi_arthro_doi_pmid'],
+    xml = directory(config['plazi_arthro_pmc_xml'])
+  log:
+    out = '../log/plazi_download_pmc.log'
+  benchmark:
+    '../log/plazi_download_pmc.prf'
+  shell:
+    """
+    python scripts/plazi_download_pmc_articles.py \
+      --in-file-csv {input.csv} \
+      --out-file-pmid {output.d2p} \
+      --out-file-doi-pmid {output.csv} \
+      --out-dir-xml {output.xml} \
+      --doi-2-pmid \
+      --batch-size 200 \
+    1>{log.out} 2>&1
+    """
