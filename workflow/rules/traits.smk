@@ -63,7 +63,7 @@ rule plazi_xml_to_txt:
     1>{log.out} 2>&1
     """
 
-# Donwload PMC articles
+# Download PMC articles
 rule plazi_download_pmc:
   input:
     csv = config['plazi_arthro_id_doi']
@@ -84,5 +84,25 @@ rule plazi_download_pmc:
       --out-dir-xml {output.xml} \
       --doi-2-pmid \
       --batch-size 200 \
+    1>{log.out} 2>&1
+    """
+
+# Convert PMC article XML to text
+rule plazi_pmc_xml_to_txt:
+  input:
+    config['plazi_arthro_pmc_xml']
+  output:
+    directory(config['plazi_pmc_txt_dir'])
+  params:
+    out_dir_root=config['plazi_root_dir']
+  log:
+    out = '../log/plazi_pmc_xml_to_txt.log'
+  benchmark:
+    '../log/plazi_pmc_xml_to_txt.prf'
+  shell:
+    """
+    python scripts/plazi_pmc_xml_to_text.py \
+      --in-dir-xml {input} \
+      --out-dir-root {params.out_dir_root} \
     1>{log.out} 2>&1
     """
