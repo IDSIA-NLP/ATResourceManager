@@ -15,7 +15,7 @@ configfile: '../config/config.yaml'
 # Dummy rule to run all other rules
 rule all_traits:
   input:
-    #config['col_eol_taxa']
+    config['plazi_pmc_txt_dir']
   output:
     '../results/traits.done'
   shell:
