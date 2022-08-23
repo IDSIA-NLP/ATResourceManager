@@ -14,3 +14,15 @@ eol_version_file: '../resources/eol/traits_all.zip.version'
 
 # Taxa output files
 col_eol_taxa: '../results/col_eol_taxa.tsv'
+
+# PLAZI settings
+plazi_root_dir: '../resources/plazi/'
+plazi_xml_dir: '../resources/plazi/plazi.xml/'
+plazi_arthro_xml_dir: '../resources/plazi/plazi_arthro.xml/'
+plazi_arthro_txt_dir: '../resources/plazi/plazi_arthro.txt/'
+plazi_arthro_id_doi: '../resources/plazi/plazi_arthro_id_doi.csv'
+plazi_arthro_pmc_xml: '../resources/plazi/pmc_xml/'
+plazi_arthro_doi_pmid_map: '../resources/plazi/doi_pmid.csv'
+plazi_arthro_doi_pmid: '../resources/plazi/plazi_arthro_id_doi_pmid.csv'
+plazi_pmc_txt_dir: '../resources/plazi/pmc_txt/'
+plazi_pmc_txt_fmt_dir: '../resources/plazi/pmc_txt_formatted/'
