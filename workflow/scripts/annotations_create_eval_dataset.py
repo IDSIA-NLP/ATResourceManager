@@ -1,16 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# vim: syntax=python tabstop=4 expandtab
 
 """
 Description: ...
-Author: ...
-Month Year
+Authors:
+    Joseph Cornelius
+    Harald Detering
+August 2022
 """
 # --------------------------------------------------------------------------------------------
 #                                           IMPORT
 # --------------------------------------------------------------------------------------------
 
-import argparse
+import click
 from loguru import logger
 import json
 from bs4 import BeautifulSoup
@@ -26,12 +29,14 @@ import copy
 
 # ----------------------------------------- Functions ----------------------------------------
 class EvalDataloader:
-    """Create evaluation datasets from the gold annotations.
-    """
-    def __init__(self, logger, args):
+    """Create evaluation datasets from the gold annotations."""
+    def __init__(self, in_dir_anno, in_file_legend, in_dir_html, out_dir, logger):
         self.logger = logger
-        self.args = args
-        self.anno_legend = self.load(self.args.anno_legend_file, "json")
+        self.anno_dir = in_dir_anno
+        self.anno_legend_file = in_file_legend
+        self.html_dir = in_dir_html
+        self.out_dir = out_dir
+        self.anno_legend = self.load(self.anno_legend_file, "json")
 
         self.annotator = None
         self.doc_filename = None
@@ -357,11 +362,11 @@ class EvalDataloader:
         """
         if file_type == "bioc":
             out_data = self.create_bioc_json()
-            out_file = f"{self.args.out_dir}json_bioc/{self.annotator}/{self.doc_filename}.bioc.json" 
+            out_file = os.path.join(self.out_dir, "json_bioc", self.annotator, f"{self.doc_filename}.bioc.json") 
 
         if file_type == "json":
             out_data = self.create_out_json()
-            out_file = f"{self.args.out_dir}json/{self.annotator}/{self.doc_filename}.json" 
+            out_file = os.path.join(self.out_dir, "json", self.annotator, f"{self.doc_filename}.json") 
         
         os.makedirs(os.path.dirname(out_file), exist_ok=True)
         with open(out_file, "w", encoding="utf-8") as f:
@@ -379,7 +384,7 @@ class EvalDataloader:
         """
 
         self.logger.info(f'Loading documents ...')
-        for filename in glob.glob(self.args.anno_dir + '*/pool/*'):
+        for filename in glob.glob(os.path.join(self.anno_dir, '*', 'pool', '*')):
             self.annotator =  filename.split("/")[-3]
             self.doc_filename = ".".join(filename.split("/")[-1].split(".")[:-2])
 
@@ -388,7 +393,7 @@ class EvalDataloader:
             anno_data = self.load(filename, "json")
 
             html_file = self.doc_filename + ".plain.html"
-            soup = self.load(self.args.html_dir + html_file, "html")
+            soup = self.load(os.path.join(self.html_dir, html_file), "html")
 
             self.logger.info(f'Converting annotations ...')
             anno_data = self.convert_anno(anno_data)
@@ -421,27 +426,19 @@ class EvalDataloader:
 #                                          RUN
 # --------------------------------------------------------------------------------------------
 
-if __name__ == '__main__':
-
+@click.command()
+@click.option('-a', '--in-dir-anno', required=True, help='Directory to annotations (members).')
+@click.option('-l', '--in-file-legend', required=True, help='Path to annotation legend JSON file.')
+@click.option('-h', '--in-dir-html', required=True, help='Directory of HTML documents (pool).')
+@click.option('-o', '--out-dir', required=True, help='Output directory for converted annotations.')
+def main(in_dir_anno, in_file_legend, in_dir_html, out_dir):
     # Setup logger
-    logger.add("./create_eval_data.log", rotation="20 MB")
+    #logger.add("./create_eval_data.log", rotation="20 MB")
     logger.info(f'Start ...')
 
-    # Setup argument parser
-    description = "Application description"
-    parser = argparse.ArgumentParser(description=description)
-    parser.add_argument('-p', '--anno_dir', metavar='anno_dir', type=str, required=False, 
-                        default='../../data/gold_annotations/ann.json/members/', help='Directory to  annotations.')
-    parser.add_argument('-l', '--anno_legend_file', metavar='anno_legend_file', type=str, required=False, 
-                        default='../../data/gold_annotations/annotations-legend.json', help='Path to annotation legend.')
-    parser.add_argument('-d', '--html_dir', metavar='html_dir', type=str, required=False, 
-                        default='../../data/gold_annotations/plain.html/pool/', help='Directory of HTML documents.')
-    parser.add_argument('-o', '--out_dir', metavar='out_dir', type=str, required=False, 
-                        default='../../data/gold_annotations/converted/', help='Output directory.')
-   
-
-    args = parser.parse_args()
-    
     # Run main
-    eval_dataloader = EvalDataloader(logger, args)
+    eval_dataloader = EvalDataloader(in_dir_anno, in_file_legend, in_dir_html, out_dir, logger)
     eval_dataloader.run()
+
+if __name__ == '__main__':
+    main()
