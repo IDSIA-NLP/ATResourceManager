@@ -5,3 +5,9 @@
 col_taxa_file_path: '../resources/col/latest_dwca/Taxon.tsv'
 col_taxa_arthropoda: '../results/col/Taxon_arthro.tsv'
 col_taxa_arthropoda_sm: '../results/col/Taxon_arthro_sm.tsv'
+
+# Annotations settings
+anno_members_dir: '../resources/gold_annotations/ann.json/members/'
+anno_html_dir: '../resources/gold_annotations/plain.html/pool/'
+anno_legend_file: '../resources/gold_annotations/annotations-legend.json'
+anno_out_dir: '../resources/gold_annotations/converted/'
