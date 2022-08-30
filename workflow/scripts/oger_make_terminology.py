@@ -1,16 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# vim: syntax=python tabstop=4 expandtab
 
 """
 Description: Converters the arthropod and traits files in OGER terminologies.
-Author: Joseph Cornelius
+Authors:
+    Joseph Cornelius
+    Harald Detering
 August 2022
 """
 # --------------------------------------------------------------------------------------------
 #                                           IMPORT
 # --------------------------------------------------------------------------------------------
 
-import argparse
+import click
 import glob
 from loguru import logger
 import pandas as pd
@@ -26,7 +29,7 @@ from nltk.corpus import stopwords
 
 
 # ----------------------------------------- Functions ----------------------------------------
-def create_arthro_term(logger, args):
+def create_arthro_term(logger, in_file, out_file, stopwords_file):
     """Create arthropod terminology.
 
     Args:
@@ -37,20 +40,22 @@ def create_arthro_term(logger, args):
         None
     """
 
-    if args.input_file_path is not None:
-        input_file_path = args.input_file_path
+    if in_file is not None:
+        input_file_path = in_file
     else:
         input_file_path = '../../data/latest_dwca/Taxon_arthro_eol_wikidata_sm.tsv'
 
-    if args.output_file_path is not None:
-        output_file_path = args.output_file_path
+    if out_file is not None:
+        output_file_path = out_file
     else:
         output_file_path = '../../data/bth_oger/col_arthropods.tsv'
 
-    logger.info(f'Read stopwords file: {args.stopwords}...')
-    with open(args.stopwords, 'r', encoding='utf-8') as f:
-        stopwords = [line.strip() for line in f]
-
+    logger.info(f'Read stopwords file: {stopwords_file}...')
+    if stopwords_file:
+        with open(stopwords_file, 'r', encoding='utf-8') as f:
+            stopwords = [line.strip() for line in f]
+    else:
+        stopwords = []
 
     logger.info('Read col file and transform it to oger readable terminology...')
     
@@ -106,7 +111,7 @@ def get_synonyms_dataframe(df_out):
     return pd.DataFrame(newrows)
 
 
-def create_trait_feeding_term(logger, args):
+def create_trait_feeding_term(logger, in_file, out_file): #, stopwords_file):
     """Create feeding trait terminology.
 
     Args:
@@ -117,13 +122,13 @@ def create_trait_feeding_term(logger, args):
         None
     """
 
-    if args.input_file_path is not None:
-        input_file_path = args.input_file_path
+    if in_file is not None:
+        input_file_path = in_file
     else:
         input_file_path = '../../data/traits/terms_arthro_traits_curated_feeding.tsv'
 
-    if args.output_file_path is not None:
-        output_file_path = args.output_file_path
+    if out_file is not None:
+        output_file_path = out_file
     else:
         output_file_path = '../../data/bth_oger/traits_feeding.tsv'
 
@@ -154,7 +159,7 @@ def create_trait_feeding_term(logger, args):
 
 
 
-def create_trait_habitat_term(logger, args):
+def create_trait_habitat_term(logger, in_file, out_file): #, stopwords_file):
     """Create habitat trait terminology.
 
     Args:
@@ -165,13 +170,13 @@ def create_trait_habitat_term(logger, args):
         None
     """
 
-    if args.input_file_path is not None:
-        input_file_path = args.input_file_path
+    if in_file is not None:
+        input_file_path = in_file
     else:
         input_file_path = '../../data/traits/terms_arthro_traits_curated_habitat.tsv'
 
-    if args.output_file_path is not None:
-        output_file_path = args.output_file_path
+    if out_file is not None:
+        output_file_path = out_file
     else:
         output_file_path = '../../data/bth_oger/traits_habitat.tsv'
 
@@ -206,7 +211,7 @@ def create_trait_habitat_term(logger, args):
 
 
 
-def create_trait_morph_term(logger, args):
+def create_trait_morph_term(logger, in_file, out_file): #, stopwords_file):
     """Create habitat trait terminology.
 
     Args:
@@ -217,13 +222,13 @@ def create_trait_morph_term(logger, args):
         None
     """
 
-    if args.input_file_path is not None:
-        input_file_path = args.input_file_path
+    if in_file is not None:
+        input_file_path = in_file
     else:
         input_file_path = '../../data/traits/terms_arthro_traits_curated_morphology.tsv'
 
-    if args.output_file_path is not None:
-        output_file_path = args.output_file_path
+    if out_file is not None:
+        output_file_path = out_file
     else:
         output_file_path = '../../data/bth_oger/traits_morphology.tsv'
 
@@ -257,7 +262,7 @@ def create_trait_morph_term(logger, args):
     df_out.to_csv(output_file_path, index=False, sep='\t')
 
 
-def create_trait_eol_term(logger, args):
+def create_trait_eol_term(logger, in_file, out_file): #, stopwords_file):
     """Create EOL trait terminology.
 
     Args:
@@ -268,13 +273,13 @@ def create_trait_eol_term(logger, args):
         None
     """
 
-    if args.input_file_path is not None:
-        input_file_path = args.input_file_path
+    if in_fileh is not None:
+        input_file_path = in_file
     else:
         input_file_path = '../../data/encyclopedia_of_life/trait_bank/traits_arthro_relationship.tsv'
 
-    if args.output_file_path is not None:
-        output_file_path = args.output_file_path
+    if out_file is not None:
+        output_file_path = out_file
     else:
         output_file_path = '../../data/bth_oger/traits_eol.tsv'
 
@@ -300,7 +305,7 @@ def create_trait_eol_term(logger, args):
     df_out.to_csv(output_file_path, index=False, sep='\t')
 
 
-def create_arthro_eol_term(logger, args):
+def create_arthro_eol_term(logger, in_file, out_file, stopwords_file):
     """Create EOL arthropod terminology.
 
     Args:
@@ -311,18 +316,18 @@ def create_arthro_eol_term(logger, args):
         None
     """
 
-    if args.input_file_path is not None:
-        input_file_path = args.input_file_path
+    if in_file is not None:
+        input_file_path = in_file
     else:
         input_file_path = '../../data/encyclopedia_of_life/trait_bank/pages_arthro.csv'
 
-    if args.output_file_path is not None:
-        output_file_path = args.output_file_path
+    if out_file is not None:
+        output_file_path = out_file
     else:
         output_file_path = '../../data/bth_oger/eol_arthropods.tsv'
 
-    logger.info(f'Read stopwords file: {args.stopwords}...')
-    with open(args.stopwords, 'r', encoding='utf-8') as f:
+    logger.info(f'Read stopwords file: {stopwords_file}...')
+    with open(stopwords_file, 'r', encoding='utf-8') as f:
         stopwords = [line.strip() for line in f]
 
 
@@ -351,70 +356,53 @@ def create_arthro_eol_term(logger, args):
 
     df_out.to_csv(output_file_path, index=False, sep='\t')
 
+# --------------------------------------------------------------------------------------------
+#                                          RUN
+# --------------------------------------------------------------------------------------------
 
-def main(logger, args):
-    """Choose between different terminologies to create.
+@click.command()
+@click.option('-t', '--terminology', required=True, type=click.Choice(['arthro', 'arthro_eol',
+              'trait_eol', 'trait_feeding', 'trait_habitat', 'trait_morph']), 
+              help='Which terminology should be created?')
+@click.option('-i', '--in-file', required=True, help='Path to input file.')
+@click.option('-o', '--out-file', required=True, help='Path to output .tsv file.')
+@click.option('-s', '--stopwords-file', required=False, help='Path to stopwords .txt file.')
+def main(terminology, in_file, out_file, stopwords_file):
+    """Choose between different terminologies to create."""
 
-    Args:
-        logger (logger instance): Instance of the loguru logger
-        args (argparser object): Object of the argument parser 
+    # Setup logger
+    #logger.add("../../logs/make_oger_terminology.log", rotation="20 MB")
+    logger.info(f'Start ...')
 
-    Returns:
-        None
-    """
-
-    if args.terminology == 'arthro':
+    if terminology == 'arthro':
         logger.info(f'Start creating the arthropod terminology.')
-        create_arthro_term(logger, args)
+        create_arthro_term(logger, in_file, out_file, stopwords_file)
 
-    elif args.terminology == 'trait_feeding':
+    elif terminology == 'trait_feeding':
         logger.info(f'Start creating the trait feeding terminology.')
-        create_trait_feeding_term(logger, args)
+        create_trait_feeding_term(logger, in_file, out_file)
     
-    elif args.terminology == 'trait_habitat':
+    elif terminology == 'trait_habitat':
         logger.info(f'Start creating the trait habitat terminology.')
-        create_trait_habitat_term(logger, args)
+        create_trait_habitat_term(logger, in_file, out_file)
 
-    elif args.terminology == 'trait_morph':
+    elif terminology == 'trait_morph':
         logger.info(f'Start creating the trait morphology terminology.')
-        create_trait_morph_term(logger, args)
+        create_trait_morph_term(logger, in_file, out_file)
 
-    elif args.terminology == 'trait_eol':
+    elif terminology == 'trait_eol':
         logger.info(f'Start creating the trait EOL terminology.')
-        create_trait_eol_term(logger, args)
+        create_trait_eol_term(logger, in_file, out_file)
 
-    elif args.terminology == 'arthro_eol':
+    elif terminology == 'arthro_eol':
         logger.info(f'Start creating the trait EOL terminology.')
-        create_arthro_eol_term(logger, args)
+        create_arthro_eol_term(logger, in_file, out_file, stopwords_file)
     
     else:
         logger.info(f'Invalid terminology!')
 
-
-# --------------------------------------------------------------------------------------------
-#                                          RUN
-# --------------------------------------------------------------------------------------------
-if __name__ == '__main__':
-
-    # Setup logger
-    logger.add("../../logs/make_oger_terminology.log", rotation="20 MB")
-    logger.info(f'Start ...')
-
-    # Setup argument parser
-    description = "Application description"
-    parser = argparse.ArgumentParser(description=description)
-    parser.add_argument('-t', '--terminology', metavar='terminology', type=str, required=True,
-                        default='arthro', choices=['arthro', 'arthro_eol', 'trait_eol', 'trait_feeding', 
-                        'trait_habitat', 'trait_morph'], help='Which terminology should be created?')
-    parser.add_argument('-i', '--input_file_path', metavar='input_file_path', type=str, required=False,
-                        help='Path to input file.')
-    parser.add_argument('-o', '--output_file_path', metavar='output_file_path', type=str, required=False,
-                        help='Path to output .tsv file.')
-    parser.add_argument('-s', '--stopwords', metavar='stopwords', type=str, required=False,
-                        default="./most_freq_20k.txt", help='Path to output .tsv file.')
-    args = parser.parse_args()
-
-   # Run main
-    main(logger, args)
-
     logger.info(f'Done.')
+
+
+if __name__ == '__main__':
+    main()

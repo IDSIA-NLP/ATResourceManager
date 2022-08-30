@@ -12,4 +12,5 @@ dependencies:
   - dvc=2.15.0
   - dvc-gdrive=2.15.0
   - loguru=0.5.3
+  - nltk=3.6.7
   - pandas=1.4.3
