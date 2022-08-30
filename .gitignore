@@ -1,5 +1,6 @@
 # ignore workflow output
 results/
+log/
 workflow/.snakemake/
 log/
 

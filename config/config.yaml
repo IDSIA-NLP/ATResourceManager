@@ -26,3 +26,9 @@ plazi_arthro_doi_pmid_map: '../resources/plazi/doi_pmid.csv'
 plazi_arthro_doi_pmid: '../resources/plazi/plazi_arthro_id_doi_pmid.csv'
 plazi_pmc_txt_dir: '../resources/plazi/pmc_txt/'
 plazi_pmc_txt_fmt_dir: '../resources/plazi/pmc_txt_formatted/'
+
+# Annotations settings
+anno_members_dir: '../resources/gold_annotations/ann.json/members/'
+anno_html_dir: '../resources/gold_annotations/plain.html/pool/'
+anno_legend_file: '../resources/gold_annotations/annotations-legend.json'
+anno_out_dir: '../resources/gold_annotations/converted/'
