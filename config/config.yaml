@@ -2,6 +2,52 @@
 # coding: utf-8
 
 # Catalogue of Life (CoL) settings
-col_taxa_file_path: '../resources/col/latest_dwca/Taxon.tsv'
+col_data_dir: '../resources/col/latest_dwca'
+col_taxa_file: '../resources/col/latest_dwca/Taxon.tsv'
 col_taxa_arthropoda: '../results/col/Taxon_arthro.tsv'
-col_taxa_arthropoda_sm: '../results/col/Taxon_arthro_sm.tsv'
+col_version_file: '../resources/col/latest_dwca.zip.version'
+
+# Encyclopedia of Life (EOL) settings
+eol_data_dir: '../resources/eol/trait_bank'
+eol_taxa_file: '../resources/eol/trait_bank/pages.csv'
+eol_version_file: '../resources/eol/traits_all.zip.version'
+
+# Taxa output files
+col_eol_taxa: '../results/col_eol_taxa.tsv'
+
+# PLAZI settings
+plazi_root_dir: '../resources/plazi/'
+plazi_xml_dir: '../resources/plazi/plazi.xml/'
+plazi_arthro_xml_dir: '../resources/plazi/plazi_arthro.xml/'
+plazi_arthro_txt_dir: '../resources/plazi/plazi_arthro.txt/'
+plazi_arthro_id_doi: '../resources/plazi/plazi_arthro_id_doi.csv'
+plazi_arthro_pmc_xml: '../resources/plazi/pmc_xml/'
+plazi_arthro_doi_pmid_map: '../resources/plazi/doi_pmid.csv'
+plazi_arthro_doi_pmid: '../resources/plazi/plazi_arthro_id_doi_pmid.csv'
+plazi_pmc_txt_dir: '../resources/plazi/pmc_txt/'
+plazi_pmc_txt_fmt_dir: '../resources/plazi/pmc_txt_formatted/'
+
+# Annotations settings
+anno_members_dir: '../resources/gold_annotations/ann.json/members/'
+anno_html_dir: '../resources/gold_annotations/plain.html/pool/'
+anno_legend_file: '../resources/gold_annotations/annotations-legend.json'
+anno_out_dir: '../resources/gold_annotations/converted/'
+
+# OGER settings
+oger_input_arthro_col: '../../data/latest_dwca/Taxon_arthro_eol_wikidata_sm.tsv'
+oger_term_arthro_col: '../results/bth_oger/col_arthro.tsv'
+
+oger_input_arthro_eol: '../../data/encyclopedia_of_life/trait_bank/pages_arthro.csv'
+oger_term_arthro_eol: '../results/bth_oger/eol_arthro.tsv'
+
+oger_input_feeding: '../../data/traits/terms_arthro_traits_curated_feeding.tsv'
+oger_term_feeding: '../results/bth_oger/traits_feeding.tsv'
+
+oger_input_habitat: '../../data/traits/terms_arthro_traits_curated_habitat.tsv'
+oger_term_habitat: '../results/bth_oger/traits_habitat.tsv'
+
+oger_input_morph: '../../data/traits/terms_arthro_traits_curated_morphology.tsv'
+oger_term_morph: '../results/bth_oger/traits_morphology.tsv'
+
+oger_input_eol: '../../data/encyclopedia_of_life/trait_bank/traits_arthro_relationship.tsv'
+oger_term_eol: '../results/bth_oger/traits_eol.tsv'
