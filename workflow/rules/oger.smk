@@ -5,7 +5,7 @@
 #------------------------------------------------------------------------------
 # author   : Harald Detering
 # email    : harald.detering@gmail.com
-# modified : 2022-08-30
+# modified : 2022-08-31
 #------------------------------------------------------------------------------
 
 configfile: '../config/config.yaml' 
@@ -13,7 +13,12 @@ configfile: '../config/config.yaml'
 # Dummy rule to run all the rules.
 rule oger_all:
   input:
-    config['oger_term_arthro']
+    config['oger_term_arthro_col'],
+    #config['oger_term_arthro_eol'],
+    config['oger_term_feeding'],
+    config['oger_term_habitat'],
+    config['oger_term_morph'],
+    #config['oger_term_eol']
   output:
     '../results/oger.done',
   shell:
@@ -21,14 +26,13 @@ rule oger_all:
     touch {output}
     """
 
-'arthro', 'arthro_eol', 'trait_eol', 'trait_feeding', 'trait_habitat', 'trait_morph'
-
 # create OGER terminology for CoL arthropods
 rule oger_term_arthro:
   input:
-    tax = config['col_eol_taxa_file']
+    taxa = config['oger_input_arthro_col'],
+    stop = config['oger_stopwords_file']
   output:
-    trm = config['oger_term_arthro_col']
+    config['oger_term_arthro_col']
   log:
     '../log/oger_term_arthro.log'
   benchmark:
@@ -37,19 +41,20 @@ rule oger_term_arthro:
     """
     set -x
     python scripts/oger_make_terminology.py \
-        --in-file {input.tax} \
-        --out-file {output.trm} \
+        --in-file {input.taxa} \
+        --stopwords-file {input.stop} \
+        --out-file {output} \
         --terminology arthro \
-    \ >{log} 2>&1
+    >{log} 2>&1
     """
 
 # create OGER terminology for EOL arthropods
 rule oger_term_arthro_eol:
   input:
-    # '../../data/latest_dwca/Taxon_arthro_eol_wikidata_sm.tsv'
-    tax = config['col_eol_taxa_file']
+    taxa = config['oger_input_arthro_eol'],
+    stop = config['oger_stopwords_file']
   output:
-    trm = config['oger_term_arthro_eol']
+    config['oger_term_arthro_eol']
   log:
     '../log/oger_term_arthro_eol.log'
   benchmark:
@@ -58,18 +63,19 @@ rule oger_term_arthro_eol:
     """
     set -x
     python scripts/oger_make_terminology.py \
-        --in-file {input.tax} \
-        --out-file {output.trm} \
+        --in-file {input.taxa} \
+        --stopwords-file {input.stop} \
+        --out-file {output} \
         --terminology arthro_eol \
-    \ >{log} 2>&1
+    >{log} 2>&1
     """
 
 # create OGER terminology for 'feeding' trait
 rule oger_term_feeding:
   input:
-    tax = config['col_eol_taxa_file']
+    config['oger_input_feeding']
   output:
-    trm = config['oger_term_feeding']
+    config['oger_term_feeding']
   log:
     '../log/oger_term_feeding.log'
   benchmark:
@@ -78,18 +84,18 @@ rule oger_term_feeding:
     """
     set -x
     python scripts/oger_make_terminology.py \
-        --in-file {input.tax} \
-        --out-file {output.trm} \
+        --in-file {input} \
+        --out-file {output} \
         --terminology trait_feeding \
-    \ >{log} 2>&1
+    >{log} 2>&1
     """
 
 # create OGER terminology for 'habitat' trait
 rule oger_term_habitat:
   input:
-    tax = config['col_eol_taxa_file']
+    config['oger_input_habitat']
   output:
-    trm = config['oger_term_habitat']
+    config['oger_term_habitat']
   log:
     '../log/oger_term_habitat.log'
   benchmark:
@@ -98,18 +104,18 @@ rule oger_term_habitat:
     """
     set -x
     python scripts/oger_make_terminology.py \
-        --in-file {input.tax} \
-        --out-file {output.trm} \
+        --in-file {input} \
+        --out-file {output} \
         --terminology trait_habitat \
-    \ >{log} 2>&1
+    >{log} 2>&1
     """
 
 # create OGER terminology for 'morphology' trait
 rule oger_term_morph:
   input:
-    tax = config['col_eol_taxa_file']
+    config['oger_input_morph']
   output:
-    trm = config['oger_term_morph']
+    config['oger_term_morph']
   log:
     '../log/oger_term_morph.log'
   benchmark:
@@ -118,18 +124,18 @@ rule oger_term_morph:
     """
     set -x
     python scripts/oger_make_terminology.py \
-        --in-file {input.tax} \
-        --out-file {output.trm} \
+        --in-file {input} \
+        --out-file {output} \
         --terminology trait_morph \
-    \ >{log} 2>&1
+    >{log} 2>&1
     """
 
 # create OGER terminology for EOL traits
 rule oger_term_eol:
   input:
-    tax = config['col_eol_taxa_file']
+    config['oger_input_eol']
   output:
-    trm = config['oger_term_eol']
+    config['oger_term_eol']
   log:
     '../log/oger_term_eol.log'
   benchmark:
@@ -138,8 +144,8 @@ rule oger_term_eol:
     """
     set -x
     python scripts/oger_make_terminology.py \
-        --in-file {input.tax} \
-        --out-file {output.trm} \
+        --in-file {input} \
+        --out-file {output} \
         --terminology trait_eol \
-    \ >{log} 2>&1
+    >{log} 2>&1
     """

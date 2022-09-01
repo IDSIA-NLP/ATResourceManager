@@ -3,7 +3,9 @@
 configfile: '../config/config.yaml'
 
 include: 'rules/col.smk'
+include: 'rules/oger.smk'
 
 rule all:
   input:
-    '../results/col.done'
+#    '../results/col.done',
+    '../results/oger.done'
