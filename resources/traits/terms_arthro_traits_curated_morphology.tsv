@@ -1,0 +1,221 @@
+uri	name	type	synonyms	definition	resource	wikipedia
+						
+Body Mass						
+http://purl.obolibrary.org/obo/VT_0001259	body mass	measurement	body weight, whole body mass	The amount of matter in the body of an organism	Vertebrate trait ontology	
+http://eol.org/schema/terms/bodyMassDry	dry body mass	measurement	dry body weight, dehydrated body mass, dessicated body mass	Dehydrated body mass	Encyclopedia of Life	
+http://eol.org/schema/terms/bodyMassWet	wet body mass	measurement	wet body weight, fresh body mass	Mass of one individual of this taxon, living or fresh, without desiccation	Encyclopedia of Life	
+						
+						
+Body Parts (length/width)						
+https://www.wikidata.org/wiki/Q34630	abdomen length	length/width	abdominal length	Posterior-most body segment of an arthropod	Wikiworld	https://en.wikipedia.org/wiki/Insect_morphology#Abdomen
+https://en.wiktionary.org/wiki/aculeus	aculeus length	length/width	aculei length, aculeate length	Sting, stinger, of an insect	Wikiworld	https://www.wikidata.org/wiki/Q657076
+https://www.wikidata.org/wiki/Q380510	aedeagus length	length/width	aedeagal length, aedeagi length	Male reproductive organ	Wikiworld	https://en.wikipedia.org/wiki/Aedeagus
+https://www.wikidata.org/wiki/Q204664	antenna length	length/width	antennal length, antennae length	Paired appendages used for sensing in arthropods	Wikiworld	https://en.wikipedia.org/wiki/Antenna_(biology)
+https://en.wikipedia.org/wiki/Arthropod_leg	basis length	length/width	basal length	Second segment of crustacean legs	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg
+https://en.wiktionary.org/wiki/basitarsus	basitarsus length	length/width	basitarsal length	Sixth segment of arachnid legs	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg
+https://www.wikidata.org/wiki/Q170494	body length	length/width		Main body excluding appendages	Wikiworld	https://en.wiktionary.org/wiki/body
+https://www.wikidata.org/wiki/Q666115	carapace length	length/width	carapacial length	A dorsal (upper) section of the exoskeleton	Wikiworld	https://en.wikipedia.org/wiki/Carapace
+https://en.wikipedia.org/wiki/Arthropod_leg	carpus length	length/width	carpal length	Fifth segment of crustacean legs	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg
+https://www.wikidata.org/wiki/Q10994170	cephalon length	length/width	cephalic length	The head section of an arthropod	Wikiworld	https://en.wikipedia.org/wiki/Cephalon_(arthropod_head)
+https://en.wiktionary.org/wiki/cephalosome	cephalosome length	length/width	cephalosomal length	The anterior region or head of insects and other arthropods	Wikiworld	https://en.wiktionary.org/wiki/cephalosome
+https://www.wikidata.org/wiki/Q1137335	cephalothorax length	length/width	prosoma length, prosomal length	The arthropod head and the thorax tagma fused together	Wikiworld	https://en.wikipedia.org/wiki/Cephalothorax
+https://www.wikidata.org/wiki/Q1054892	cercus length	length/width	cerci length, cersal length	Paired appendages on the rear-most segments of many arthropods	Wikiworld	https://en.wikipedia.org/wiki/Cercus
+https://www.wikidata.org/wiki/Q1069045	chela length	length/width	chelae length, chelate length	Claw or pincer-like organ terminating certain limbs of some arthropods	Wikiworld	https://en.wikipedia.org/wiki/Chela_(organ)
+https://www.wikidata.org/wiki/Q843142	chelicera length	length/width	chelicerae length, cheliceral length	The mouthparts (jaws) of the Chelicerata	Wikiworld	https://en.wikipedia.org/wiki/Chelicerae
+https://www.wikidata.org/wiki/Q217605	claw length	length/width	claws length	Claw or pincer-like organ terminating certain limbs of some arthropods	Wikiworld	https://en.wikipedia.org/wiki/Chela_(organ)
+https://www.wikidata.org/wiki/Q1103783	clypeus length	length/width	clypeal length, clypei length	One of the sclerites that make up the face of an arthropod	Wikiworld	https://en.wikipedia.org/wiki/Clypeus_(arthropod_anatomy)
+https://en.wiktionary.org/wiki/coxa	coxa length	length/width	coxal length, coxae length	The proximal segment and functional base of the leg	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg#Coxa
+https://www.wikidata.org/wiki/Q5207822	dactylus length	length/width	dactylar length, dactyli length	The tip region of the leg of some crustaceans	Wikiworld	https://en.wikipedia.org/wiki/Dactylus
+https://en.wiktionary.org/wiki/dorsum	dorsum length	length/width	dorsal length, dorsa length	The dorsal (upper/back) part of an organism	Wikiworld	https://en.wikipedia.org/wiki/Anatomical_terms_of_location#Dorsal_and_ventral
+https://www.wikidata.org/wiki/Q658398	elytron length	length/width	elytra length, elytral length	A modified, hardened forewing of certain insect orders	Wikiworld	https://en.wikipedia.org/wiki/Elytron
+https://en.wiktionary.org/wiki/endopod	endopod length	length/width	endopodal length	Inner branch of the biramous crustacean limb	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg
+https://en.wiktionary.org/wiki/epipod	epipod length	length/width	epipodal length	A small projection arising from the thoracic legs of a crustacean	Wikiworld	https://en.wiktionary.org/wiki/epipod
+https://en.wiktionary.org/wiki/exopod	exopod length	length/width	exopodal length	Outer branch of the biramous crustacean limb	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg
+https://www.wikidata.org/wiki/Q7364	eye length	length/width		Visual organ	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_eye
+https://www.wikidata.org/wiki/Q4441421	eyestalk length	length/width	ommatophore length	A protrusion that extends an eye away from the body	Wikiworld	https://en.wikipedia.org/wiki/Eyestalk
+https://www.wikidata.org/wiki/Q37017	face length	length/width	facial length	The front of an animal's head	Wikiworld	https://en.wikipedia.org/wiki/Face
+https://www.wikidata.org/wiki/Q1940269	fang length	length/width		Chelicerae shaped as articulated fangs	Wikiworld	https://en.wikipedia.org/wiki/Chelicerae
+https://www.wikidata.org/wiki/Q1404561	femur length	length/width	femoral length, femora length	Largest segment of most legs	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg#Femur
+https://www.wikidata.org/wiki/Q58841533	flagellum length	length/width	flagellar length	Last segment of typical insect antenna	Wikiworld	https://en.wikipedia.org/wiki/Antenna_(biology)
+https://en.wiktionary.org/wiki/forelimb#English	foreleg length	length/width	fore-leg length, forelimb length	First pair of legs	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg
+https://en.wiktionary.org/wiki/forewing	forewing length	length/width	fore-wing length	First pair of wings	Wikiworld	https://en.wikipedia.org/wiki/Insect_wing
+https://www.wikidata.org/wiki/Q1434710	frons length	length/width		One of the sclerites that make up the face of an arthropod	Wikiworld	https://en.wikipedia.org/wiki/Insect_morphology#External
+https://www.wikidata.org/wiki/Q1495406	gaster length	length/width		Bulbous posterior portion of the metasoma found in hymenopterans	Wikiworld	https://en.wikipedia.org/wiki/Gaster_(insect_anatomy)
+https://en.wiktionary.org/wiki/gena#English	gena length	length/width	genal length, genae length	The part of the head to which the jaws of an insect are attached	Wikiworld	https://en.wiktionary.org/wiki/gena
+https://www.wikidata.org/wiki/Q4620674	genitalia length	length/width	genital length	A sex or reproductive organ	Wikiworld	https://en.wikipedia.org/wiki/Sex_organ
+https://www.wikidata.org/wiki/Q132390	gill length	length/width		A respiratory organ found in many aquatic organisms that extracts dissolved oxygen from water	Wikiworld	https://en.wikipedia.org/wiki/Gill
+https://www.wikidata.org/wiki/Q138167	gnathosoma length	length/width	gnathosomal length	Part of the body of the mites and ticks comprising the mouth and feeding parts	Wikiworld	https://en.wikipedia.org/wiki/Gnathosoma
+https://www.wikidata.org/wiki/Q2138124	gonopod length	length/width	gonopodal length	Specialized appendages of various arthropods used in reproduction or egg-laying	Wikiworld	https://en.wikipedia.org/wiki/Gonopod
+https://www.wikidata.org/wiki/Q1335456	haltere length	length/width	halter length, halteres length	A pair of small club-shaped organs on the body of some flying insects	Wikiworld	https://en.wikipedia.org/wiki/Halteres
+https://www.wikidata.org/wiki/Q23640	head length	length/width		The head section of an arthropod	Wikiworld	https://en.wikipedia.org/wiki/Cephalon_(arthropod_head)
+https://www.wikidata.org/wiki/Q1604753	hemelytron length	length/width	hemelytra length, hemelytral length, hemelytrum length, hemielytra length	An insect's forewing with both membranous and hardened portions	Wikiworld	https://en.wiktionary.org/wiki/hemelytron
+https://en.wiktionary.org/wiki/hindleg	hindleg length	length/width	hind-leg length	Last pair of legs	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg
+https://en.wiktionary.org/wiki/hindwing	hindwing length	length/width	hind-wing length	Second pair of wings	Wikiworld	https://en.wikipedia.org/wiki/Insect_wing
+https://www.wikidata.org/wiki/Q104526082	horn length	length/width		Pointed projection on the head of various animals	Wikiworld	https://en.wikipedia.org/wiki/Horn_(anatomy)
+https://www.wikidata.org/wiki/Q1641405	hypopygium length	length/width	hypopygia length, hypopygial length	A modified abdominal segment, in some insects, which supports the copulatory apparatus	Wikiworld	https://en.wiktionary.org/wiki/hypopygium
+https://en.wiktionary.org/wiki/idiosoma	idiosoma length	length/width	idiosomal length	The posterior portion of the body of mites and ticks	Wikiworld	https://en.wiktionary.org/wiki/idiosoma
+https://en.wiktionary.org/wiki/ischium	ischium length	length/width	ischia length, ischial length	Third segment of crustacean legs	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg
+https://www.wikidata.org/wiki/Q520833	labium length	length/width	labial length, labia length	A lower mouthpart of an insect that is formed by the second pair of maxillae united in the middle line	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_mouthparts#Labium
+https://www.wikidata.org/wiki/Q360768	labrum length	length/width	labral length, labra length	Flap-like structure that lies immediately in front of the mouth, upper lip of an insect mouth	Wikiworld	https://en.wikipedia.org/wiki/Labrum_(arthropod_mouthpart)
+https://www.wikidata.org/wiki/Q133105	leg length	length/width	limb length	The complete leg	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg
+https://www.wikidata.org/wiki/Q920112	mandible length	length/width	mandibular length, mouthparts length, mouth length	A pair of mouthparts, jaws	Wikiworld	https://en.wikipedia.org/wiki/Mandible_(arthropod_mouthpart)
+https://www.wikidata.org/wiki/Q350956	maxilla length	length/width	maxillae length, maxillary length	The paired structures that make up the mandible	Wikiworld	https://en.wikipedia.org/wiki/Maxilla_(arthropod_mouthpart)
+https://en.wiktionary.org/wiki/merus	merus length	length/width	meral length, meri length	Fourth segment of crustacean legs	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg
+https://www.wikidata.org/wiki/Q1461105	mesosoma length	length/width	mesosomal length	The middle part of the body of arthropods whose body is composed of three parts	Wikiworld	https://en.wikipedia.org/wiki/Mesosoma
+https://www.wikidata.org/wiki/Q602075	metasoma length	length/width	metasomal length	The posterior part of the body of arthropods whose body is composed of three parts	Wikiworld	https://en.wikipedia.org/wiki/Metasoma
+https://www.wikidata.org/wiki/Q66516345	metatarsus length	length/width	metatarsal length, basitarsus length, metatarsi length	Sixth segment of chelicerate legs	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg
+https://en.wiktionary.org/wiki/midleg	midleg length	length/width	middle-leg length	Middle pair of insect legs	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg
+https://en.wiktionary.org/wiki/ocellus#English	ocellus length	length/width	ocelli length, ocellar length	A simple eye consisting of a single lens and a small number of sensory cells	Wikiworld	https://en.wiktionary.org/wiki/ocellus
+https://en.wiktionary.org/wiki/opisthosoma	opisthosoma length	length/width	opisthosomal length	Posterior part of the body in some arthropods, behind the prosoma - cephalothorax	Wikiworld	https://en.wikipedia.org/wiki/Opisthosoma
+https://www.wikidata.org/wiki/Q868460	ovipositor length	length/width	ovipositors length	A tube-like organ used by some animals, especially insects, for the laying of eggs	Wikiworld	https://en.wikipedia.org/wiki/Ovipositor
+https://www.wikidata.org/wiki/Q7135191	paramere length	length/width	parameres length	Part of the external reproductive organs of male insects	Wikiworld	https://en.wikipedia.org/wiki/Paramere
+https://en.wiktionary.org/wiki/patella	patella length	length/width	patellar length, patellae length	Fourth segment of chelicerate legs	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg
+https://www.wikidata.org/wiki/Q932179	pedipalp length	length/width	palp length, palpi length	The second pair of appendages of chelicerates	Wikiworld	https://en.wikipedia.org/wiki/Pedipalp
+https://www.wikidata.org/wiki/Q58	phallus length	length/width	phallic length, penis, penile length	Male reproductive organ	Wikiworld	https://en.wikipedia.org/wiki/Aedeagus
+https://www.wikidata.org/wiki/Q899348	proboscis length	length/width	proboscises length, proboscides length	A tubular feeding and sucking organ	Wikiworld	https://en.wikipedia.org/wiki/Proboscis#Invertebrates
+https://en.wiktionary.org/wiki/pronotum	pronotum length	length/width	pronotal length, pronota length	A prominent plate-like structure that covers all or part of the thorax of some insects	Wikiworld	https://en.wikipedia.org/wiki/Prothorax
+https://www.wikidata.org/wiki/Q3133438	propodus length	length/width	propodal length	Sixth segment of crustacean legs	Wikiworld	https://en.wikipedia.org/wiki/Dactylus
+https://www.wikidata.org/wiki/Q3407707	prosoma length	length/width	prosomal length	A tagma of various arthropods comprising the head and the thorax fused together	Wikiworld	https://en.wikipedia.org/wiki/Cephalothorax
+https://www.wikidata.org/wiki/Q123439	prothorax length	length/width	prothoracic length	The foremost of the three segments in the thorax of an insect	Wikiworld	https://en.wikipedia.org/wiki/Prothorax
+https://www.wikidata.org/wiki/Q1048843	pterostigma length	length/width	pterostigmata length, pterostigmal length	A group of specialized cells in the outer wings of insects	Wikiworld	https://en.wikipedia.org/wiki/Pterostigma
+https://en.wiktionary.org/wiki/ramus	ramus length	length/width	ramal length, rami length	External branch of limbs	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg
+https://www.wikidata.org/wiki/Q2233438	rostrum length	length/width	rostral length, rostra length	The forward extension of the carapace in front of the eyes	Wikiworld	https://en.wikipedia.org/wiki/Rostrum_(anatomy)
+https://www.wikidata.org/wiki/Q2094206	scutellum length	length/width	scutellar length, scutella length	Posterior portion of mesonotum of an insect thorax	Wikiworld	https://en.wikipedia.org/wiki/Scutellum_(insect_anatomy)
+https://www.wikidata.org/wiki/Q1777684	sternum length	length/width	sternal length, sterna length	The ventral portion of a segment of an arthropod thorax or abdomen	Wikiworld	https://en.wikipedia.org/wiki/Sternum_(arthropod_anatomy)
+https://www.wikidata.org/wiki/Q476820	tarsus length	length/width	tarsal length, tarsi length	Segment of arthropod leg	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg#Tarsus
+https://www.wikidata.org/wiki/Q952557	telson length	length/width	telsonal length, telsonic length	The posterior-most division of the body of an arthropod	Wikiworld	https://en.wikipedia.org/wiki/Telson
+https://www.wikidata.org/wiki/Q652546	tergum length	length/width	tergal length, terga length	The dorsal portion of an arthropod segment other than the head	Wikiworld	https://en.wikipedia.org/wiki/Tergum
+https://www.wikidata.org/wiki/Q942508	thorax length	length/width	thoracic length, thoraces length	The midsection of the insect body also called mesosoma or cephalothorax	Wikiworld	https://en.wikipedia.org/wiki/Thorax_(arthropod_anatomy)
+https://www.wikidata.org/wiki/Q2035874	tibia length	length/width	tibiae length, tibial length	Segment of arthropod leg	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg#Tibia
+https://en.wiktionary.org/wiki/trochanter	trochanter length	length/width		Segment of arthropod leg	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg#Trochanter
+https://www.wikidata.org/wiki/Q161358	wing length	length/width		Complete wing	Wikiworld	https://en.wikipedia.org/wiki/Insect_wing
+http://www.wikidata.org/entity/Q245097	wingspan length	length/width		distance from the tip of one limb such as an arm or wing to the tip of the paired limb, or analogically the same measure for airplane wings	Wikiworld	https://en.wikipedia.org/wiki/Wingspan
+
+https://www.wikidata.org/wiki/Q34630	abdomen width	length/width	abdominal width	Posterior-most body segment of an arthropod	Wikiworld	https://en.wikipedia.org/wiki/Insect_morphology#Abdomen
+https://en.wiktionary.org/wiki/aculeus	aculeus width	length/width	aculei width, aculeate width	Sting, stinger, of an insect	Wikiworld	https://www.wikidata.org/wiki/Q657076
+https://www.wikidata.org/wiki/Q380510	aedeagus width	length/width	aedeagal width, aedeagi width	Male reproductive organ	Wikiworld	https://en.wikipedia.org/wiki/Aedeagus
+https://www.wikidata.org/wiki/Q204664	antenna width	length/width	antennal width, antennae width	Paired appendages used for sensing in arthropods	Wikiworld	https://en.wikipedia.org/wiki/Antenna_(biology)
+https://en.wikipedia.org/wiki/Arthropod_leg	basis width	length/width	basal width	Second segment of crustacean legs	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg
+https://en.wiktionary.org/wiki/basitarsus	basitarsus width	length/width	basitarsal width	Sixth segment of arachnid legs	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg
+https://www.wikidata.org/wiki/Q170494	body width	length/width		Main body excluding appendages	Wikiworld	https://en.wiktionary.org/wiki/body
+https://www.wikidata.org/wiki/Q666115	carapace width	length/width	carapacial width	A dorsal (upper) section of the exoskeleton	Wikiworld	https://en.wikipedia.org/wiki/Carapace
+https://en.wikipedia.org/wiki/Arthropod_leg	carpus width	length/width	carpal width	Fifth segment of crustacean legs	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg
+https://www.wikidata.org/wiki/Q10994170	cephalon width	length/width	cephalic width	The head section of an arthropod	Wikiworld	https://en.wikipedia.org/wiki/Cephalon_(arthropod_head)
+https://en.wiktionary.org/wiki/cephalosome	cephalosome width	length/width	cephalosomal width	The anterior region or head of insects and other arthropods	Wikiworld	https://en.wiktionary.org/wiki/cephalosome
+https://www.wikidata.org/wiki/Q1137335	cephalothorax width	length/width	prosoma width, prosomal width	The arthropod head and the thorax tagma fused together	Wikiworld	https://en.wikipedia.org/wiki/Cephalothorax
+https://www.wikidata.org/wiki/Q1054892	cercus width	length/width	cerci width, cersal width	Paired appendages on the rear-most segments of many arthropods	Wikiworld	https://en.wikipedia.org/wiki/Cercus
+https://www.wikidata.org/wiki/Q1069045	chela width	length/width	chelae width, chelate width	Claw or pincer-like organ terminating certain limbs of some arthropods	Wikiworld	https://en.wikipedia.org/wiki/Chela_(organ)
+https://www.wikidata.org/wiki/Q843142	chelicera width	length/width	chelicerae width, cheliceral width	The mouthparts (jaws) of the Chelicerata	Wikiworld	https://en.wikipedia.org/wiki/Chelicerae
+https://www.wikidata.org/wiki/Q217605	claw width	length/width	claws width	Claw or pincer-like organ terminating certain limbs of some arthropods	Wikiworld	https://en.wikipedia.org/wiki/Chela_(organ)
+https://www.wikidata.org/wiki/Q1103783	clypeus width	length/width	clypeal width, clypei width	One of the sclerites that make up the face of an arthropod	Wikiworld	https://en.wikipedia.org/wiki/Clypeus_(arthropod_anatomy)
+https://en.wiktionary.org/wiki/coxa	coxa width	length/width	coxal width, coxae width	The proximal segment and functional base of the leg	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg#Coxa
+https://www.wikidata.org/wiki/Q5207822	dactylus width	length/width	dactylar width, dactyli width	The tip region of the leg of some crustaceans	Wikiworld	https://en.wikipedia.org/wiki/Dactylus
+https://en.wiktionary.org/wiki/dorsum	dorsum width	length/width	dorsal width, dorsa width	The dorsal (upper/back) part of an organism	Wikiworld	https://en.wikipedia.org/wiki/Anatomical_terms_of_location#Dorsal_and_ventral
+https://www.wikidata.org/wiki/Q658398	elytron width	length/width	elytra width, elytral width	A modified, hardened forewing of certain insect orders	Wikiworld	https://en.wikipedia.org/wiki/Elytron
+https://en.wiktionary.org/wiki/endopod	endopod width	length/width	endopodal width	Inner branch of the biramous crustacean limb	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg
+https://en.wiktionary.org/wiki/epipod	epipod width	length/width	epipodal width	A small projection arising from the thoracic legs of a crustacean	Wikiworld	https://en.wiktionary.org/wiki/epipod
+https://en.wiktionary.org/wiki/exopod	exopod width	length/width	exopodal width	Outer branch of the biramous crustacean limb	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg
+https://www.wikidata.org/wiki/Q7364	eye width	length/width		Visual organ	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_eye
+https://www.wikidata.org/wiki/Q4441421	eyestalk width	length/width	ommatophore width	A protrusion that extends an eye away from the body	Wikiworld	https://en.wikipedia.org/wiki/Eyestalk
+https://www.wikidata.org/wiki/Q37017	face width	length/width	facial width	The front of an animal's head	Wikiworld	https://en.wikipedia.org/wiki/Face
+https://www.wikidata.org/wiki/Q1940269	fang width	length/width		Chelicerae shaped as articulated fangs	Wikiworld	https://en.wikipedia.org/wiki/Chelicerae
+https://www.wikidata.org/wiki/Q1404561	femur width	length/width	femoral width, femora width	Largest segment of most legs	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg#Femur
+https://www.wikidata.org/wiki/Q58841533	flagellum width	length/width	flagellar width	Last segment of typical insect antenna	Wikiworld	https://en.wikipedia.org/wiki/Antenna_(biology)
+https://en.wiktionary.org/wiki/forelimb#English	foreleg width	length/width	fore-leg width, forelimb width	First pair of legs	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg
+https://en.wiktionary.org/wiki/forewing	forewing width	length/width	fore-wing width	First pair of wings	Wikiworld	https://en.wikipedia.org/wiki/Insect_wing
+https://www.wikidata.org/wiki/Q1434710	frons width	length/width		One of the sclerites that make up the face of an arthropod	Wikiworld	https://en.wikipedia.org/wiki/Insect_morphology#External
+https://www.wikidata.org/wiki/Q1495406	gaster width	length/width		Bulbous posterior portion of the metasoma found in hymenopterans	Wikiworld	https://en.wikipedia.org/wiki/Gaster_(insect_anatomy)
+https://en.wiktionary.org/wiki/gena#English width	gena	length/width	genal width, genae width	The part of the head to which the jaws of an insect are attached	Wikiworld	https://en.wiktionary.org/wiki/gena
+https://www.wikidata.org/wiki/Q4620674	genitalia width	length/width	genital width	A sex or reproductive organ	Wikiworld	https://en.wikipedia.org/wiki/Sex_organ
+https://www.wikidata.org/wiki/Q132390	gill width	length/width		A respiratory organ found in many aquatic organisms that extracts dissolved oxygen from water	Wikiworld	https://en.wikipedia.org/wiki/Gill
+https://www.wikidata.org/wiki/Q138167	gnathosoma width	length/width	gnathosomal width	Part of the body of the mites and ticks comprising the mouth and feeding parts	Wikiworld	https://en.wikipedia.org/wiki/Gnathosoma
+https://www.wikidata.org/wiki/Q2138124	gonopod width	length/width	gonopodal width	Specialized appendages of various arthropods used in reproduction or egg-laying	Wikiworld	https://en.wikipedia.org/wiki/Gonopod
+https://www.wikidata.org/wiki/Q1335456	haltere width	length/width	halter width, halteres width	A pair of small club-shaped organs on the body of some flying insects	Wikiworld	https://en.wikipedia.org/wiki/Halteres
+https://www.wikidata.org/wiki/Q23640	head width	length/width		The head section of an arthropod	Wikiworld	https://en.wikipedia.org/wiki/Cephalon_(arthropod_head)
+https://www.wikidata.org/wiki/Q1604753	hemelytron width	length/width	hemelytra width, hemelytral width, hemelytrum width, hemielytra width	An insect's forewing with both membranous and hardened portions	Wikiworld	https://en.wiktionary.org/wiki/hemelytron
+https://en.wiktionary.org/wiki/hindleg	hindleg width	length/width	hind-leg width	Last pair of legs	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg
+https://en.wiktionary.org/wiki/hindwing	hindwing width	length/width	hind-wing width	Second pair of wings	Wikiworld	https://en.wikipedia.org/wiki/Insect_wing
+https://www.wikidata.org/wiki/Q104526082	horn width	length/width		Pointed projection on the head of various animals	Wikiworld	https://en.wikipedia.org/wiki/Horn_(anatomy)
+https://www.wikidata.org/wiki/Q1641405	hypopygium width	length/width	hypopygia width, hypopygial width	A modified abdominal segment, in some insects, which supports the copulatory apparatus	Wikiworld	https://en.wiktionary.org/wiki/hypopygium
+https://en.wiktionary.org/wiki/idiosoma	idiosoma width	length/width	idiosomal width	The posterior portion of the body of mites and ticks	Wikiworld	https://en.wiktionary.org/wiki/idiosoma
+https://en.wiktionary.org/wiki/ischium	ischium width	length/width	ischia width, ischial width	Third segment of crustacean legs	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg
+https://www.wikidata.org/wiki/Q520833	labium width	length/width	labial width, labia width	A lower mouthpart of an insect that is formed by the second pair of maxillae united in the middle line	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_mouthparts#Labium
+https://www.wikidata.org/wiki/Q360768	labrum width	length/width	labral width, labra width	Flap-like structure that lies immediately in front of the mouth, upper lip of an insect mouth	Wikiworld	https://en.wikipedia.org/wiki/Labrum_(arthropod_mouthpart)
+https://www.wikidata.org/wiki/Q133105	leg width	length/width	limb width	The complete leg	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg
+https://www.wikidata.org/wiki/Q920112	mandible width	length/width	mandibular width, mouthparts width, mouth	A pair of mouthparts, jaws	Wikiworld	https://en.wikipedia.org/wiki/Mandible_(arthropod_mouthpart)
+https://www.wikidata.org/wiki/Q350956	maxilla width	length/width	maxillae width, maxillary width	The paired structures that make up the mandible	Wikiworld	https://en.wikipedia.org/wiki/Maxilla_(arthropod_mouthpart)
+https://en.wiktionary.org/wiki/merus	merus width	length/width	meral width, meri width	Fourth segment of crustacean legs	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg
+https://www.wikidata.org/wiki/Q1461105	mesosoma width	length/width	mesosomal width	The middle part of the body of arthropods whose body is composed of three parts	Wikiworld	https://en.wikipedia.org/wiki/Mesosoma
+https://www.wikidata.org/wiki/Q602075	metasoma width	length/width	metasomal width	The posterior part of the body of arthropods whose body is composed of three parts	Wikiworld	https://en.wikipedia.org/wiki/Metasoma
+https://www.wikidata.org/wiki/Q66516345	metatarsus width	length/width	metatarsal width, basitarsus width, metatarsi width	Sixth segment of chelicerate legs	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg
+https://en.wiktionary.org/wiki/midleg	midleg width	length/width	middle width-leg	Middle pair of insect legs	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg
+https://en.wiktionary.org/wiki/ocellus#English	ocellus width	length/width	ocelli width, width ocellar	A simple eye consisting of a single lens and a small number of sensory cells	Wikiworld	https://en.wiktionary.org/wiki/ocellus
+https://en.wiktionary.org/wiki/opisthosoma	opisthosoma width	length/width	opisthosomal width	Posterior part of the body in some arthropods, behind the prosoma - cephalothorax	Wikiworld	https://en.wikipedia.org/wiki/Opisthosoma
+https://www.wikidata.org/wiki/Q868460	ovipositor width	length/width	ovipositors width	A tube-like organ used by some animals, especially insects, for the laying of eggs	Wikiworld	https://en.wikipedia.org/wiki/Ovipositor
+https://www.wikidata.org/wiki/Q7135191	paramere width	length/width	parameres width	Part of the external reproductive organs of male insects	Wikiworld	https://en.wikipedia.org/wiki/Paramere
+https://en.wiktionary.org/wiki/patella	patella width	length/width	patellar width, patellae width	Fourth segment of chelicerate legs	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg
+https://www.wikidata.org/wiki/Q932179	pedipalp width	length/width	palp width, palpi width	The second pair of appendages of chelicerates	Wikiworld	https://en.wikipedia.org/wiki/Pedipalp
+https://www.wikidata.org/wiki/Q58	phallus width	length/width	phallic width, penis width, penile width	Male reproductive organ	Wikiworld	https://en.wikipedia.org/wiki/Aedeagus
+https://www.wikidata.org/wiki/Q899348	proboscis width	length/width	proboscises width, proboscides width	A tubular feeding and sucking organ	Wikiworld	https://en.wikipedia.org/wiki/Proboscis#Invertebrates
+https://en.wiktionary.org/wiki/pronotum	pronotum width	length/width	pronotal width, pronota width	A prominent plate-like structure that covers all or part of the thorax of some insects	Wikiworld	https://en.wikipedia.org/wiki/Prothorax
+https://www.wikidata.org/wiki/Q3133438	propodus width	length/width	propodal width	Sixth segment of crustacean legs	Wikiworld	https://en.wikipedia.org/wiki/Dactylus
+https://www.wikidata.org/wiki/Q3407707	prosoma width	length/width	prosomal width	A tagma of various arthropods comprising the head and the thorax fused together	Wikiworld	https://en.wikipedia.org/wiki/Cephalothorax
+https://www.wikidata.org/wiki/Q123439	prothorax width	length/width	prothoracic width	The foremost of the three segments in the thorax of an insect	Wikiworld	https://en.wikipedia.org/wiki/Prothorax
+https://www.wikidata.org/wiki/Q1048843	pterostigma width	length/width	pterostigmata width, pterostigmal width	A group of specialized cells in the outer wings of insects	Wikiworld	https://en.wikipedia.org/wiki/Pterostigma
+https://en.wiktionary.org/wiki/ramus	ramus width	length/width	ramal width, rami width	External branch of limbs	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg
+https://www.wikidata.org/wiki/Q2233438	rostrum width	length/width	rostral width, rostra width	The forward extension of the carapace in front of the eyes	Wikiworld	https://en.wikipedia.org/wiki/Rostrum_(anatomy)
+https://www.wikidata.org/wiki/Q2094206	scutellum width	length/width	scutellar width, scutella width	Posterior portion of mesonotum of an insect thorax	Wikiworld	https://en.wikipedia.org/wiki/Scutellum_(insect_anatomy)
+https://www.wikidata.org/wiki/Q1777684	sternum width	length/width	sternal width, sterna width	The ventral portion of a segment of an arthropod thorax or abdomen	Wikiworld	https://en.wikipedia.org/wiki/Sternum_(arthropod_anatomy)
+https://www.wikidata.org/wiki/Q476820	tarsus width	length/width	tarsal width, tarsi width	Segment of arthropod leg	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg#Tarsus
+https://www.wikidata.org/wiki/Q952557	telson width	length/width	telsonal width, telsonic width	The posterior-most division of the body of an arthropod	Wikiworld	https://en.wikipedia.org/wiki/Telson
+https://www.wikidata.org/wiki/Q652546	tergum width	length/width	tergal width, terga width	The dorsal portion of an arthropod segment other than the head	Wikiworld	https://en.wikipedia.org/wiki/Tergum
+https://www.wikidata.org/wiki/Q942508	thorax width	length/width	thoracic width, thoraces width	The midsection of the insect body also called mesosoma or cephalothorax	Wikiworld	https://en.wikipedia.org/wiki/Thorax_(arthropod_anatomy)
+https://www.wikidata.org/wiki/Q2035874	tibia width	length/width	tibiae width, tibial width	Segment of arthropod leg	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg#Tibia
+https://en.wiktionary.org/wiki/trochanter	trochanter width	length/width		Segment of arthropod leg	Wikiworld	https://en.wikipedia.org/wiki/Arthropod_leg#Trochanter
+https://www.wikidata.org/wiki/Q161358	wing width	length/width		Complete wing	Wikiworld	https://en.wikipedia.org/wiki/Insect_wing
+http://www.wikidata.org/entity/Q245097	wingspan width	length/width		distance from the tip of one limb such as an arm or wing to the tip of the paired limb, or analogically the same measure for airplane wings	Wikiworld	https://en.wikipedia.org/wiki/Wingspan
+						
+						
+Body Parts (counts, 0=absent)						
+http://purl.obolibrary.org/obo/BTO_0000074	antenna	count	antennae	Paired appendages used for sensing in arthropods	BRENDA tissue / enzyme source	https://en.wikipedia.org/wiki/Antenna_(biology)
+http://purl.obolibrary.org/obo/IDOMAL_0002229	apposition eye	count	apposition eyes	A compound eye with no separation between the crystalline-cone layer and the retinula, each rhabdom receiving light only from its own corneal lens.	Malaria Ontology	https://en.wikipedia.org/wiki/Compound_eye#Apposition_eyes
+http://purl.obolibrary.org/obo/BTO_0001701	carapace	count		A bony or chitinous case or shield covering the back or part of the back of an animal (as a turtle or crab).	BRENDA tissue / enzyme source	https://en.wikipedia.org/wiki/Carapace
+http://purl.obolibrary.org/obo/AISM_0004165	cercus	count	cerci	Paired appendages on the rear-most segments of many arthropods	Ontology for the Anatomy of the Insect SkeletoMuscular system (AISM)	https://en.wikipedia.org/wiki/Cercus
+http://purl.obolibrary.org/obo/UBERON_0000018	compound eye	count	compound eyes	A light sensing organ composed of multiple ommatidia, visual units consisting of a limited number of rhabdomeric photoreceptor cells, cornea-secreting epithelial cells, interommatidial pigment cells, and sometimes crystalline cone cells	UBERON	https://en.wikipedia.org/wiki/Compound_eye
+http://purl.obolibrary.org/obo/BTO_0000378	elytron	count	elytra	A modified, hardened forewing of certain insect orders	BRENDA tissue / enzyme source	https://en.wikipedia.org/wiki/Elytron
+http://purl.obolibrary.org/obo/UBERON_0000970	eye	count	eyes	Visual organ	UBERON	https://en.wikipedia.org/wiki/Arthropod_eye
+http://purl.obolibrary.org/obo/BTO_0001604	eyestalk	count	eyestalks	A protrusion that extends an eye away from the body	BRENDA tissue / enzyme source	https://en.wikipedia.org/wiki/Eyestalk
+http://purl.obolibrary.org/obo/UBERON_0002535	gill	count	gills	A respiratory organ found in many aquatic organisms that extracts dissolved oxygen from water	UBERON	https://en.wikipedia.org/wiki/Gill
+http://purl.obolibrary.org/obo/TGMA_0000526	gonopod	count	gonopods	Specialized appendages of various arthropods used in reproduction or egg-laying	Mosquito gross anatomy ontology	https://en.wikipedia.org/wiki/Gonopod
+http://purl.obolibrary.org/obo/UBERON_0000987	haltere	count	halteres	A pair of small club-shaped organs on the body of some flying insects	UBERON	https://en.wikipedia.org/wiki/Halteres
+https://en.wiktionary.org/wiki/hemelytron	hemelytron	count	hemelytra, hemelytrum, hemielytra	An insect's forewing with both membranous and hardened portions	Wikiworld	https://en.wiktionary.org/wiki/hemelytron
+http://purl.obolibrary.org/obo/UBERON_0006967	horn	count		Pointed projection on the head of various animals	UBERON	https://en.wikipedia.org/wiki/Horn_(anatomy)
+http://purl.obolibrary.org/obo/UBERON_0000978	leg	count	limbs, legs	A leg is a weight-bearing and locomotive anatomical structure, usually having a columnar shape.	UBERON	https://en.wikipedia.org/wiki/Leg#Limb
+http://purl.obolibrary.org/obo/BTO_0001758	ocellus	count	simple eyes, ocelli	small simple eyes, found in many invertebrates, usually consisting of a few sensory cells and a single lens	BRENDA tissue / enzyme source	https://en.wikipedia.org/wiki/Simple_eye_in_invertebrates#Ocelli_or_eye_spots
+http://purl.obolibrary.org/obo/UBERON_2002117	ovipositor	count	ovipositors	A tube-like organ used by some animals, especially insects, for the laying of eggs	UBERON	https://en.wikipedia.org/wiki/Ovipositor
+http://purl.obolibrary.org/obo/BTO_0001117	proboscis	count	proboscises, proboscides	A tubular feeding and sucking organ	BRENDA tissue / enzyme source	https://en.wikipedia.org/wiki/Proboscis#Invertebrates
+http://purl.obolibrary.org/obo/HAO_0000957	pterostigma	count	pterostigmata	A group of specialized cells in the outer wings of insects	Hymenoptera Anatomy Ontology	https://en.wikipedia.org/wiki/Pterostigma
+http://purl.obolibrary.org/obo/IDOMAL_0002230	superposition eye	count	superposition eyes	refracting, reflecting and parabolic superposition eyes	Malaria Ontology	https://en.wikipedia.org/wiki/Eye#Superposition_eyes
+http://purl.obolibrary.org/obo/BTO_0002098	tympanal organ	count	tympanum	hearing organ in insects, consisting of a membrane (tympanum) stretched across a frame backed by an air sac and associated sensory neurons	BRENDA tissue / enzyme source	https://en.wikipedia.org/wiki/Tympanal_organ
+http://purl.obolibrary.org/obo/UBERON_0000023	wing	count	wings	Complete wing	UBERON	https://en.wikipedia.org/wiki/Insect_wing
+						
+						
+Body Features (terms used to describe)						
+http://eol.org/schema/terms/apterous	apterous	yes/no	wingless	Wings are absent	Encyclopedia of Life	https://en.wikipedia.org/wiki/Aptery
+http://purl.obolibrary.org/obo/UBERON_0016490	auditory system	yes/no	hearing system, hearing organ	is the sensory system for the sense of hearing	UBERON	https://en.wikipedia.org/wiki/Auditory_system
+http://eol.org/schema/terms/Bioluminescent	bioluminescent	yes/no	bioluminescence	Has this organism been observed to produce and transmit light?	Encyclopedia of Life	http://en.wikipedia.org/wiki/Bioluminescence
+https://www.wikidata.org/entity/Q10874	blind	yes/no	sightless	complete or nearly complete lack of vision	WikiData	https://en.wiktionary.org/wiki/blind
+http://eol.org/schema/terms/brachypterous	brachypterous	yes/no	nonfunctional wings, reduced wings, microptery, micropterous	The presence of short wings, not functional as organs of flight	Encyclopedia of Life	https://en.wikipedia.org/wiki/Brachyptery
+http://eol.org/schema/terms/hasWings	has wings	yes/no	winged	Wings are present	Encyclopedia of Life	https://en.wikipedia.org/wiki/Wing
+http://eol.org/schema/terms/secondarilyApterous	secondarily apterous	yes/no	secondarily wingless	The absence of wings in organisms that are descended from winged ancestors	Encyclopedia of Life	https://en.wikipedia.org/wiki/Aptery
+https://en.wiktionary.org/wiki/aristate	aristate antenna	yes/no	aristate antennae	Having a slender, sharp, or spiny tip.	Wikiworld	
+https://en.wiktionary.org/wiki/lamellate	lamellate antenna	yes/no	lamellate antennae	This term is used especially to describe certain insect antennae in which the last segments are so shaped into a compact club of flat plates	Wikiworld	
+https://en.wiktionary.org/wiki/serrate	serrate antenna	yes/no	serrate antennae	Having tooth-like projections on one side, as in a saw	Wikiworld	
+https://en.wiktionary.org/wiki/flabellate	flabellate antenna	yes/no	flabellate antennae	Fan-shaped; having parts or segments that are flattened and lengthened on one side, such that they are long and narrow	Wikiworld	
+https://en.wiktionary.org/wiki/moniliform	moniliform antenna	yes/no	moniliform antennae	Having a form resembling a string of beads, where the component parts or segments are more or less uniform in size and are spherical or rounded in shape	Wikiworld	
+https://en.wiktionary.org/wiki/setaceous	setaceous antenna	yes/no	setaceous antennae	Of, relating to, or resembling a seta or bristle; bristly	Wikiworld	
+https://en.wiktionary.org/wiki/geniculate	geniculate antenna	yes/no	geniculate antennae	Having kneelike joints; able to bend at an abrupt angle	Wikiworld	
+https://en.wiktionary.org/wiki/plumose	plumose antenna	yes/no	plumose antennae, feathery antennae, plumelike antennae	Having hairs, or other parts, arranged along an axis like a feather	Wikiworld	
+https://en.wiktionary.org/wiki/pectinate	pectinate antenna	yes/no	pectinate antennae	Having segments which are greatly lengthened to one side	Wikiworld	
+https://en.wiktionary.org/wiki/clavate	clavate antenna	yes/no	clavate antennae, claviform antennae, clubbed antennae	Resembling a club, becoming increasingly wide from the base to the distal end	Wikiworld	
+https://en.wiktionary.org/wiki/stylate	stylate antenna	yes/no	stylate antennae, styliform antennae	A small, thin, pointed body part	Wikiworld	
