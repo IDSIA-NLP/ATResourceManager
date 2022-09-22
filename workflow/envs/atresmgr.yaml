@@ -13,4 +13,5 @@ dependencies:
   - dvc-gdrive=2.15.0
   - loguru=0.5.3
   - lxml=4.9.1
+  - nltk=3.6.7
   - pandas=1.4.3

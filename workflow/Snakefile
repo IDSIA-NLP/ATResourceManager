@@ -5,9 +5,12 @@ configfile: '../config/config.yaml'
 include: 'rules/taxa.smk'
 include: 'rules/traits.smk'
 include: 'rules/annotations.smk'
+include: 'rules/oger.smk'
 
 rule all:
   input:
     '../results/taxa.done',
     '../results/traits.done',
-    '../results/annotations.done'
+    '../results/annotations.done',
+   '../results/oger.done'
+
