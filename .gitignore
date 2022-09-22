@@ -1,5 +1,6 @@
 # ignore workflow output
 results/
+log/
 workflow/.snakemake/
 
 # Byte-compiled / optimized / DLL files

@@ -3,7 +3,7 @@
 # vim: syntax=python tabstop=4 expandtab
 
 """
-Description: Converters the arthropod and traits files in OGER terminologies.
+Description: Converts the arthropod and traits files in OGER terminologies.
 Authors:
     Joseph Cornelius
     Harald Detering

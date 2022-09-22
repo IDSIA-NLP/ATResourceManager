@@ -14,11 +14,11 @@ configfile: '../config/config.yaml'
 rule oger_all:
   input:
     config['oger_term_arthro_col'],
-    #config['oger_term_arthro_eol'],
+    config['oger_term_arthro_eol'],
     config['oger_term_feeding'],
     config['oger_term_habitat'],
     config['oger_term_morph'],
-    #config['oger_term_eol']
+    config['oger_term_eol']
   output:
     '../results/oger.done',
   shell:
