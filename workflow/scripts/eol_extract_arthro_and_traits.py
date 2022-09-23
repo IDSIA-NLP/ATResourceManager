@@ -1,24 +1,27 @@
 #!/usr/bin/env python3
+# vim: syntax=python tabstop=2 expandtab
 # -*- coding: utf-8 -*-
 
 """
-Description: ...
-Author: ...
-Month Year
+Description: Extract Arthropod taxa, traits, terms and relationship from Encyclopedia of Life (EOL).
+Authors:
+  Joseph Cornelius
+  Harald Detering
+September 2022
 """
 # --------------------------------------------------------------------------------------------
 #                                           IMPORT
 # --------------------------------------------------------------------------------------------
 
-import argparse
+import click
 from loguru import logger
 import pandas as pd 
 import re
 import numpy as np
 
-# --------------------------------------------------------------------------------------------
-#                                            MAIN
-# --------------------------------------------------------------------------------------------
+
+# ----------------------------------------- Declarations ----------------------------------------
+
 class Graph:
     def __init__(self, egdes):
         self.egdes = egdes
@@ -68,21 +71,36 @@ class Graph:
         
         return list(set(all_children))
 
-# ----------------------------------------- Functions ----------------------------------------
 
-def main(logger, args):
-    """[summary]
+# --------------------------------------------------------------------------------------------
+#                                            MAIN
+# --------------------------------------------------------------------------------------------
 
-    Args:
-        logger ([type]): [description]
+@click.command()
 
-    Returns:
-        [type]: [description]
-    """
+# '../../data/encyclopedia_of_life/trait_bank/pages.csv'
+@click.option('-p', '--pages', required=True, help='Path to EOL pages file')
+#'../../data/encyclopedia_of_life/trait_bank/traits.csv'
+@click.option('-t', '--traits', required=True, help='Path to EOL traits file')
+# '../../data/encyclopedia_of_life/trait_bank/terms.csv'
+@click.option('-i', '--terms',required=True, help='Path to EOL terms file')
+#  '../../data/encyclopedia_of_life/trait_bank/pages_arthro.csv'
+@click.option('-pa', '--pages-arthro', required=True, help='Output path to EOL pages arthropod file')
+# '../../data/encyclopedia_of_life/trait_bank/traits_arthro.csv' 
+@click.option('-ta', '--traits-arthro', required=True, help='Output path to EOL traits arthropod file')
+# '../../data/encyclopedia_of_life/trait_bank/terms_arthro_trait_predicates.csv'
+@click.option('-ia', '--terms-arthro', required=True, help='Output path to EOL terms arthropod file')
+# '../../data/encyclopedia_of_life/trait_bank/traits_arthro_relationship.tsv'
+@click.option('-ot', '--trait-arthro-rel', required=True, help='Output path to EOL trait-arthropod relationship file')
+def main(pages, traits, terms, pages_arthro, traits_arthro, terms_arthro, trait_arthro_rel):
+    """Extract EOL taxa, traits and terms associated with Arthropoda."""
 
+    # Setup logger
+    #logger.add("./LOG_FILE.log", rotation="20 MB")
+    logger.info(f'Start ...')
     logger.info(f'Start computing pages_arthro...')
 
-    df_pages = pd.read_csv(args.pages)
+    df_pages = pd.read_csv(pages)
     df_pages["parent_id"] = df_pages["parent_id"].fillna(0)
     df_pages = df_pages.astype({"page_id": int, "parent_id": int})
 
@@ -138,14 +156,14 @@ def main(logger, args):
     logger.debug(f"pages_arthro shape: {df_pages_arthro.shape}")    
     logger.debug(f"pages_arthro columns: {df_pages_arthro.columns}")
     logger.debug(f"pages_arthro head: \n{df_pages_arthro.head()}")
-    df_pages_arthro.to_csv(args.pages_arthro)
+    df_pages_arthro.to_csv(pages_arthro)
 
 
     # ------------------------------------------
     # GET THE ARTHROPOD TRAIT DATA
     logger.info(f'Start computing traits_arthro...')
 
-    df_traits = pd.read_csv(args.traits)
+    df_traits = pd.read_csv(traits)
     arthro_page_ids = df_pages_arthro.page_id.unique()
 
     arthro_trait_filter = df_traits["page_id"].isin(arthro_page_ids)
@@ -155,13 +173,13 @@ def main(logger, args):
     logger.debug(f"traits_arthro columns: {df_traits_arthro.columns}")
     logger.debug(f"traits_arthro head: \n{df_traits_arthro.head()}")
 
-    df_traits_arthro.to_csv(args.traits_arthro)
+    df_traits_arthro.to_csv(traits_arthro)
 
     # ------------------------------------------
     # GET THE ARTHROPOD TERM DATA
     logger.info(f'Start computing terms_arthro...')
 
-    df_terms = pd.read_csv(args.terms)
+    df_terms = pd.read_csv(terms)
     arthro_predicates = df_traits_arthro.predicate.unique()
     arthro_term_filter = df_terms["uri"].isin(arthro_predicates)
     df_terms_arthro = df_terms[arthro_term_filter]
@@ -170,7 +188,7 @@ def main(logger, args):
     logger.debug(f"terms_arthro columns: {df_terms_arthro.columns}")
     logger.debug(f"terms_arthro head: \n{df_terms_arthro.head()}")
 
-    df_terms_arthro.to_csv(args.terms_arthro, index=False)
+    df_terms_arthro.to_csv(terms_arthro, index=False)
 
     
     # ------------------------------------------
@@ -207,7 +225,7 @@ def main(logger, args):
     logger.debug(f"trait_arthro_rel columns: {df_out.columns}")
     logger.debug(f"trait_arthro_rel head: \n{df_out.head()}")
 
-    df_out.to_csv(args.trait_arthro_rel, index=False, sep='\t')
+    df_out.to_csv(trait_arthro_rel, index=False, sep='\t')
 
 
 # --------------------------------------------------------------------------------------------
@@ -215,38 +233,5 @@ def main(logger, args):
 # --------------------------------------------------------------------------------------------
 
 if __name__ == '__main__':
-
-    # Setup logger
-    logger.add("./LOG_FILE.log", rotation="20 MB")
-    logger.info(f'Start ...')
-
-    # Setup argument parser
-    description = "Application description"
-    parser = argparse.ArgumentParser(description=description)
-    parser.add_argument('-p', '--pages', metavar='pages', type=str, required=False, 
-                        default='../../data/encyclopedia_of_life/trait_bank/pages.csv', 
-                        help='Path to EOL pages file')
-    parser.add_argument('-t', '--traits', metavar='traits', type=str, required=False, 
-                        default='../../data/encyclopedia_of_life/trait_bank/traits.csv', 
-                        help='Path to EOL traits file')
-    parser.add_argument('-i', '--terms', metavar='terms', type=str, required=False, 
-                        default='../../data/encyclopedia_of_life/trait_bank/terms.csv', 
-                        help='Path to EOL terms file')
-    
-    parser.add_argument('-pa', '--pages_arthro', metavar='pages', type=str, required=False, 
-                        default='../../data/encyclopedia_of_life/trait_bank/pages_arthro.csv', 
-                        help='Output path to EOL pages arthropod file')
-    parser.add_argument('-ta', '--traits_arthro', metavar='traits', type=str, required=False, 
-                        default='../../data/encyclopedia_of_life/trait_bank/traits_arthro.csv', 
-                        help='Output path to EOL traits arthropod file')
-    parser.add_argument('-ia', '--terms_arthro', metavar='terms_arthro', type=str, required=False, 
-                        default='../../data/encyclopedia_of_life/trait_bank/terms_arthro_trait_predicates.csv', 
-                        help='Output path to EOL terms arthropod file')
-
-    parser.add_argument('-ot', '--trait_arthro_rel', metavar='trait_arthro_rel', type=str, required=False, 
-                        default='../../data/encyclopedia_of_life/trait_bank/traits_arthro_relationship.tsv', 
-                        help='Output path to EOL terms arthropod file')
-    args = parser.parse_args()
-
-   # Run main
-    main(logger, args)
+    # Run main
+    main()
