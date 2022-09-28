@@ -77,7 +77,6 @@ class Graph:
 # --------------------------------------------------------------------------------------------
 
 @click.command()
-
 # '../../data/encyclopedia_of_life/trait_bank/pages.csv'
 @click.option('-p', '--pages', required=True, help='Path to EOL pages file')
 #'../../data/encyclopedia_of_life/trait_bank/traits.csv'
@@ -163,7 +162,7 @@ def main(pages, traits, terms, pages_arthro, traits_arthro, terms_arthro, trait_
     # GET THE ARTHROPOD TRAIT DATA
     logger.info(f'Start computing traits_arthro...')
 
-    df_traits = pd.read_csv(traits)
+    df_traits = pd.read_csv(traits, low_memory=False)
     arthro_page_ids = df_pages_arthro.page_id.unique()
 
     arthro_trait_filter = df_traits["page_id"].isin(arthro_page_ids)
@@ -214,12 +213,22 @@ def main(pages, traits, terms, pages_arthro, traits_arthro, terms_arthro, trait_
     'literal'
     ]]
 
+    # Prepare columns for output
+    df_out_traits = df_out.drop_duplicates().copy()
+    df_out_pages = df_pages_arthro[['page_id','canonical']].groupby(['page_id'])['canonical'].first().reset_index()
+    df_out_terms = df_terms[['uri','name','type']].groupby(['uri'])[['name','type']].first().reset_index()
+    df_out_terms = df_out_terms.rename(columns={'name': 'term_name', 'type': 'term_type'})
+
+    # Merge output DataFrames
+    df_out = pd.merge(df_out_traits, df_out_pages, on='page_id', how='left')
+    df_out = pd.merge(df_out, df_out_terms, left_on='predicate', right_on='uri', how='left')
+
     # Add canonical name of Taxon
-    df_out["canonical"] = df_out['page_id'].apply(lambda x: df_pages_arthro[df_pages_arthro["page_id"]==x]["canonical"].iloc[0])
+    #df_out["canonical"] = df_out['page_id'].apply(lambda x: df_pages_arthro[df_pages_arthro["page_id"]==x]["canonical"].iloc[0])
     # Add predicate term
-    df_out["term_name"] = df_out['predicate'].apply(lambda x: df_terms[df_terms["uri"]==x]["name"].iloc[0])
+    #df_out["term_name"] = df_out['predicate'].apply(lambda x: df_terms[df_terms["uri"]==x]["name"].iloc[0])
     # Add predicate term type
-    df_out["term_type"] = df_out['predicate'].apply(lambda x: df_terms[df_terms["type"]==x]["name"].iloc[0])
+    #df_out["term_type"] = df_out['predicate'].apply(lambda x: df_terms[df_terms["type"]==x]["name"].iloc[0])
 
     logger.debug(f"trait_arthro_rel shape: {df_out.shape}")
     logger.debug(f"trait_arthro_rel columns: {df_out.columns}")
