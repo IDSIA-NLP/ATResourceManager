@@ -223,13 +223,6 @@ def main(pages, traits, terms, pages_arthro, traits_arthro, terms_arthro, trait_
     df_out = pd.merge(df_out_traits, df_out_pages, on='page_id', how='left')
     df_out = pd.merge(df_out, df_out_terms, left_on='predicate', right_on='uri', how='left')
 
-    # Add canonical name of Taxon
-    #df_out["canonical"] = df_out['page_id'].apply(lambda x: df_pages_arthro[df_pages_arthro["page_id"]==x]["canonical"].iloc[0])
-    # Add predicate term
-    #df_out["term_name"] = df_out['predicate'].apply(lambda x: df_terms[df_terms["uri"]==x]["name"].iloc[0])
-    # Add predicate term type
-    #df_out["term_type"] = df_out['predicate'].apply(lambda x: df_terms[df_terms["type"]==x]["name"].iloc[0])
-
     logger.debug(f"trait_arthro_rel shape: {df_out.shape}")
     logger.debug(f"trait_arthro_rel columns: {df_out.columns}")
     logger.debug(f"trait_arthro_rel head: \n{df_out.head()}")
