@@ -8,12 +8,20 @@ col_taxa_arthropoda: '../results/col/Taxon_arthro.tsv'
 col_version_file: '../resources/col/latest_dwca.zip.version'
 
 # Encyclopedia of Life (EOL) settings
+eol_version_file: '../resources/eol/traits_all.zip.version'
 eol_data_dir: '../resources/eol/trait_bank'
 eol_taxa_file: '../resources/eol/trait_bank/pages.csv'
-eol_version_file: '../resources/eol/traits_all.zip.version'
+eol_traits_file: '../resources/eol/trait_bank/traits.csv'
+eol_terms_file: '../resources/eol/trait_bank/terms.csv'
 
-# Taxa output files
+# Output files
+## Taxa
 col_eol_taxa: '../results/col_eol_taxa.tsv'
+eol_taxa_arthro_file: '../results/eol_pages_arthro.csv'
+## Traits
+eol_traits_arthro_file: '../results/eol_traits_arthro.csv'
+eol_traits_arthro_rel_file: '../results/eol_traits_arthro_relationship.tsv'
+eol_terms_arthro_file: '../results/eol_terms_arthro_trait_predicates.csv'
 
 # PLAZI settings
 plazi_root_dir: '../resources/plazi/'

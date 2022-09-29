@@ -18,7 +18,11 @@ configfile: '../config/config.yaml'
 # Dummy rule to run all other rules
 rule all_taxa:
   input:
-    config['col_eol_taxa']
+    config['col_eol_taxa'],
+    config['eol_taxa_arthro_file'],
+    config['eol_traits_arthro_file'],
+    config['eol_terms_arthro_file'],
+    config['eol_traits_arthro_rel_file']
   output:
     '../results/taxa.done'
   shell:
@@ -104,7 +108,7 @@ rule eol_get_data:
     ) >{log.out} 2>{log.err}
     """
 
-# Parse Catalogue of Life (CoL) taxa file and extract descents of Arthropoda
+# Parse Catalogue of Life (CoL) taxa file and extract descendents of Arthropoda
 rule col_taxa_extract_arthropods:
   input:
     col = config['col_taxa_file']
@@ -123,6 +127,35 @@ rule col_taxa_extract_arthropods:
         --col-file {input.col} \
         --out-file {output.tax_art}
     ) >{log.out} 2>{log.err}
+    """
+
+# Parse Encyclopedia of Life (EOL) taxa, traits and relationships and extract descendents of Arthropoda
+rule eol_taxa_traits_extract_arthropods:
+  input:
+    taxa = config['eol_taxa_file'],
+    traits = config['eol_traits_file'],
+    terms = config['eol_terms_file']
+  output:
+    taxa = config['eol_taxa_arthro_file'],
+    traits = config['eol_traits_arthro_file'],
+    terms = config['eol_terms_arthro_file'],
+    rel = config['eol_traits_arthro_rel_file']
+  log:
+    '../log/eol_taxa_traits_extract_arthropods.log'
+  benchmark:
+    '../log/eol_taxa_traits_extract_arthropods.prf'
+  shell:
+    """
+    set -x
+    python scripts/eol_extract_arthro_and_traits.py \
+      --pages {input.taxa} \
+      --traits {input.traits} \
+      --terms {input.terms} \
+      --pages-arthro {output.taxa} \
+      --traits-arthro {output.traits} \
+      --terms-arthro {output.terms} \
+      --trait-arthro-rel {output.rel} \
+    >{log} 2>&1
     """
 
 # Merge CoL and EOL taxa
