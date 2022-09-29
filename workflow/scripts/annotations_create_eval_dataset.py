@@ -292,7 +292,7 @@ class EvalDataloader:
             
             out_doc["relations"].append({
                 "id": rel["id"],
-                "node": [
+                "nodes": [
                     {
                         "role": ent_0_role, 
                         "refid": rel["entities"][0]
