@@ -12,5 +12,5 @@ rule all:
     '../results/taxa.done',
     '../results/traits.done',
     '../results/annotations.done',
-   '../results/oger.done'
+    '../results/oger.done'
 
