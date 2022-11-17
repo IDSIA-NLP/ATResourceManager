@@ -1,15 +1,11 @@
 #!/usr/bin/env python3
+# vim: syntax=python tabstop=2 expandtab
 
+import click
 import bz2
 import json
 from datetime import datetime
 from loguru import logger
-
-wikidata_file = '/mnt/BIGSCRATCH/joseph/wiki/wikidata/latest-all.json.bz2'
-output_file = '/mnt/BIGSCRATCH/joseph/wiki/wikidata/results/wikidata_arthro.json'
-arthro_file = '/mnt/BIGSCRATCH/joseph/arthropod/taxonimic_name_arthro_col.txt'
-
-
 
 # TODO:
 #  1. Get all the arthropods by entity['labels']
@@ -24,6 +20,7 @@ arthro_file = '/mnt/BIGSCRATCH/joseph/arthropod/taxonimic_name_arthro_col.txt'
 # 3. Query all the collected PropertyIDs to get the source name (e.g. GBIF)
 
 
+# ----------------------------------------- Functions ----------------------------------------
 
 def ana_wiki(filename, n=10, s='Q18'):
     c = 0
@@ -93,14 +90,24 @@ def get_arthropods_from_wiki(wiki_file, out_file, arthro_dict, logger):
                 logger.opt(exception=True).warning(e)
                 pass
 
+# --------------------------------------------------------------------------------------------
+#                                            MAIN
+# --------------------------------------------------------------------------------------------
 
+@click.command()
+@click.option('-w', 'wikidata-file', 
+              #default='/work/FAC/FBM/DEE/rwaterho/evofun/harry/wikidata/latest-all.json.bz2',
+              help='Input file containing Wikidata data dump (JSON).')
+@click.option('-o', 'output-file',
+              #default='/work/FAC/FBM/DEE/rwaterho/evofun/harry/ATResourceManager/results/wikidata_arthro.json',
+              help='Output file to which to write Arthropod data (JSON).')
+@click.option('-a', 'arthro-file',
+              #default='/work/FAC/FBM/DEE/rwaterho/evofun/harry/ATResourceManager/results/col_taxonomic_names.txt',
+              help='Input file with Arthropod taxon names (TXT),')
+def main(wikidata_file, output_file, arthro_file):
+    """Extract Arthropod data from Wikidata JSON data dump."""
 
-
-
-
-if __name__ == '__main__':
-
-    logger.add("./logs/extract_arthro.log", rotation="100 KB")
+    #logger.add("./logs/extract_arthro.log", rotation="100 KB")
 
     #print(f'Start at: {datetime.now().strftime("%d/%m/%Y %H:%M:%S")}\n\n')
     logger.info(f'Start ...')
@@ -108,8 +115,6 @@ if __name__ == '__main__':
     logger.info(f"Wikidata file:\t{wikidata_file}")
     logger.info(f"Output file:\t{output_file}")
     logger.info(f"Arthropod file:\t{arthro_file}\n")
-
-    
 
     # store taxonomic names in dict
     logger.info(f"Load taxonomic names...")
@@ -129,3 +134,11 @@ if __name__ == '__main__':
     logger.info('Done.')
     #print(f'\n\nEnd at: {datetime.now().strftime("%d/%m/%Y %H:%M:%S")}')
     #ana_wiki(wikidata_file, n=1000000, s='Q18')
+
+
+# --------------------------------------------------------------------------------------------
+#                                          RUN
+# --------------------------------------------------------------------------------------------
+
+if __name__ == '__main__':
+    main()
