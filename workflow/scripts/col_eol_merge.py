@@ -84,9 +84,10 @@ def get_eol_page_id(term, canonical_2_page_id={}):
 @click.command()
 @click.option('--col-taxa', required=True, help='Catalogue of Life (CoL) taxa file')
 @click.option('--eol-taxa', required=True, help='Encyclopedia of Life (EOL) pages file')
-@click.option('--out-file', required=True, help='File to write output to')
+@click.option('--out-file', required=True, help='File to write taxa to')
+@click.option('--out-taxa', required=True, help='File to write taxonomic names list to')
 @click.option('--log', default='col_eol_merge.log', help='File receiving log messages')
-def main(col_taxa, eol_taxa, out_file, log):
+def main(col_taxa, eol_taxa, out_file, out_taxa, log):
     """Merge Catalog of Life (CoL) arthropods with the Encyclopedia of Life (EoL) arthropods."""
 
     #! REPLACE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -124,6 +125,9 @@ def main(col_taxa, eol_taxa, out_file, log):
 
     # Write new DataFrame to file
     df_col.to_csv(out_file, sep='\t')
+
+    # Write taxonomic names to file
+    df_col['taxonomicName'].to_csv(out_taxa, sep='\t', header=False, index=False)
 
    
 if __name__ == '__main__':

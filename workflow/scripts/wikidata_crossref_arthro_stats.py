@@ -1,15 +1,19 @@
+#!/usr/bin/env python3
+# vim: syntax=python tabstop=2 expandtab
 # -*- coding: utf-8 -*-
 
 """
 Description: 
-Author: Joseph Cornelius
-April 2021
+Authors:
+  Joseph Cornelius
+  Harald Detering
+November 2022
 """
 # --------------------------------------------------------------------------------------------
 #                                           IMPORT
 # --------------------------------------------------------------------------------------------
 
-import argparse
+import click
 import json
 import bz2
 
@@ -23,23 +27,39 @@ from collections import Counter
 
 # ----------------------------------------- Functions ----------------------------------------
 
-def main(logger, args):
-    """Get number of occurrences for each properties and the count of properties 
-        per wikidata arthropod.
+@click.command()
+@click.option('-f', '--ref-file', 
+              #default='/mnt/BIGSCRATCH/joseph/wiki/wikidata/results/wikidata_arthro_crossref.json', 
+              help='Path to arthropod cross-ref properties.')
+@click.option('-o', '--out-file', 
+              #default='/mnt/BIGSCRATCH/joseph/wiki/wikidata/results/wikidata_arthro_crossref_stats.json', 
+              help='Path to output file.')
+def main(ref_file, out_file):
+    """Evaluate arthropod wikidata
+
+    Get number of occurrences for each properties and the count of properties 
+    per wikidata arthropod.
 
 
     Args:
-        logger (logger instance): Instance of the loguru logger
-        args (argparser object): Object of the argument parser 
+        ref_file : Path to arthropod cross-ref properties.
+        out_file : Path to output file.
 
     Returns:
         None
     """
+
+    # Setup logger
+    logger.add("./logs/crossref_arthro_stats.log", rotation="100 KB")
+    logger.info(f'Start ...')
+    # TODO: write CLI args to log
+    #logger.info('Argparse arguments:\n'+' \n'.join(f'\t{k: <15} : {v: <80}' for k, v in vars(args).items()))
+
     arthro_to_ref_count = {}
     all_refs = []
     logger.info(f'Read arthropods ...')
     c = 0 
-    with open(args.ref_file, mode="r") as f:
+    with open(ref_file, mode="r") as f:
 
         for line in f:
             c += 1
@@ -62,30 +82,14 @@ def main(logger, args):
     out_dict = {}
     out_dict['occurrence'] = dict(Counter(all_refs))
     out_dict['wikidata'] = arthro_to_ref_count
-    with open(args.out_file, mode="w") as of:
+    with open(out_file, mode="w") as of:
         json.dump(out_dict, of)
+    
+    logger.info('Done!')
+
 # --------------------------------------------------------------------------------------------
 #                                          RUN
 # --------------------------------------------------------------------------------------------
 
 if __name__ == '__main__':
-
-    # Setup logger
-    logger.add("./logs/crossref_arthro_stats.log", rotation="100 KB")
-    logger.info(f'Start ...')
-
-    # Setup argument parser
-    description = "Evaluate arthropod wikidata"
-    parser = argparse.ArgumentParser(description=description)
-    parser.add_argument('-f', '--ref_file', metavar='ref_file', type=str, required=False, 
-                        default='/mnt/BIGSCRATCH/joseph/wiki/wikidata/results/wikidata_arthro_crossref.json', 
-                        help='Path to arthropod cross-ref properties.')
-    parser.add_argument('-o', '--out_file', metavar='out_file', type=str, required=False, 
-                        default='/mnt/BIGSCRATCH/joseph/wiki/wikidata/results/wikidata_arthro_crossref_stats.json', 
-                        help='Path to arthropod cross-ref properties.')
-    args = parser.parse_args()
-    logger.info('Argparse arguments:\n'+' \n'.join(f'\t{k: <15} : {v: <80}' for k, v in vars(args).items()))
-
-   # Run main
-    main(logger, args)
-    logger.info('Done!')
+    main()

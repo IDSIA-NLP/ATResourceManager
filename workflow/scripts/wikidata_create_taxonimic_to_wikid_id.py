@@ -1,18 +1,21 @@
+# vim: syntax=python tabstop=2 expandtab
 # -*- coding: utf-8 -*-
 
 """
 Description: 
-Author: Joseph Cornelius
-April 2021
+Authors:
+  Joseph Cornelius
+  Harald Detering
+November 2021
 """
 # --------------------------------------------------------------------------------------------
 #                                           IMPORT
 # --------------------------------------------------------------------------------------------
 
-import argparse
+import click
 from loguru import logger
 import json
-
+import sys
 
 # --------------------------------------------------------------------------------------------
 #                                            MAIN
@@ -20,7 +23,7 @@ import json
 
 
 # ----------------------------------------- Functions ----------------------------------------
-def get_taxon_set(args):
+def get_taxon_set(taxo_file):
     """Load taxonomic names to set.
 
     Args:
@@ -31,13 +34,23 @@ def get_taxon_set(args):
     """
 
     taxon_set = set()
-    with open(args.taxo_file, mode="r") as tf:
+    with open(taxo_file, mode="r") as tf:
         for line in tf:
             taxon_set.add(line.strip())
 
     return taxon_set
 
-def main(logger, args):
+@click.command()
+@click.option('-a', '--arthro-file', 
+#              default='/mnt/BIGSCRATCH/joseph/wiki/wikidata/results/wikidata_arthro.json', 
+              help='Path to arthropod wikidata json file.')
+@click.option('-t', '--taxo-file', 
+#              default='/mnt/BIGSCRATCH/joseph/arthropod/taxonimic_name_arthro_col.txt', 
+              help='Path to taxonimic CoL names file.')
+@click.option('-tw', '--taxo-to-wiki-file', 
+#              default='/mnt/BIGSCRATCH/joseph/wiki/wikidata/results/taxonimic_name_to_wikiID.json', 
+              help='Path to output file (taxonimic names to wikidataID).')
+def main(arthro_file, taxo_file, taxo_to_wiki_file):
     """Create a dictionary of taxonimic name to wikidataID
 
     Args:
@@ -48,14 +61,21 @@ def main(logger, args):
         None
     """
     
+    # Setup logger
+    #logger.add("./logs/create_taxonimic_to_wikid_id.log", rotation="100 KB")
+    logger.info(f'Start ...')
+
+    # TODO: print CLI args to log
+    #logger.info('Command line arguments:\n'+' \n'.join(f'\t{k: <15} : {v: <80}' for k, v in sys.argv))
+
     logger.info(f'Load CoL taxonimic names ...')
-    taxon_set = get_taxon_set(args)
+    taxon_set = get_taxon_set(taxo_file)
 
     logger.info(f'Create taxon2wikiID dict ...')
     taxon_to_wikiID = {}
     c = 0
     dc = 0
-    with open(args.arthro_file, mode="r") as af:
+    with open(arthro_file, mode="r") as af:
         for line in af:
             c += 1
             if c % 50000 == 0: logger.info(f"Entry count: {c}")
@@ -72,35 +92,14 @@ def main(logger, args):
     logger.info(f'Number of wiki entries: {c}, len of taxon_to_wikiID dict: {len(taxon_to_wikiID)}')
 
     logger.info('Wrtiting taxonomic-names-to-wikiID to file...')
-    with open(args.taxo_to_wiki_file, mode="w") as twf:
+    with open(taxo_to_wiki_file, mode="w") as twf:
         json.dump(taxon_to_wikiID, twf)
-
+    
+    logger.info('Done!')
 
 # --------------------------------------------------------------------------------------------
 #                                          RUN
 # --------------------------------------------------------------------------------------------
 
 if __name__ == '__main__':
-
-    # Setup logger
-    logger.add("./logs/create_taxonimic_to_wikid_id.log", rotation="100 KB")
-    logger.info(f'Start ...')
-
-    # Setup argument parser
-    description = "Evaluate arthopod wikidata"
-    parser = argparse.ArgumentParser(description=description)
-    parser.add_argument('-a', '--arthro_file', metavar='arthro_file', type=str, required=False, 
-                        default='/mnt/BIGSCRATCH/joseph/wiki/wikidata/results/wikidata_arthro.json', 
-                        help='Path to arthropod wikidata json file.')
-    parser.add_argument('-t', '--taxo_file', metavar='taxo_file', type=str, required=False, 
-                        default='/mnt/BIGSCRATCH/joseph/arthropod/taxonimic_name_arthro_col.txt', 
-                        help='Path to taxonimic CoL names file.')
-    parser.add_argument('-tw', '--taxo_to_wiki_file', metavar='taxo_to_wiki_file', type=str, required=False, 
-                        default='/mnt/BIGSCRATCH/joseph/wiki/wikidata/results/taxonimic_name_to_wikiID.json', 
-                        help='Path to output file (taxonimic names to wikidataID).')
-    args = parser.parse_args()
-    logger.info('Argparse arguments:\n'+' \n'.join(f'\t{k: <15} : {v: <80}' for k, v in vars(args).items()))
-
-   # Run main
-    main(logger, args)
-    logger.info('Done!')
+    main()
