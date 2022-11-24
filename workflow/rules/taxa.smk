@@ -131,7 +131,8 @@ rule col_eol_merge_taxa:
     tax_col = config['col_taxa_arthropoda'],
     tax_eol = config['eol_taxa_file']
   output:
-    tax_col_eol = config['col_eol_taxa']
+    tax_col_eol = config['col_eol_taxa'],
+    tax_names = config['col_taxa_names']
   log:
     '../log/col_eol_merge_taxa.log'
   shell:
@@ -142,6 +143,7 @@ rule col_eol_merge_taxa:
       --log {log} \
       --col-taxa {input.tax_col} \
       --eol-taxa {input.tax_eol} \
-      --out-file {output.tax_col_eol}
+      --out-file {output.tax_col_eol} \
+      --out-taxa {output.tax_names}
     )
     """

@@ -52,8 +52,7 @@ def get_taxon_set(taxo_file):
               help='Path to output file (taxonimic names to wikidataID).')
 def main(arthro_file, taxo_file, taxo_to_wiki_file):
     """Create a dictionary of taxonimic name to wikidataID
-
-    Args:
+    
         logger (logger instance): Instance of the loguru logger
         args (argparser object): Object of the argument parser 
 

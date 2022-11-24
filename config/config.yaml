@@ -14,6 +14,7 @@ eol_version_file: '../resources/eol/traits_all.zip.version'
 
 # Taxa output files
 col_eol_taxa: '../results/col_eol_taxa.tsv'
+col_taxa_names: '../results/col_taxonomic_names.txt'
 
 # PLAZI settings
 plazi_root_dir: '../resources/plazi/'
@@ -32,3 +33,13 @@ anno_members_dir: '../resources/gold_annotations/ann.json/members/'
 anno_html_dir: '../resources/gold_annotations/plain.html/pool/'
 anno_legend_file: '../resources/gold_annotations/annotations-legend.json'
 anno_out_dir: '../resources/gold_annotations/converted/'
+
+# Wikidata settings
+wiki_dump_file: '../resources/wikidata/latest-all.json.bz2'
+wiki_arthro_file: '../results/wikidata_arthro.json'
+wiki_crossref_file: '../results/wikidata_arthro_crossref.json'
+wiki_crossref_prop_id_file: '../results/wikidata_crossref_prop_ids.txt'
+wiki_crossref_props_json_file: '../results/wikidata_crossref_props.json'
+wiki_crossref_props_labels_file: '../results/wikidata_crossref_props_labels.json'
+wiki_crossref_props_count_file: '../results/wikidata_crossref_props_count.tsv'
+wiki_crossref_props_arthropods_file: '../results/col_eol_taxa_wikidata_crossref.tsv'
