@@ -93,13 +93,13 @@ def get_arthropods_from_wiki(wiki_file, out_file, arthro_dict, logger):
 # --------------------------------------------------------------------------------------------
 
 @click.command()
-@click.option('-w', 'wikidata-file', 
+@click.option('-w', '--wikidata-file', 
               #default='/work/FAC/FBM/DEE/rwaterho/evofun/harry/wikidata/latest-all.json.bz2',
               help='Input file containing Wikidata data dump (JSON).')
-@click.option('-a', 'arthro-file',
+@click.option('-a', '--arthro-file',
               #default='/work/FAC/FBM/DEE/rwaterho/evofun/harry/ATResourceManager/results/col_taxonomic_names.txt',
               help='Input file with Arthropod taxon names (TXT).')
-@click.option('-o', 'output-file',
+@click.option('-o', '--output-file',
               #default='/work/FAC/FBM/DEE/rwaterho/evofun/harry/ATResourceManager/results/wikidata_arthro.json',
               help='Output file to which to write Arthropod data (JSON).')
 def main(wikidata_file, output_file, arthro_file):
