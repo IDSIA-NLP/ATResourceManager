@@ -71,7 +71,7 @@ def get_arthropods_from_wiki(wiki_file, out_file, arthro_dict, logger):
                         # check if wiki entry is arthropod
                         label_en = wiki_json['labels']['en']['value']
 
-                        if label_en in arthro_dict:
+                        if label.lower() in arthro_dict:
                             #* print(f"ID:\t{wiki_json['id']: >40}\nLabel:\t{label_en: >40}\n")
                             #* print(f"Wiki keys{wiki_json.keys()}")
 
@@ -118,7 +118,7 @@ def main(wikidata_file, output_file, arthro_file):
     with open(arthro_file, mode='r') as af:
         for line in af:
             arthro_dict[line.strip()] = line.strip()
-            data.append(line)
+            data.append(line.lower())
 
     # sanity check
     logger.debug(f"Sanity check: # unique({len(arthro_dict)}) == # total({len(data)})")
