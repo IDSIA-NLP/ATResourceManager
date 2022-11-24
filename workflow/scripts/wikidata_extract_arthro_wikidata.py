@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# vim: syntax=python tabstop=2 expandtab
+# vim: syntax=python tabstop=4 expandtab
 
 import click
 import bz2
@@ -57,9 +57,7 @@ def get_arthropods_from_wiki(wiki_file, out_file, arthro_dict, logger):
         for line in in_f:
             c += 1
             if c !=0 and (c%500000 == 0):
-                #print(f'{datetime.now().strftime("%d/%m/%Y %H:%M:%S")}:\t Entry count: {c}')
                 logger.info(f'Entry count: {c}')
-                #* break
             try:
                 wiki_json = json.loads(line.rstrip(',\n'))
                 try:
@@ -73,21 +71,21 @@ def get_arthropods_from_wiki(wiki_file, out_file, arthro_dict, logger):
                         # check if wiki entry is arthropod
                         label_en = wiki_json['labels']['en']['value']
 
-                        arthro_dict[label_en]
-                        #* print(f"ID:\t{wiki_json['id']: >40}\nLabel:\t{label_en: >40}\n")
-                        #* print(f"Wiki keys{wiki_json.keys()}")
+                        if label_en in arthro_dict:
+                            #* print(f"ID:\t{wiki_json['id']: >40}\nLabel:\t{label_en: >40}\n")
+                            #* print(f"Wiki keys{wiki_json.keys()}")
 
-                        out_f.write(json.dumps(wiki_json)+'\n')
-                        ac += 1
-                        if ac !=0 and (ac%50000 == 0):
-                            logger.info(f'Arthropod count: {ac}')
-                        #* break
+                            out_f.write(json.dumps(wiki_json)+'\n')
+                            ac += 1
+                            if ac !=0 and (ac%50000 == 0):
+                                logger.info(f'Arthropod count: {ac}')
 
                 except:
                     pass
 
             except Exception as e:
                 logger.opt(exception=True).warning(e)
+                logger.opt(exception=True).warning(line)
                 pass
 
 # --------------------------------------------------------------------------------------------
@@ -107,9 +105,6 @@ def get_arthropods_from_wiki(wiki_file, out_file, arthro_dict, logger):
 def main(wikidata_file, output_file, arthro_file):
     """Extract Arthropod data from Wikidata JSON data dump."""
 
-    #logger.add("./logs/extract_arthro.log", rotation="100 KB")
-
-    #print(f'Start at: {datetime.now().strftime("%d/%m/%Y %H:%M:%S")}\n\n')
     logger.info(f'Start ...')
 
     logger.info(f"Wikidata file:\t{wikidata_file}")
