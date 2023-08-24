@@ -10,14 +10,14 @@
 # modified : 2022-08-17
 #------------------------------------------------------------------------------
 
-configfile: '../config/config.yaml' 
+configfile: 'config/config.yaml' 
 
 # Dummy rule to run all other rules
 rule all_traits:
   input:
     config['plazi_pmc_txt_dir']
   output:
-    '../results/traits.done'
+    'results/traits.done'
   shell:
     """
     touch {output}
@@ -33,9 +33,9 @@ rule plazi_extract_arthro_treatments_and_doi:
     xml = directory(config['plazi_arthro_txt_dir']),
     csv = config['plazi_arthro_id_doi']
   log:
-    out = '../log/plazi_extract_arthro_treatments_and_doi.log'
+    out = 'log/plazi_extract_arthro_treatments_and_doi.log'
   benchmark:
-    '../log/plazi_extract_arthro_treatments_and_doi.prf'
+    'log/plazi_extract_arthro_treatments_and_doi.prf'
   shell:
     """
     python scripts/plazi_extract_arthro_treatments_and_doi.py \
@@ -52,9 +52,9 @@ rule plazi_xml_to_txt:
   output:
     directory(config['plazi_arthro_txt_dir'])
   log:
-    out = '../log/plazi_xml_to_txt.log'
+    out = 'log/plazi_xml_to_txt.log'
   benchmark:
-    '../log/plazi_xml_to_txt.prf'
+    'log/plazi_xml_to_txt.prf'
   shell:
     """
     python scripts/plazi_treatment_to_text.py \
@@ -72,9 +72,9 @@ rule plazi_download_pmc:
     csv = config['plazi_arthro_doi_pmid'],
     xml = directory(config['plazi_arthro_pmc_xml'])
   log:
-    out = '../log/plazi_download_pmc.log'
+    out = 'log/plazi_download_pmc.log'
   benchmark:
-    '../log/plazi_download_pmc.prf'
+    'log/plazi_download_pmc.prf'
   shell:
     """
     python scripts/plazi_download_pmc_articles.py \
@@ -96,9 +96,9 @@ rule plazi_pmc_xml_to_txt:
   params:
     out_dir_root=config['plazi_root_dir']
   log:
-    out = '../log/plazi_pmc_xml_to_txt.log'
+    out = 'log/plazi_pmc_xml_to_txt.log'
   benchmark:
-    '../log/plazi_pmc_xml_to_txt.prf'
+    'log/plazi_pmc_xml_to_txt.prf'
   shell:
     """
     python scripts/plazi_pmc_xml_to_text.py \

@@ -1,0 +1,261 @@
+2022-11-16 09:41:37.687 | INFO     | __main__:<module>:109 - Start ...
+2022-11-16 09:41:37.687 | INFO     | __main__:<module>:111 - Wikidata file:	/work/FAC/FBM/DEE/rwaterho/evofun/harry/wikidata/latest-all.json.bz2
+2022-11-16 09:41:37.688 | INFO     | __main__:<module>:112 - Output file:	/work/FAC/FBM/DEE/rwaterho/evofun/harry/ATResourceManager/results/wikidata_arthro.json
+2022-11-16 09:41:37.688 | INFO     | __main__:<module>:113 - Arthropod file:	/work/FAC/FBM/DEE/rwaterho/evofun/harry/ATResourceManager/results/col_taxonomic_names.txt
+
+2022-11-16 09:41:37.688 | INFO     | __main__:<module>:118 - Load taxonomic names...
+2022-11-16 09:41:38.273 | DEBUG    | __main__:<module>:127 - Sanity check: # unique(1244027) == # total(1254479)
+2022-11-16 09:41:38.273 | INFO     | __main__:<module>:129 - Extracting arthropods from Wikidata...
+
+2022-11-16 09:44:42.047 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 500000
+2022-11-16 09:46:44.121 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 1000000
+2022-11-16 09:47:58.750 | INFO     | __main__:get_arthropods_from_wiki:89 - Arthropod count: 50000
+2022-11-16 09:48:19.519 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 1500000
+2022-11-16 09:49:43.850 | INFO     | __main__:get_arthropods_from_wiki:89 - Arthropod count: 100000
+2022-11-16 09:50:03.517 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 2000000
+2022-11-16 09:51:43.118 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 2500000
+2022-11-16 09:54:30.416 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 3000000
+2022-11-16 09:57:10.525 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 3500000
+2022-11-16 10:04:48.301 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 4000000
+2022-11-16 10:10:36.314 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 4500000
+2022-11-16 10:14:51.448 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 5000000
+2022-11-16 10:19:05.477 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 5500000
+2022-11-16 10:23:02.523 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 6000000
+2022-11-16 10:25:34.187 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 6500000
+2022-11-16 10:27:44.155 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 7000000
+2022-11-16 10:29:46.332 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 7500000
+2022-11-16 10:32:18.501 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 8000000
+2022-11-16 10:34:33.856 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 8500000
+2022-11-16 10:37:10.999 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 9000000
+2022-11-16 10:39:36.657 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 9500000
+2022-11-16 10:42:18.888 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 10000000
+2022-11-16 10:45:56.112 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 10500000
+2022-11-16 10:47:57.336 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 11000000
+2022-11-16 10:49:46.934 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 11500000
+2022-11-16 10:51:13.225 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 12000000
+2022-11-16 10:53:47.508 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 12500000
+2022-11-16 10:56:01.977 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 13000000
+2022-11-16 10:56:42.924 | INFO     | __main__:get_arthropods_from_wiki:89 - Arthropod count: 150000
+2022-11-16 10:58:10.998 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 13500000
+2022-11-16 10:59:20.243 | INFO     | __main__:get_arthropods_from_wiki:89 - Arthropod count: 200000
+2022-11-16 10:59:56.355 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 14000000
+2022-11-16 11:01:28.216 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 14500000
+2022-11-16 11:03:44.327 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 15000000
+2022-11-16 11:06:32.131 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 15500000
+2022-11-16 11:11:06.476 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 16000000
+2022-11-16 11:18:21.330 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 16500000
+2022-11-16 11:23:35.827 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 17000000
+2022-11-16 11:27:47.940 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 17500000
+2022-11-16 11:31:40.662 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 18000000
+2022-11-16 11:35:03.764 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 18500000
+2022-11-16 11:37:32.835 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 19000000
+2022-11-16 11:39:36.742 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 19500000
+2022-11-16 11:41:47.496 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 20000000
+2022-11-16 11:44:29.187 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 20500000
+2022-11-16 11:46:45.037 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 21000000
+2022-11-16 11:49:14.267 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 21500000
+2022-11-16 11:51:37.223 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 22000000
+2022-11-16 11:54:45.610 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 22500000
+2022-11-16 11:57:48.393 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 23000000
+2022-11-16 11:59:44.953 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 23500000
+2022-11-16 12:01:21.324 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 24000000
+2022-11-16 12:02:46.348 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 24500000
+2022-11-16 12:05:30.478 | INFO     | __main__:get_arthropods_from_wiki:89 - Arthropod count: 250000
+2022-11-16 12:05:39.451 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 25000000
+2022-11-16 12:07:37.044 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 25500000
+2022-11-16 12:09:30.474 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 26000000
+2022-11-16 12:09:46.406 | INFO     | __main__:get_arthropods_from_wiki:89 - Arthropod count: 300000
+2022-11-16 12:11:08.772 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 26500000
+2022-11-16 12:12:41.857 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 27000000
+2022-11-16 12:14:34.729 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 27500000
+2022-11-16 12:17:41.347 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 28000000
+2022-11-16 12:23:01.710 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 28500000
+2022-11-16 12:29:41.015 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 29000000
+2022-11-16 12:34:13.946 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 29500000
+2022-11-16 12:38:36.625 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 30000000
+2022-11-16 12:42:01.189 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 30500000
+2022-11-16 12:45:01.626 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 31000000
+2022-11-16 12:46:41.086 | INFO     | __main__:get_arthropods_from_wiki:89 - Arthropod count: 350000
+2022-11-16 12:47:11.919 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 31500000
+2022-11-16 12:49:00.828 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 32000000
+2022-11-16 12:51:23.845 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 32500000
+2022-11-16 12:53:56.929 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 33000000
+2022-11-16 12:56:10.691 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 33500000
+2022-11-16 12:58:28.303 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 34000000
+2022-11-16 13:01:05.893 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 34500000
+2022-11-16 13:04:18.520 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 35000000
+2022-11-16 13:06:52.688 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 35500000
+2022-11-16 13:08:41.529 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 36000000
+2022-11-16 13:10:06.937 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 36500000
+2022-11-16 13:11:42.447 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 37000000
+2022-11-16 13:14:43.428 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 37500000
+2022-11-16 13:16:43.712 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 38000000
+2022-11-16 13:17:21.958 | INFO     | __main__:get_arthropods_from_wiki:89 - Arthropod count: 400000
+2022-11-16 13:18:18.626 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 38500000
+2022-11-16 13:18:34.430 | INFO     | __main__:get_arthropods_from_wiki:89 - Arthropod count: 450000
+2022-11-16 13:20:00.148 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 39000000
+2022-11-16 13:21:35.855 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 39500000
+2022-11-16 13:24:09.956 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 40000000
+2022-11-16 13:26:47.062 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 40500000
+2022-11-16 13:34:07.908 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 41000000
+2022-11-16 13:39:48.543 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 41500000
+2022-11-16 13:44:01.069 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 42000000
+2022-11-16 13:48:06.932 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 42500000
+2022-11-16 13:52:00.607 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 43000000
+2022-11-16 13:54:29.334 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 43500000
+2022-11-16 13:56:31.142 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 44000000
+2022-11-16 13:58:33.603 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 44500000
+2022-11-16 14:01:02.771 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 45000000
+2022-11-16 14:03:16.266 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 45500000
+2022-11-16 14:05:49.692 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 46000000
+2022-11-16 14:08:12.043 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 46500000
+2022-11-16 14:10:51.215 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 47000000
+2022-11-16 14:14:25.444 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 47500000
+2022-11-16 14:16:25.887 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 48000000
+2022-11-16 14:18:14.942 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 48500000
+2022-11-16 14:19:39.860 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 49000000
+2022-11-16 14:22:08.480 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 49500000
+2022-11-16 14:24:05.705 | INFO     | __main__:get_arthropods_from_wiki:89 - Arthropod count: 500000
+2022-11-16 14:24:21.058 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 50000000
+2022-11-16 14:26:27.916 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 50500000
+2022-11-16 14:27:32.664 | INFO     | __main__:get_arthropods_from_wiki:89 - Arthropod count: 550000
+2022-11-16 14:28:06.113 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 51000000
+2022-11-16 14:29:31.593 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 51500000
+2022-11-16 14:31:32.450 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 52000000
+2022-11-16 14:34:06.347 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 52500000
+2022-11-16 14:38:23.963 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 53000000
+2022-11-16 14:45:21.496 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 53500000
+2022-11-16 14:50:32.284 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 54000000
+2022-11-16 14:54:37.122 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 54500000
+2022-11-16 14:58:21.773 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 55000000
+2022-11-16 15:01:38.775 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 55500000
+2022-11-16 15:04:02.684 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 56000000
+2022-11-16 15:06:01.997 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 56500000
+2022-11-16 15:08:08.717 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 57000000
+2022-11-16 15:10:47.376 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 57500000
+2022-11-16 15:13:03.653 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 58000000
+2022-11-16 15:15:38.898 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 58500000
+2022-11-16 15:18:03.231 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 59000000
+2022-11-16 15:21:16.225 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 59500000
+2022-11-16 15:24:28.789 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 60000000
+2022-11-16 15:26:29.917 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 60500000
+2022-11-16 15:28:08.693 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 61000000
+2022-11-16 15:29:34.944 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 61500000
+2022-11-16 15:32:15.684 | INFO     | __main__:get_arthropods_from_wiki:89 - Arthropod count: 600000
+2022-11-16 15:32:34.366 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 62000000
+2022-11-16 15:34:37.953 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 62500000
+2022-11-16 15:36:38.259 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 63000000
+2022-11-16 15:36:53.039 | INFO     | __main__:get_arthropods_from_wiki:89 - Arthropod count: 650000
+2022-11-16 15:38:21.809 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 63500000
+2022-11-16 15:39:58.081 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 64000000
+2022-11-16 15:41:52.840 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 64500000
+2022-11-16 15:43:15.353 | INFO     | __main__:get_arthropods_from_wiki:89 - Arthropod count: 700000
+2022-11-16 15:45:18.733 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 65000000
+2022-11-16 15:50:52.075 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 65500000
+2022-11-16 15:57:56.861 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 66000000
+2022-11-16 16:02:55.736 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 66500000
+2022-11-16 16:07:28.785 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 67000000
+2022-11-16 16:11:03.545 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 67500000
+2022-11-16 16:14:24.303 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 68000000
+2022-11-16 16:16:50.659 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 68500000
+2022-11-16 16:18:45.419 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 69000000
+2022-11-16 16:21:14.074 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 69500000
+2022-11-16 16:24:05.706 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 70000000
+2022-11-16 16:26:45.206 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 70500000
+2022-11-16 16:29:25.438 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 71000000
+2022-11-16 16:32:06.685 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 71500000
+2022-11-16 16:35:19.236 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 72000000
+2022-11-16 16:37:58.719 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 72500000
+2022-11-16 16:39:47.622 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 73000000
+2022-11-16 16:41:14.076 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 73500000
+2022-11-16 16:42:48.702 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 74000000
+2022-11-16 16:45:50.874 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 74500000
+2022-11-16 16:47:51.504 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 75000000
+2022-11-16 16:48:30.277 | INFO     | __main__:get_arthropods_from_wiki:89 - Arthropod count: 750000
+2022-11-16 16:49:29.173 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 75500000
+2022-11-16 16:49:43.778 | INFO     | __main__:get_arthropods_from_wiki:89 - Arthropod count: 800000
+2022-11-16 16:51:12.017 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 76000000
+2022-11-16 16:52:45.976 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 76500000
+2022-11-16 16:55:17.250 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 77000000
+2022-11-16 16:57:54.187 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 77500000
+2022-11-16 17:05:07.884 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 78000000
+2022-11-16 17:10:50.303 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 78500000
+2022-11-16 17:15:03.213 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 79000000
+2022-11-16 17:19:06.015 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 79500000
+2022-11-16 17:22:56.593 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 80000000
+2022-11-16 17:25:27.261 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 80500000
+2022-11-16 17:27:21.946 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 81000000
+2022-11-16 17:29:26.909 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 81500000
+2022-11-16 17:31:55.115 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 82000000
+2022-11-16 17:34:07.545 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 82500000
+2022-11-16 17:36:39.820 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 83000000
+2022-11-16 17:39:01.063 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 83500000
+2022-11-16 17:41:39.118 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 84000000
+2022-11-16 17:45:11.839 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 84500000
+2022-11-16 17:47:10.607 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 85000000
+2022-11-16 17:48:59.993 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 85500000
+2022-11-16 17:50:23.411 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 86000000
+2022-11-16 17:52:46.473 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 86500000
+2022-11-16 17:54:03.565 | INFO     | __main__:get_arthropods_from_wiki:89 - Arthropod count: 850000
+2022-11-16 17:55:00.675 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 87000000
+2022-11-16 17:57:04.920 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 87500000
+2022-11-16 17:58:01.154 | INFO     | __main__:get_arthropods_from_wiki:89 - Arthropod count: 900000
+2022-11-16 17:58:39.227 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 88000000
+2022-11-16 18:00:03.743 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 88500000
+2022-11-16 18:02:02.461 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 89000000
+2022-11-16 18:04:37.639 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 89500000
+2022-11-16 18:08:49.063 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 90000000
+2022-11-16 18:15:43.402 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 90500000
+2022-11-16 18:20:55.870 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 91000000
+2022-11-16 18:24:57.198 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 91500000
+2022-11-16 18:28:47.376 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 92000000
+2022-11-16 18:32:06.178 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 92500000
+2022-11-16 18:34:27.677 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 93000000
+2022-11-16 18:36:29.943 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 93500000
+2022-11-16 18:38:35.880 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 94000000
+2022-11-16 18:41:11.707 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 94500000
+2022-11-16 18:43:21.864 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 95000000
+2022-11-16 18:45:52.597 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 95500000
+2022-11-16 18:48:11.330 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 96000000
+2022-11-16 18:51:15.217 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 96500000
+2022-11-16 18:54:23.936 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 97000000
+2022-11-16 18:56:18.990 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 97500000
+2022-11-16 18:57:57.865 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 98000000
+2022-11-16 18:59:21.378 | INFO     | __main__:get_arthropods_from_wiki:67 - Entry count: 98500000
+2022-11-16 19:00:01.346 | WARNING  | __main__:get_arthropods_from_wiki:96 - Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+
+  File "/work/FAC/FBM/DEE/rwaterho/evofun/harry/ATResourceManager/workflow/scripts/wikidata_extract_arthro_wikidata.py", line 130, in <module>
+    get_arthropods_from_wiki(wikidata_file, output_file, arthro_dict, logger)
+    │                        │              │            │            └ <loguru.logger handlers=[(id=0, level=10, sink=<stderr>), (id=1, level=10, sink='./logs/extract_arthro.log')]>
+    │                        │              │            └ {'Velocipedoidea': 'Velocipedoidea', 'Callichilella': 'Callichilella', 'Chiliocyclidae': 'Chiliocyclidae', 'Neoloxops': 'Neol...
+    │                        │              └ '/work/FAC/FBM/DEE/rwaterho/evofun/harry/ATResourceManager/results/wikidata_arthro.json'
+    │                        └ '/work/FAC/FBM/DEE/rwaterho/evofun/harry/wikidata/latest-all.json.bz2'
+    └ <function get_arthropods_from_wiki at 0x7f402b410700>
+
+> File "/work/FAC/FBM/DEE/rwaterho/evofun/harry/ATResourceManager/workflow/scripts/wikidata_extract_arthro_wikidata.py", line 70, in get_arthropods_from_wiki
+    wiki_json = json.loads(line.rstrip(',\n'))
+                │    │     │    └ <method 'rstrip' of 'str' objects>
+                │    │     └ ']\n'
+                │    └ <function loads at 0x7f402bd22170>
+                └ <module 'json' from '/work/FAC/FBM/DEE/rwaterho/evofun/harry/miniconda3/envs/atresmgr/lib/python3.10/json/__init__.py'>
+
+  File "/work/FAC/FBM/DEE/rwaterho/evofun/harry/miniconda3/envs/atresmgr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           │                │      └ ']'
+           │                └ <function JSONDecoder.decode at 0x7f402bd21990>
+           └ <json.decoder.JSONDecoder object at 0x7f402bcef8b0>
+  File "/work/FAC/FBM/DEE/rwaterho/evofun/harry/miniconda3/envs/atresmgr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               │    │          │      │  └ ']'
+               │    │          │      └ <built-in method match of re.Pattern object at 0x7f4039fc31d0>
+               │    │          └ ']'
+               │    └ <function JSONDecoder.raw_decode at 0x7f402bd21a20>
+               └ <json.decoder.JSONDecoder object at 0x7f402bcef8b0>
+  File "/work/FAC/FBM/DEE/rwaterho/evofun/harry/miniconda3/envs/atresmgr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+          │                                  └ ']'
+          └ <class 'json.decoder.JSONDecodeError'>
+
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2022-11-16 19:00:01.863 | INFO     | __main__:<module>:132 - Done.

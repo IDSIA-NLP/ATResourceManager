@@ -13,14 +13,14 @@
 # modified : 2022-08-06
 #------------------------------------------------------------------------------
 
-configfile: '../config/config.yaml' 
+configfile: 'config/config.yaml' 
 
 # Dummy rule to run all other rules
 rule all_taxa:
   input:
     config['col_eol_taxa']
   output:
-    '../results/taxa.done'
+    'results/taxa.done'
   shell:
     """
     touch {output}
@@ -36,10 +36,10 @@ rule col_get_data:
     data_dir = config['col_data_dir'],
     dl_dir = f"{config['col_data_dir']}/.."
   log:
-    out = '../log/col_get_data.out',
-    err = '../log/col_get_data.err'
+    out = 'log/col_get_data.out',
+    err = 'log/col_get_data.err'
   benchmark:
-    '../log/col_get_data.prf'
+    'log/col_get_data.prf'
   shell:
     """
     set -x
@@ -80,10 +80,10 @@ rule eol_get_data:
   params:
     data_dir = config['eol_data_dir']
   log:
-    out = '../log/eol_get_data.out',
-    err = '../log/eol_get_data.err'
+    out = 'log/eol_get_data.out',
+    err = 'log/eol_get_data.err'
   benchmark:
-    '../log/eol_get_data.prf'
+    'log/eol_get_data.prf'
   shell:
     """
     (
@@ -95,7 +95,7 @@ rule eol_get_data:
     fi
 
     # download data file
-    python scripts/eol_download_latest_traits.py \
+    python workflow/scripts/eol_download_latest_traits.py \
       --version-file {input} \
       --out-dir {params.data_dir}/../
 
@@ -111,10 +111,10 @@ rule col_taxa_extract_arthropods:
   output:
     tax_art = config['col_taxa_arthropoda']
   log:
-    out = '../log/col_taxa_extract_arthropods.out',
-    err = '../log/col_taxa_extract_arthropods.err'
+    out = 'log/col_taxa_extract_arthropods.out',
+    err = 'log/col_taxa_extract_arthropods.err'
   benchmark:
-    '../log/col_taxa_extract_arthropods.prf'
+    'log/col_taxa_extract_arthropods.prf'
   shell:
     """
     set -x
@@ -134,7 +134,7 @@ rule col_eol_merge_taxa:
     tax_col_eol = config['col_eol_taxa'],
     tax_names = config['col_taxa_names']
   log:
-    '../log/col_eol_merge_taxa.log'
+    'log/col_eol_merge_taxa.log'
   shell:
     """
     set -x

@@ -47,14 +47,16 @@ def ana_wiki(filename, n=10, s='Q18'):
                 print(e)
                 continue
 
-
-
 def get_arthropods_from_wiki(wiki_file, out_file, arthro_dict, logger):
     c = 0
     ac = 0
     with bz2.open(wiki_file, mode='rt') as in_f, open(out_file, 'w') as out_f:
         in_f.read(2)
         for line in in_f:
+            # skip final "]" line to avoid error
+            if len(line.strip()) < 2:
+                continue
+
             c += 1
             if c !=0 and (c%500000 == 0):
                 logger.info(f'Entry count: {c}')

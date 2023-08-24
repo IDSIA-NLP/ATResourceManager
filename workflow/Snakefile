@@ -1,6 +1,6 @@
 # vim: syntax=python tabstop=2 expandtab
 # coding: utf-8
-configfile: '../config/config.yaml'
+configfile: 'config/config.yaml'
 
 include: 'rules/taxa.smk'
 include: 'rules/traits.smk'

@@ -8,14 +8,14 @@
 # modified : 2022-08-24
 #------------------------------------------------------------------------------
 
-configfile: '../config/config.yaml' 
+configfile: 'config/config.yaml' 
 
 # Dummy rule to run sub-workflow
 rule anno_all:
   input:
     config['anno_out_dir']
   output:
-    '../results/annotations.done',
+    'results/annotations.done',
   shell:
     """
     touch {output}
@@ -29,9 +29,9 @@ rule anno_convert:
   output:
     directory(config['anno_out_dir'])
   log:
-    '../log/anno_convert.log'
+    'log/anno_convert.log'
   benchmark:
-    '../log/anno_convert.prf'
+    'log/anno_convert.prf'
   shell:
     """
     python scripts/annotations_create_eval_dataset.py \

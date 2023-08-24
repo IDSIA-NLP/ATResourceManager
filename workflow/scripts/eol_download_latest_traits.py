@@ -65,7 +65,7 @@ def main(version_file, out_dir): #def main(args):
   version = '1970-01-01 00:00:00 GMT'
   dt_version = parse(version)
   # read version file if given
-  if version_file:
+  if version_file and os.path.exists(version_file):
     with open(version_file, 'rt') as f:
       version = f.readline().strip()
       dt_version = parse(version)
